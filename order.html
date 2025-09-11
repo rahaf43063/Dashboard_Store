@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/my_loop.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>لوحة التحكم | تفاصيل الطلب</title>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">إيليجانسيا</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="اكتب اسم المنتج للبحث">
+                    </form>
+                </div>
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div id="icons" class="icons d-flex gap-3">
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span class="icon-badge">4</span>
+                            <ul id="messagesMenu" class="icon-dropdown">
+                                <div class="header-title">الرسائل</div>
+                                <li>
+                                    <strong>نورة عبد العزيز</strong>
+                                    <div class="small text-muted">قبل 10 دقائق</div>
+                                    <div class="small">مرحباً، هل لديكم فستان أزرق بالحجم المتوسط؟</div>
+                                </li>
+                                <li>
+                                    <strong>جوهرة تركي</strong>
+                                    <div class="small text-muted">قبل 30 دقيقة</div>
+                                    <div class="small">أريد استبدال المعطف الذي اشتريته بالحجم الأصغر</div>
+                                </li>
+                                <li>
+                                    <strong>سارة أحمد</strong>
+                                    <div class="small text-muted">أمس</div>
+                                    <div class="small">متى ستتوفر المجموعة الصيفية الجديدة؟</div>
+                                </li>
+                                <li>
+                                    <strong>ريم حسن</strong>
+                                    <div class="small text-muted">منذ يومين</div>
+                                    <div class="small">شكراً على التوصيل السريع، المنتج رائع!</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الرسائل</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="icon-badge">2</span>
+                            <ul id="bellMenu" class="icon-dropdown">
+                                <div class="header-title">الإشعارات</div>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-truck text-success"></i>
+                                        <div>
+                                            <div class="small">تم شحن طلبك رقم #1234 بنجاح</div>
+                                            <div class="small text-muted">قبل ساعة</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-tag"></i>
+                                        <div>
+                                            <div class="small">خصم 20% على جميع الفساتين المسائية</div>
+                                            <div class="small text-muted">منذ يومين</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الإشعارات</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="المهام">
+                            <i class="fa-regular fa-clipboard"></i>
+                            <ul id="tasksMenu" class="icon-dropdown">
+                                <div class="header-title">المهام</div>
+                                <li>
+                                    <strong>مهمة: تحديث الأسعار</strong>
+                                    <div class="small text-muted">اليوم 10:30</div>
+                                    <div class="small">راجع أسعار قسم الفساتين الجديدة.</div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: صور المنتجات</strong>
+                                    <div class="small text-muted">اليوم 12:00</div>
+                                    <div class="small">أضفت صوراً عالية الدقة لمنتج "حافظة حرارية ذكية مع شاشة رقمية".
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: متابعة الشحن</strong>
+                                    <div class="small text-muted">غداً</div>
+                                    <div class="small">تأكيد موعد التسليم لطلبات المنطقة الغربية.</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل المهام</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="الإعدادات">
+                            <i class="fa-solid fa-gear"></i>
+                            <ul id="icon-dropdown" class="icon-dropdown">
+                                <div class="header-title">الإعدادات</div>
+                                <li>
+                                    <strong>الملف الشخصي</strong>
+                                    <div class="small text-muted">إعدادات الحساب والمعلومات الشخصية</div>
+                                </li>
+                                <li>
+                                    <strong>الأمان</strong>
+                                    <div class="small text-muted">تغيير كلمة المرور والمصادقة الثنائية</div>
+                                </li>
+                                <li>
+                                    <strong>الإشعارات</strong>
+                                    <div class="small text-muted">تفعيل/تعطيل التنبيهات البريدية والرسائل</div>
+                                </li>
+                                <li class="text-center small"><a href="">الذهاب إلى صفحة الإعدادات</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="avatar">
+                        <img src="assets/images/avatars/avatar.png" alt="">
+                    </div>
+                    <i class="fa-solid fa-bars-staggered active-users" role="button" tabindex="0"
+                        title="المستخدمون النشطون" data-bs-toggle="offcanvas" data-bs-target="#activeUsersOffcanvas"
+                        aria-controls="activeUsersOffcanvas"></i>
+                </div>
+            </header>
+        </nav>
+
+        <div class="side-bar" id="side-bar">
+            <div class="profile">
+                <img width="90px" src="assets/images/avatars/avatar.png" alt="">
+                <h3>رهف فرحات</h3>
+            </div>
+
+            <ul class="menu ul-sidebar">
+                <li class="mb-2"><a href="index.html" class="menu-link"><i class="fa-solid fa-house fs-5"
+                            aria-hidden="true"></i>الصفحة الرئيسية</a></li>
+                <li class="mb-2"><a href="products.html" class="menu-link"><i class="fa-solid fa-shirt fs-5"
+                            aria-hidden="true"></i>المنتجات</a></li>
+                <li class="mb-2"><a href="orders.html" class="menu-link is-active"><i
+                            class="fa-solid fa-cart-shopping fs-5" aria-hidden="true"></i>الطلبات</a></li>
+                <li class="mb-2"><a href="customers.html" class="menu-link"><i class="fa-solid fa-users fs-5"
+                            aria-hidden="true"></i>العملاء</a></li>
+                <li class="mb-2"><a href="blog.html" class="menu-link"><i class="fa-solid fa-list fs-5"
+                            aria-hidden="true"></i>المدونة</a></li>
+                <li class="mb-2"><a href="discounts.html" class="menu-link"><i class="fa-solid fa-tag fs-5"
+                            aria-hidden="true"></i>الخصومات</a></li>
+                <li class="mb-2"><a href="reports.html" class="menu-link"><i class="fa-solid fa-chart-line fs-5"
+                            aria-hidden="true"></i>التقارير</a></li>
+                <li class="mb-2"><a href="settings.html" class="menu-link"><i class="fa-solid fa-gear fs-5"
+                            aria-hidden="true"></i>الإعدادات</a></li>
+                <li class="mb-2"><a href="help.html" class="menu-link"><i class="fa-regular fa-circle-question fs-5"
+                            aria-hidden="true"></i>مركز المساعدة</a></li>
+                <li class="mb-2"><a href="logout.html" class="menu-link"><i class="fa-solid fa-right-to-bracket fs-5"
+                            aria-hidden="true"></i>تسجيل الخروج</a></li>
+            </ul>
+        </div>
+
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h4 class="lp-font-bold mb-0">تفاصيل الطلب #ORD-2025-1001</h4>
+                                <div class="text-end">
+                                    <div class="status-badge status-shipped mb-2">تم الشحن</div>
+                                    <div>
+                                        <a href="orders.html" class="btn btn-back btn-sm">
+                                            <i class="fas fa-arrow-right me-1"></i> العودة للطلبات
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+                                    <li class="breadcrumb-item"><a href="orders.html">الطلبات</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">تفاصيل الطلب</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="card mb-4">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">المنتجات</h5>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mb-0">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>المنتج</th>
+                                                    <th class="text-center">الكمية</th>
+                                                    <th class="text-end">السعر</th>
+                                                    <th class="text-end">المجموع</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/Products/product_46.png" alt="منتج"
+                                                                class="rounded me-3" width="60">
+                                                            <div>
+                                                                <h6 class="mb-0">فستان سهرة أنيق</h6>
+                                                                <small class="text-muted">الحجم: L | اللون: أحمر</small>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">1</td>
+                                                    <td class="text-end">205.58 ر.س</td>
+                                                    <td class="text-end">205.58 ر.س</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/Products/product_47.png" alt="منتج"
+                                                                class="rounded me-3" width="60">
+                                                            <div>
+                                                                <h6 class="mb-0">فستان زاف</h6>
+                                                                <small class="text-muted">الحجم: 34 | اللون:
+                                                                    أبيض</small>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">1</td>
+                                                    <td class="text-end">871.00 ر.س</td>
+                                                    <td class="text-end">871.00 ر.س</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <img src="assets/images/Products/product_57.png" alt="منتج"
+                                                                class="rounded me-3" width="60">
+                                                            <div>
+                                                                <h6 class="mb-0">فستان زفاف</h6>
+                                                                <small class="text-muted">الحجم: M | اللون:
+                                                                    وردي</small>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center">1</td>
+                                                    <td class="text-end">24.00 ر.س</td>
+                                                    <td class="text-end">24.00 ر.س</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card lp-p-10 mb-4">
+                                <div class="card-body">
+                                    <h5 class="mb-4">معلومات الشحن</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <h6>عنوان الشحن</h6>
+                                            <p class="mb-0">سارة أحمد<br>
+                                                الرياض، حي النخيل<br>
+                                                شارع الملك فهد، ص.ب 12345<br>
+                                                المملكة العربية السعودية<br>
+                                                هاتف: 0501234567</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6>طريقة الشحن</h6>
+                                            <p class="mb-2">شركة الشحن السريع</p>
+                                            <p class="mb-0">رقم التتبع: SHP-789456123<br>
+                                                التقدير: 2-5 أيام عمل<br>
+                                                تاريخ الشحن: 2025-01-16</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card mb-4 lp-p-10">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">ملخص الطلب</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>المنتجات</span>
+                                        <span>1100.58 ر.س</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>الشحن</span>
+                                        <span>25.00 ر.س</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>الضريبة</span>
+                                        <span>82.50 ر.س</span>
+                                    </div>
+                                    <hr>
+                                    <div class="d-flex justify-content-between fw-bold">
+                                        <span>المجموع الكلي</span>
+                                        <span>120.808 ر.س</span>
+                                    </div>
+                                    <hr>
+                                    <div class="mb-3">
+                                        <label class="form-label">حالة الدفع</label>
+                                        <div class="badge bg-success">مدفوع</div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">طريقة الدفع</label>
+                                        <p class="mb-0">بطاقة ائتمان (Visa •••• 4242)</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">تاريخ الطلب</label>
+                                        <p class="mb-0">15 يناير 2025، 10:30 ص</p>
+                                    </div>
+                                    <button class="btn btn-refresh w-100 mt-3">تحديث حالة الطلب</button>
+                                </div>
+                            </div>
+
+                            <div class="card lp-p-10">
+                                <div class="card-header bg-white">
+                                    <h5 class="mb-0">معلومات العميلة</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <img src="assets/images/Customers/customer_1.png" alt="صورة العميلة"
+                                            class="rounded-circle me-3" width="60">
+                                        <div>
+                                            <h6 class="mb-0">سارة أحمد</h6>
+                                            <a href="mailto:sara.ahmed@example.com"
+                                                class="text-muted">sara.ahmed@example.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <i class="fas fa-phone me-2 text-muted"></i>
+                                        <span>+966501234567</span>
+                                    </div>
+                                    <div class="mb-3">
+                                        <i class="fas fa-map-marker-alt me-2 text-muted"></i>
+                                        <span>الرياض، المملكة العربية السعودية</span>
+                                    </div>
+                                    <a href="#" class="btn btn-view w-100">عرض الملف الشخصي</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="activeUsersOffcanvas"
+        aria-labelledby="activeUsersOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="activeUsersOffcanvasLabel">المستخدمون النشطون</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p class="alert alert-success text-success mb-3">هنا يمكنك رؤية المستخدمين المتصلين حالياً.</p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_3.png" alt="جوهرة تركي"
+                                    class="rounded-circle" width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                    role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">جوهرة تركي</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">نشط الآن</small>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_1.png" alt="سارة أحمد" class="rounded-circle"
+                                    width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                    role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">سارة أحمد</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">نشط الآن</small>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_2.png" alt="نورة عبد العزيز"
+                                    class="rounded-circle" width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-warning status-dot spinner-xxs"
+                                    role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">نورة عبد العزيز</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">خامل</small>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="assets/js/datatables.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        });
+    </script>
+</body>
+
+</html>

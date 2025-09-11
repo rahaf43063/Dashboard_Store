@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/my_loop.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>لوحة التحكم | الطلبات</title>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">إيليجانسيا</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="اكتب اسم المنتج للبحث">
+                    </form>
+                </div>
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div id="icons" class="icons d-flex gap-3">
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span class="icon-badge">4</span>
+                            <ul id="messagesMenu" class="icon-dropdown">
+                                <div class="header-title">الرسائل</div>
+                                <li>
+                                    <strong>نورة عبد العزيز</strong>
+                                    <div class="small text-muted">قبل 10 دقائق</div>
+                                    <div class="small">مرحباً، هل لديكم فستان أزرق بالحجم المتوسط؟</div>
+                                </li>
+                                <li>
+                                    <strong>جوهرة تركي</strong>
+                                    <div class="small text-muted">قبل 30 دقيقة</div>
+                                    <div class="small">أريد استبدال المعطف الذي اشتريته بالحجم الأصغر</div>
+                                </li>
+                                <li>
+                                    <strong>سارة أحمد</strong>
+                                    <div class="small text-muted">أمس</div>
+                                    <div class="small">متى ستتوفر المجموعة الصيفية الجديدة؟</div>
+                                </li>
+                                <li>
+                                    <strong>ريم حسن</strong>
+                                    <div class="small text-muted">منذ يومين</div>
+                                    <div class="small">شكراً على التوصيل السريع، المنتج رائع!</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الرسائل</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="icon-badge">2</span>
+                            <ul id="bellMenu" class="icon-dropdown">
+                                <div class="header-title">الإشعارات</div>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-truck text-success"></i>
+                                        <div>
+                                            <div class="small">تم شحن طلبك رقم #1234 بنجاح</div>
+                                            <div class="small text-muted">قبل ساعة</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-tag"></i>
+                                        <div>
+                                            <div class="small">خصم 20% على جميع الفساتين المسائية</div>
+                                            <div class="small text-muted">منذ يومين</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الإشعارات</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="المهام">
+                            <i class="fa-regular fa-clipboard"></i>
+                            <ul id="tasksMenu" class="icon-dropdown">
+                                <div class="header-title">المهام</div>
+                                <li>
+                                    <strong>مهمة: تحديث الأسعار</strong>
+                                    <div class="small text-muted">اليوم 10:30</div>
+                                    <div class="small">راجع أسعار قسم الفساتين الجديدة.</div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: صور المنتجات</strong>
+                                    <div class="small text-muted">اليوم 12:00</div>
+                                    <div class="small">أضفت صوراً عالية الدقة لمنتج "حافظة حرارية ذكية مع شاشة رقمية".
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: متابعة الشحن</strong>
+                                    <div class="small text-muted">غداً</div>
+                                    <div class="small">تأكيد موعد التسليم لطلبات المنطقة الغربية.</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل المهام</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="الإعدادات">
+                            <i class="fa-solid fa-gear"></i>
+                            <ul id="icon-dropdown" class="icon-dropdown">
+                                <div class="header-title">الإعدادات</div>
+                                <li>
+                                    <strong>الملف الشخصي</strong>
+                                    <div class="small text-muted">إعدادات الحساب والمعلومات الشخصية</div>
+                                </li>
+                                <li>
+                                    <strong>الأمان</strong>
+                                    <div class="small text-muted">تغيير كلمة المرور والمصادقة الثنائية</div>
+                                </li>
+                                <li>
+                                    <strong>الإشعارات</strong>
+                                    <div class="small text-muted">تفعيل/تعطيل التنبيهات البريدية والرسائل</div>
+                                </li>
+                                <li class="text-center small"><a href="">الذهاب إلى صفحة الإعدادات</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="avatar">
+                        <img src="assets/images/avatars/avatar.png" alt="">
+                    </div>
+                    <i class="fa-solid fa-bars-staggered active-users" role="button" tabindex="0"
+                        title="المستخدمون النشطون" data-bs-toggle="offcanvas" data-bs-target="#activeUsersOffcanvas"
+                        aria-controls="activeUsersOffcanvas"></i>
+                </div>
+            </header>
+        </nav>
+
+        <div class="side-bar" id="side-bar">
+            <div class="profile">
+                <img width="90px" src="assets/images/avatars/avatar.png" alt="">
+                <h3>رهف فرحات</h3>
+            </div>
+
+            <ul class="menu ul-sidebar">
+                <li class="mb-2"><a href="index.html" class="menu-link"><i class="fa-solid fa-house fs-5"
+                            aria-hidden="true"></i>الصفحة الرئيسية</a></li>
+                <li class="mb-2"><a href="products.html" class="menu-link"><i class="fa-solid fa-shirt fs-5"
+                            aria-hidden="true"></i>المنتجات</a></li>
+                <li class="mb-2"><a href="orders.html" class="menu-link is-active"><i
+                            class="fa-solid fa-cart-shopping fs-5" aria-hidden="true"></i>الطلبات</a></li>
+                <li class="mb-2"><a href="customers.html" class="menu-link"><i class="fa-solid fa-users fs-5"
+                            aria-hidden="true"></i>العملاء</a></li>
+                <li class="mb-2"><a href="blog.html" class="menu-link"><i class="fa-solid fa-list fs-5"
+                            aria-hidden="true"></i>المدونة</a></li>
+                <li class="mb-2"><a href="discounts.html" class="menu-link"><i class="fa-solid fa-tag fs-5"
+                            aria-hidden="true"></i>الخصومات</a></li>
+                <li class="mb-2"><a href="reports.html" class="menu-link"><i class="fa-solid fa-chart-line fs-5"
+                            aria-hidden="true"></i>التقارير</a></li>
+                <li class="mb-2"><a href="settings.html" class="menu-link"><i class="fa-solid fa-gear fs-5"
+                            aria-hidden="true"></i>الإعدادات</a></li>
+                <li class="mb-2"><a href="help.html" class="menu-link"><i class="fa-regular fa-circle-question fs-5"
+                            aria-hidden="true"></i>مركز المساعدة</a></li>
+                <li class="mb-2"><a href="logout.html" class="menu-link"><i class="fa-solid fa-right-to-bracket fs-5"
+                            aria-hidden="true"></i>تسجيل الخروج</a></li>
+            </ul>
+        </div>
+
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <div class="col-md-12 py-4">
+                        <h2 class="lp-font-bold mb-3">الطلبات</h2>
+                        <div class="card border-0 shadow-sm p-3 mb-4">
+                            <div class="card-header bg-white border-0 py-3">
+                                <h5 class="mb-0"><i class="fas fa-filter me-2"></i>تصفية النتائج</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3 mb-3">
+                                    <div class="col-md-3">
+                                        <div class="form-group mb-0">
+                                            <label class="form-label text-muted small mb-1">البحث</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text bg-light border-end-0">
+                                                    <i class="fas fa-search text-muted"></i>
+                                                </span>
+                                                <input id="orderSearch" type="text" class="form-control border-start-0"
+                                                    placeholder="ابحث برقم الطلب أو اسم العميل" autocomplete="off"
+                                                    aria-label="بحث الطلبات">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group mb-0">
+                                            <label class="form-label text-muted small mb-1">حالة الطلب</label>
+                                            <select id="statusFilter" class="form-select">
+                                                <option value="all">الكل</option>
+                                                <option value="قيد الانتظار">قيد الانتظار</option>
+                                                <option value="قيد التجهيز">قيد التجهيز</option>
+                                                <option value="قيد الانتظار">قيد الانتظار</option>
+                                                <option value="قيد المعالجة">قيد المعالجة</option>
+                                                <option value="تم الشحن">تم الشحن</option>
+                                                <option value="تم التسليم">تم التسليم</option>
+                                                <option value="ملغي">ملغي</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group mb-0">
+                                            <label class="form-label text-muted small mb-1">حالة الدفع</label>
+                                            <select id="paymentStatusFilter" class="form-select">
+                                                <option value="all">الكل</option>
+                                                <option value="مدفوع">مدفوع</option>
+                                                <option value="مدفوع جزئياً">مدفوع جزئياً</option>
+                                                <option value="غير مدفوع">غير مدفوع</option>
+                                                <option value="معلق">في الانتظار</option>
+                                                <option value="فشل الدفع">فشل الدفع</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group mb-0">
+                                            <label for="dateFrom" class="form-label text-muted small mb-1">من
+                                                تاريخ</label>
+                                            <input type="date" class="form-control" id="dateFrom"
+                                                max="{{ 'now' | date('Y-m-d') }}"
+                                                onchange="document.getElementById('dateTo').min = this.value;"
+                                                aria-label="من تاريخ">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-2">
+                                        <div class="form-group mb-0">
+                                            <label for="dateTo" class="form-label text-muted small mb-1">إلى
+                                                تاريخ</label>
+                                            <input type="date" class="form-control" id="dateTo"
+                                                max="{{ 'now' | date('Y-m-d') }}" aria-label="إلى تاريخ">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-start gap-2">
+                                    <button id="resetOrderFilters" class="btn btn-reset" type="button"
+                                        title="إعادة تعيين">
+                                        <i class="fas fa-undo-alt me-1"></i> إعادة تعيين
+                                    </button>
+                                    <button id="exportOrdersCsv" class="btn btn-export" type="button">
+                                        <i class="fas fa-file-export me-1"></i> تصدير CSV
+                                    </button>
+                                    <button id="printOrders" class="btn btn-print" type="button">
+                                        <i class="fas fa-print me-1"></i> طباعة
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="mb-0">قائمة الطلبات</h5>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover" id="ordersTable" aria-label="قائمة الطلبات">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col" aria-sort="none">رقم الطلب</th>
+                                            <th scope="col" aria-sort="none">العميل</th>
+                                            <th scope="col" aria-sort="descending">التاريخ</th>
+                                            <th scope="col" aria-sort="none">المجموع</th>
+                                            <th scope="col" aria-sort="none">حالة الدفع</th>
+                                            <th scope="col" aria-sort="none">الحالة</th>
+                                            <th scope="col">الإجراءات</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>#ORD-2025-1001</td>
+                                            <td>سارة أحمد</td>
+                                            <td>2025-01-15</td>
+                                            <td>1250 ر.س</td>
+                                            <td><span class="badge bg-success">مدفوع</span></td>
+                                            <td><span class="status-badge status-shipped">تم الشحن</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <a href="order.html" title="عرض تفاصيل الطلب">
+                                                        <button class="btn btn-view btn-sm" data-id="1"
+                                                            aria-label="عرض تفاصيل الطلب #ORD-2025-1001">
+                                                            <i class="fas fa-eye me-2"></i>عرض
+                                                        </button>
+                                                    </a>
+                                                    <button class="btn btn-edit btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#editOrderModal" title="تعديل الطلب"
+                                                        aria-label="تعديل الطلب #ORD-2025-1001">
+                                                        <i class="fas fa-edit"></i> تعديل
+                                                    </button>
+                                                    <button class="btn btn-del btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#confirmDeleteModal" title="حذف الطلب"
+                                                        aria-label="حذف الطلب #ORD-2025-1001">
+                                                        <i class="fas fa-trash"></i> حذف
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>#ORD-2025-1002</td>
+                                            <td>نورة الأحمدي</td>
+                                            <td>2025-01-14</td>
+                                            <td>850 ر.س</td>
+                                            <td><span class="badge bg-warning text-dark">بانتظار الدفع</span></td>
+                                            <td><span class="status-badge status-pending">قيد الانتظار</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <a href="order.html"><button class="btn btn-view btn-sm" data-id="2"
+                                                            title="عرض">
+                                                            <i class="fas fa-eye me-2"></i>عرض
+                                                        </button>
+                                                    </a>
+                                                    <button class="btn btn-edit btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#editOrderModal">
+                                                        <i class="fas fa-edit"></i> تعديل
+                                                    </button>
+                                                    <button class="btn btn-del btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#confirmDeleteModal">
+                                                        <i class="fas fa-trash"></i> حذف
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>#ORD-2025-1003</td>
+                                            <td>لمى القحطاني</td>
+                                            <td>2025-01-13</td>
+                                            <td>2350 ر.س</td>
+                                            <td><span class="badge bg-success">مدفوع</span></td>
+                                            <td><span class="status-badge status-processing">قيد المعالجة</span>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <a href="order.html"><button class="btn btn-view btn-sm" data-id="3"
+                                                            title="عرض">
+                                                            <i class="fas fa-eye me-2"></i>عرض
+                                                        </button>
+                                                    </a>
+                                                    <button class="btn btn-edit btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#editOrderModal">
+                                                        <i class="fas fa-edit"></i> تعديل
+                                                    </button>
+                                                    <button class="btn btn-del btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#confirmDeleteModal">
+                                                        <i class="fas fa-trash"></i> حذف
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>#ORD-2025-1004</td>
+                                            <td>سلمى السديري</td>
+                                            <td>2025-01-12</td>
+                                            <td>1780 ر.س</td>
+                                            <td><span class="badge bg-success">مدفوع</span></td>
+                                            <td><span class="status-badge status-delivered">تم التسليم</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <a href="order.html">
+                                                        <button class="btn btn-view btn-sm" data-id="4" title="عرض">
+                                                            <i class="fas fa-eye me-2"></i>عرض
+                                                        </button>
+                                                    </a>
+                                                    <button class="btn btn-edit btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#editOrderModal">
+                                                        <i class="fas fa-edit"></i> تعديل
+                                                    </button>
+                                                    <button class="btn btn-del btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#confirmDeleteModal">
+                                                        <i class="fas fa-trash"></i> حذف
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>#ORD-2025-1005</td>
+                                            <td>هند الحربي</td>
+                                            <td>2025-01-11</td>
+                                            <td>950 ر.س</td>
+                                            <td><span class="badge bg-danger">فشل الدفع</span></td>
+                                            <td><span class="status-badge status-cancelled">ملغي</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center justify-content-between">
+                                                    <a href="order.html">
+                                                        <button class="btn btn-view btn-sm" data-id="5" title="عرض">
+                                                            <i class="fas fa-eye me-2"></i>عرض
+                                                        </button>
+                                                    </a>
+                                                    <button class="btn btn-edit btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#editOrderModal">
+                                                        <i class="fas fa-edit"></i> تعديل
+                                                    </button>
+                                                    <button class="btn btn-del btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#confirmDeleteModal">
+                                                        <i class="fas fa-trash"></i> حذف
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>6</td>
+                                            <td>#ORD-2025-0801</td>
+                                            <td>أحمد محمد</td>
+                                            <td>2025-08-05</td>
+                                            <td>890 ر.س</td>
+                                            <td><span class="badge bg-success">مدفوع</span></td>
+                                            <td><span class="status-badge status-shipped">تم الشحن</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <a href="order.html" title="عرض تفاصيل الطلب">
+                                                        <button class="btn btn-view btn-sm" data-id="6"
+                                                            aria-label="عرض تفاصيل الطلب #ORD-2025-0801">
+                                                            <i class="fas fa-eye me-2"></i>عرض
+                                                        </button>
+                                                    </a>
+                                                    <button class="btn btn-edit btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#editOrderModal" title="تعديل الطلب"
+                                                        aria-label="تعديل الطلب #ORD-2025-0801">
+                                                        <i class="fas fa-edit"></i> تعديل
+                                                    </button>
+                                                    <button class="btn btn-del btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#confirmDeleteModal" title="حذف الطلب"
+                                                        aria-label="حذف الطلب #ORD-2025-0801">
+                                                        <i class="fas fa-trash"></i> حذف
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>7</td>
+                                            <td>#ORD-2025-0815</td>
+                                            <td>نورة عبدالله</td>
+                                            <td>2025-08-15</td>
+                                            <td>1,250 ر.س</td>
+                                            <td><span class="badge bg-warning">في الانتظار</span></td>
+                                            <td><span class="status-badge status-pending">قيد الانتظار</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <a href="order.html" title="عرض تفاصيل الطلب">
+                                                        <button class="btn btn-view btn-sm" data-id="7"
+                                                            aria-label="عرض تفاصيل الطلب #ORD-2025-0815">
+                                                            <i class="fas fa-eye me-2"></i>عرض
+                                                        </button>
+                                                    </a>
+                                                    <button class="btn btn-edit btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#editOrderModal" title="تعديل الطلب"
+                                                        aria-label="تعديل الطلب #ORD-2025-0815">
+                                                        <i class="fas fa-edit"></i> تعديل
+                                                    </button>
+                                                    <button class="btn btn-del btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#confirmDeleteModal" title="حذف الطلب"
+                                                        aria-label="حذف الطلب #ORD-2025-0815">
+                                                        <i class="fas fa-trash"></i> حذف
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>8</td>
+                                            <td>#ORD-2025-0820</td>
+                                            <td>خالد سعيد</td>
+                                            <td>2025-08-20</td>
+                                            <td>2,350 ر.س</td>
+                                            <td><span class="badge bg-success">مدفوع</span></td>
+                                            <td><span class="status-badge status-processing">قيد التجهيز</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center justify-content-between gap-2">
+                                                    <a href="order.html" title="عرض تفاصيل الطلب">
+                                                        <button class="btn btn-view btn-sm" data-id="8"
+                                                            aria-label="عرض تفاصيل الطلب #ORD-2025-0820">
+                                                            <i class="fas fa-eye me-2"></i>عرض
+                                                        </button>
+                                                    </a>
+                                                    <button class="btn btn-edit btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#editOrderModal" title="تعديل الطلب"
+                                                        aria-label="تعديل الطلب #ORD-2025-0820">
+                                                        <i class="fas fa-edit"></i> تعديل
+                                                    </button>
+                                                    <button class="btn btn-del btn-sm" data-bs-toggle="modal"
+                                                        data-bs-target="#confirmDeleteModal" title="حذف الطلب"
+                                                        aria-label="حذف الطلب #ORD-2025-0820">
+                                                        <i class="fas fa-trash"></i> حذف
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- نهاية طلبات شهر أغسطس 2025 -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Order Modal -->
+    <div class="modal fade" id="editOrderModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تعديل الطلب</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editOrderForm" class="row g-3">
+                        <div class="col-md-6">
+                            <label for="editOrderId" class="form-label">رقم الطلب</label>
+                            <input type="text" id="editOrderId" class="form-control" readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="editDate" class="form-label">التاريخ</label>
+                            <input type="date" id="editDate" class="form-control">
+                        </div>
+                        <div class="col-12">
+                            <label for="editCustomer" class="form-label">اسم العميل</label>
+                            <input type="text" id="editCustomer" class="form-control" placeholder="اكتب اسم العميل">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="editStatus" class="form-label">الحالة</label>
+                            <select id="editStatus" class="form-select">
+                                <option value="قيد الانتظار">قيد الانتظار</option>
+                                <option value="قيد المعالجة">قيد المعالجة</option>
+                                <option value="مدفوع">مدفوع</option>
+                                <option value="تم الشحن">تم الشحن</option>
+                                <option value="تم التسليم">تم التسليم</option>
+                                <option value="ملغي">ملغي</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="editTotal" class="form-label">الإجمالي (ل.س)</label>
+                            <input type="number" id="editTotal" class="form-control" min="0" step="0.01"
+                                placeholder="0.00">
+                        </div>
+                        <div class="col-12">
+                            <label for="editNotes" class="form-label">ملاحظات</label>
+                            <textarea id="editNotes" class="form-control" rows="3"
+                                placeholder="ملاحظات إضافية (اختياري)"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-save" id="saveOrderBtn">حفظ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirm Delete Modal -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تأكيد الحذف</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    هل أنت متأكد من حذف هذا الطلب؟ لا يمكن التراجع عن هذه العملية.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-delete" id="confirmDeleteBtn">حذف</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="activeUsersOffcanvas"
+        aria-labelledby="activeUsersOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="activeUsersOffcanvasLabel">المستخدمون النشطون</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p class="alert alert-success text-success mb-3">هنا يمكنك رؤية المستخدمين المتصلين حالياً.</p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_3.png" alt="جوهرة تركي"
+                                    class="rounded-circle" width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                    role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">جوهرة تركي</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">نشط الآن</small>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_1.png" alt="سارة أحمد" class="rounded-circle"
+                                    width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                    role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">سارة أحمد</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">نشط الآن</small>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_2.png" alt="نورة عبد العزيز"
+                                    class="rounded-circle" width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-warning status-dot spinner-xxs"
+                                    role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">نورة عبد العزيز</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">خامل</small>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="assets/js/datatables.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        (function () {
+            const table = document.getElementById('ordersTable');
+            if (!table) return;
+
+            const searchInput = document.getElementById('orderSearch');
+            const statusSelect = document.getElementById('statusFilter');
+            const paymentStatusSelect = document.getElementById('paymentStatusFilter');
+            const dateFrom = document.getElementById('dateFrom');
+            const dateTo = document.getElementById('dateTo');
+            const applyBtn = document.getElementById('applyOrderFilters');
+            const resetBtn = document.getElementById('resetOrderFilters');
+            const exportBtn = document.getElementById('exportOrdersCsv');
+            const printBtn = document.getElementById('printOrders');
+            const toastEl = document.getElementById('ordersToast');
+            const toast = (window.bootstrap && toastEl) ? new bootstrap.Toast(toastEl, { delay: 1400 }) : null;
+
+            function parseDate(str) {
+                // expects YYYY-MM-DD
+                const p = (str || '').split('-').map(Number);
+                return (p.length === 3) ? new Date(p[0], p[1] - 1, p[2]) : null;
+            }
+
+            function rowMatches(tr) {
+                const tds = tr.querySelectorAll('td');
+                if (tds.length < 6) return true;
+
+                const orderNum = tds[0].innerText.trim();
+                const orderId = tds[1].innerText.trim();
+                const customer = tds[2].innerText.trim();
+                const date = tds[3].innerText.trim();
+
+                const paymentBadge = tds[5].querySelector('.badge');
+                const paymentStatus = paymentBadge ? paymentBadge.innerText.trim() : '';
+                const paymentClass = paymentBadge ? paymentBadge.className : '';
+
+                const statusBadge = tds[6].querySelector('.status-badge');
+                const orderStatus = statusBadge ? statusBadge.innerText.trim() : '';
+                const statusClass = statusBadge ? statusBadge.className : '';
+
+                const searchTerm = (searchInput?.value || '').trim().toLowerCase();
+                if (searchTerm &&
+                    !orderId.toLowerCase().includes(searchTerm) &&
+                    !customer.toLowerCase().includes(searchTerm) &&
+                    !orderNum.includes(searchTerm)) {
+                    return false;
+                }
+
+                const statusFilter = statusSelect?.value || 'all';
+                if (statusFilter !== 'all' && orderStatus !== statusFilter) {
+                    return false;
+                }
+
+                const paymentFilter = paymentStatusSelect?.value || 'all';
+                if (paymentFilter !== 'all' && paymentStatus !== paymentFilter) {
+                    return false;
+                }
+
+                const fromDate = parseDate(dateFrom?.value);
+                const toDate = parseDate(dateTo?.value);
+                const orderDate = parseDate(date);
+
+                if (fromDate && orderDate && orderDate < fromDate) return false;
+                if (toDate && orderDate && orderDate > toDate) return false;
+
+                return true;
+            }
+
+            function applyFilters() {
+                const rows = table.querySelectorAll('tbody tr');
+                rows.forEach(tr => {
+                    tr.style.display = rowMatches(tr) ? '' : 'none';
+                });
+            }
+
+            function resetFilters() {
+                if (searchInput) searchInput.value = '';
+                if (statusSelect) statusSelect.value = 'all';
+                if (paymentStatusSelect) paymentStatusSelect.value = 'all';
+                if (dateFrom) dateFrom.value = '';
+                if (dateTo) dateTo.value = '';
+                applyFilters();
+            }
+
+            function tableToCsv() {
+                const rows = Array.from(table.querySelectorAll('tr'))
+                    .filter(r => r.querySelectorAll('th,td').length > 0 && r.style.display !== 'none');
+                const csv = rows.map(r => Array.from(r.children).slice(0, 6)
+                    .map(cell => '"' + cell.innerText.replace(/"/g, '""') + '"').join(',')).join('\n');
+                const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'orders.csv';
+                a.click();
+                URL.revokeObjectURL(url);
+            }
+
+            applyBtn?.addEventListener('click', () => { applyFilters(); toast?.show(); });
+            resetBtn?.addEventListener('click', () => { resetFilters(); toast?.show(); });
+            searchInput?.addEventListener('input', applyFilters);
+            statusSelect?.addEventListener('change', applyFilters);
+            paymentStatusSelect?.addEventListener('change', applyFilters);
+            dateFrom?.addEventListener('change', applyFilters);
+            dateTo?.addEventListener('change', applyFilters);
+            exportBtn?.addEventListener('click', () => { tableToCsv(); toast?.show(); });
+            printBtn?.addEventListener('click', () => { window.print(); });
+
+            // Delete confirmation demo
+            const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+            confirmDeleteBtn?.addEventListener('click', () => {
+                const modalEl = document.getElementById('confirmDeleteModal');
+                if (window.bootstrap && modalEl) bootstrap.Modal.getInstance(modalEl)?.hide();
+                toast?.show();
+            });
+
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/my_loop.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>لوحة التحكم | الإعدادات</title>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">إيليجانسيا</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="اكتب اسم المنتج للبحث">
+                    </form>
+                </div>
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div id="icons" class="icons d-flex gap-3">
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span class="icon-badge">4</span>
+                            <ul id="messagesMenu" class="icon-dropdown">
+                                <div class="header-title">الرسائل</div>
+                                <li>
+                                    <strong>نورة عبد العزيز</strong>
+                                    <div class="small text-muted">قبل 10 دقائق</div>
+                                    <div class="small">مرحباً، هل لديكم فستان أزرق بالحجم المتوسط؟</div>
+                                </li>
+                                <li>
+                                    <strong>جوهرة تركي</strong>
+                                    <div class="small text-muted">قبل 30 دقيقة</div>
+                                    <div class="small">أريد استبدال المعطف الذي اشتريته بالحجم الأصغر</div>
+                                </li>
+                                <li>
+                                    <strong>سارة أحمد</strong>
+                                    <div class="small text-muted">أمس</div>
+                                    <div class="small">متى ستتوفر المجموعة الصيفية الجديدة؟</div>
+                                </li>
+                                <li>
+                                    <strong>ريم حسن</strong>
+                                    <div class="small text-muted">منذ يومين</div>
+                                    <div class="small">شكراً على التوصيل السريع، المنتج رائع!</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الرسائل</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="icon-badge">2</span>
+                            <ul id="bellMenu" class="icon-dropdown">
+                                <div class="header-title">الإشعارات</div>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-truck text-success"></i>
+                                        <div>
+                                            <div class="small">تم شحن طلبك رقم #1234 بنجاح</div>
+                                            <div class="small text-muted">قبل ساعة</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-tag"></i>
+                                        <div>
+                                            <div class="small">خصم 20% على جميع الفساتين المسائية</div>
+                                            <div class="small text-muted">منذ يومين</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الإشعارات</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="المهام">
+                            <i class="fa-regular fa-clipboard"></i>
+                            <ul id="tasksMenu" class="icon-dropdown">
+                                <div class="header-title">المهام</div>
+                                <li>
+                                    <strong>مهمة: تحديث الأسعار</strong>
+                                    <div class="small text-muted">اليوم 10:30</div>
+                                    <div class="small">راجع أسعار قسم الفساتين الجديدة.</div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: صور المنتجات</strong>
+                                    <div class="small text-muted">اليوم 12:00</div>
+                                    <div class="small">أضفت صوراً عالية الدقة لمنتج "حافظة حرارية ذكية مع شاشة رقمية".
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: متابعة الشحن</strong>
+                                    <div class="small text-muted">غداً</div>
+                                    <div class="small">تأكيد موعد التسليم لطلبات المنطقة الغربية.</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل المهام</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="الإعدادات">
+                            <i class="fa-solid fa-gear"></i>
+                            <ul id="icon-dropdown" class="icon-dropdown">
+                                <div class="header-title">الإعدادات</div>
+                                <li>
+                                    <strong>الملف الشخصي</strong>
+                                    <div class="small text-muted">إعدادات الحساب والمعلومات الشخصية</div>
+                                </li>
+                                <li>
+                                    <strong>الأمان</strong>
+                                    <div class="small text-muted">تغيير كلمة المرور والمصادقة الثنائية</div>
+                                </li>
+                                <li>
+                                    <strong>الإشعارات</strong>
+                                    <div class="small text-muted">تفعيل/تعطيل التنبيهات البريدية والرسائل</div>
+                                </li>
+                                <li class="text-center small"><a href="">الذهاب إلى صفحة الإعدادات</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="avatar">
+                        <img src="assets/images/avatars/avatar.png" alt="">
+                    </div>
+                    <i class="fa-solid fa-bars-staggered active-users" role="button" tabindex="0"
+                        title="المستخدمون النشطون" data-bs-toggle="offcanvas" data-bs-target="#activeUsersOffcanvas"
+                        aria-controls="activeUsersOffcanvas"></i>
+                </div>
+            </header>
+        </nav>
+
+        <div class="side-bar" id="side-bar">
+            <div class="profile">
+                <img width="90px" src="assets/images/avatars/avatar.png" alt="">
+                <h3>رهف فرحات</h3>
+            </div>
+
+            <ul class="menu ul-sidebar">
+                <li class="mb-2"><a href="index.html" class="menu-link"><i class="fa-solid fa-house fs-5"
+                            aria-hidden="true"></i>الصفحة الرئيسية</a></li>
+                <li class="mb-2"><a href="products.html" class="menu-link"><i class="fa-solid fa-shirt fs-5"
+                            aria-hidden="true"></i>المنتجات</a></li>
+                <li class="mb-2"><a href="orders.html" class="menu-link"><i class="fa-solid fa-cart-shopping fs-5"
+                            aria-hidden="true"></i>الطلبات</a></li>
+                <li class="mb-2"><a href="customers.html" class="menu-link"><i class="fa-solid fa-users fs-5"
+                            aria-hidden="true"></i>العملاء</a></li>
+                <li class="mb-2"><a href="blog.html" class="menu-link"><i class="fa-solid fa-list fs-5"
+                            aria-hidden="true"></i>المدونة</a></li>
+                <li class="mb-2"><a href="discounts.html" class="menu-link"><i class="fa-solid fa-tag fs-5"
+                            aria-hidden="true"></i>الخصومات</a></li>
+                <li class="mb-2"><a href="reports.html" class="menu-link"><i class="fa-solid fa-chart-line fs-5"
+                            aria-hidden="true"></i>التقارير</a></li>
+                <li class="mb-2"><a href="settings.html" class="menu-link is-active"><i class="fa-solid fa-gear fs-5"
+                            aria-hidden="true"></i>الإعدادات</a></li>
+                <li class="mb-2"><a href="help.html" class="menu-link"><i class="fa-regular fa-circle-question fs-5"
+                            aria-hidden="true"></i>مركز المساعدة</a></li>
+                <li class="mb-2"><a href="logout.html" class="menu-link"><i class="fa-solid fa-right-to-bracket fs-5"
+                            aria-hidden="true"></i>تسجيل الخروج</a></li>
+            </ul>
+        </div>
+
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <div class="row mb-4">
+                        <div class="col-12">
+                            <h2 class="lp-font-bold mb-4">الإعدادات</h2>
+                            <div class="card lp-shadow-sm">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3 lp-p-10">
+                                            <div class="nav flex-column nav-pills" id="settingsTabs" role="tablist"
+                                                aria-orientation="vertical">
+                                                <a class="nav-link active mb-2" id="profile-tab" data-bs-toggle="pill"
+                                                    href="#profile" role="tab">
+                                                    <i class="fas fa-user-circle me-2"></i>الملف الشخصي
+                                                </a>
+                                                <a class="nav-link mb-2" id="security-tab" data-bs-toggle="pill"
+                                                    href="#security" role="tab">
+                                                    <i class="fas fa-shield-alt me-2"></i>الأمان
+                                                </a>
+                                                <a class="nav-link mb-2" id="notifications-tab" data-bs-toggle="pill"
+                                                    href="#notifications" role="tab">
+                                                    <i class="fas fa-bell me-2"></i>الإشعارات
+                                                </a>
+                                                <a class="nav-link mb-2" id="appearance-tab" data-bs-toggle="pill"
+                                                    href="#appearance" role="tab">
+                                                    <i class="fas fa-paint-brush me-2"></i>المظهر
+                                                </a>
+                                                <a class="nav-link mb-2" id="billing-tab" data-bs-toggle="pill"
+                                                    href="#billing" role="tab">
+                                                    <i class="fas fa-credit-card me-2"></i>الاشتراكات والفوترة
+                                                </a>
+                                                <a class="nav-link" id="integrations-tab" data-bs-toggle="pill"
+                                                    href="#integrations" role="tab">
+                                                    <i class="fas fa-puzzle-piece me-2"></i>التكاملات
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-9">
+                                            <div class="tab-content" id="settingsTabsContent">
+                                                <div class="tab-pane fade show active" id="profile" role="tabpanel">
+                                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                                        <h5 class="mb-0">الملف الشخصي</h5>
+                                                        <button class="btn btn-sm btn-edit" data-bs-toggle="modal"
+                                                            data-bs-target="#editProfileModal">
+                                                            <i class="fas fa-edit me-1"></i>تعديل
+                                                        </button>
+                                                    </div>
+                                                    <form>
+                                                        <div class="row mb-3">
+                                                            <div class="col-md-4 text-center">
+                                                                <div class="mb-3 position-relative">
+                                                                    <img id="profileImage"
+                                                                        src="assets/images/avatars/avatar.png"
+                                                                        class="rounded-circle" width="150" height="150"
+                                                                        alt="صورة الملف الشخصي">
+                                                                    <div class="file-input-wrapper">
+                                                                        <input type="file" id="imageUpload"
+                                                                            accept="image/*" style="display:none;">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <div class="row g-3">
+                                                                    <div class="col-md-6">
+                                                                        <label class="form-label">الاسم الأول</label>
+                                                                        <input type="text" class="form-control"
+                                                                            value="رهف" disabled>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label class="form-label">اسم العائلة</label>
+                                                                        <input type="text" class="form-control"
+                                                                            value="فرحات" disabled>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <label class="form-label">البريد
+                                                                            الإلكتروني</label>
+                                                                        <input type="email" class="form-control"
+                                                                            value="rahaf@example.com" disabled>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label class="form-label">رقم الجوال</label>
+                                                                        <input type="tel" class="form-control"
+                                                                            value="+966501234567" disabled>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <label class="form-label">الدولة</label>
+                                                                        <select class="form-select" disabled>
+                                                                            <option>المملكة العربية السعودية</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="security" role="tabpanel">
+                                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                                        <h5 class="mb-0">إعدادات الأمان</h5>
+                                                    </div>
+                                                    <div class="card lp-p-10 mb-3">
+                                                        <div class="card-body">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <div>
+                                                                    <h6 class="mb-1">كلمة المرور</h6>
+                                                                    <p class="text-muted small mb-0">آخر تحديث: منذ
+                                                                        شهرين</p>
+                                                                </div>
+                                                                <button class="btn btn-sm btn-refresh"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#changePasswordModal">
+                                                                    تغيير كلمة المرور
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card lp-p-10 mb-3">
+                                                        <div class="card-body">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <div>
+                                                                    <h6 class="mb-1">المصادقة الثنائية</h6>
+                                                                    <p class="text-muted small mb-0">مفعّلة على جهازك
+                                                                        الحالي</p>
+                                                                </div>
+                                                                <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="twoFactorSwitch" checked>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card lp-p-10">
+                                                        <div class="card-body">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <div>
+                                                                    <h6 class="mb-1">جلسات تسجيل الدخول النشطة</h6>
+                                                                    <p class="text-muted small mb-0">2 جلسة نشطة</p>
+                                                                </div>
+                                                                <button class="btn btn-sm btn-view"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#activeSessionsModal">
+                                                                    عرض التفاصيل
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="notifications" role="tabpanel">
+                                                    <h5 class="mb-4">إعدادات الإشعارات</h5>
+                                                    <div class="card lp-p-10">
+                                                        <div class="card-body">
+                                                            <div class="mb-4">
+                                                                <h6>البريد الإلكتروني</h6>
+                                                                <div class="form-check form-switch mb-2">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="emailOrders" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="emailOrders">إشعارات الطلبات
+                                                                        الجديدة</label>
+                                                                </div>
+                                                                <div class="form-check form-switch mb-2">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="emailPromotions" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="emailPromotions">العروض الترويجية والعروض
+                                                                        الخاصة</label>
+                                                                </div>
+                                                                <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="emailNewsletter">
+                                                                    <label class="form-check-label"
+                                                                        for="emailNewsletter">النشرة البريدية</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="mb-4">
+                                                                <h6>إشعارات التطبيق</h6>
+                                                                <div class="form-check form-switch mb-2">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="appOrders" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="appOrders">تحديثات الطلبات</label>
+                                                                </div>
+                                                                <div class="form-check form-switch">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        id="appMessages" checked>
+                                                                    <label class="form-check-label"
+                                                                        for="appMessages">الرسائل الجديدة</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="text-end">
+                                                                <button class="btn btn-save">حفظ التغييرات</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="appearance" role="tabpanel">
+                                                    <h5 class="mb-4">إعدادات المظهر</h5>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="card lp-p-10 mb-4">
+                                                                <div class="card-body">
+                                                                    <h6>الوضع الليلي</h6>
+                                                                    <div class="form-check form-switch mb-3">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="darkModeSwitch">
+                                                                        <label class="form-check-label"
+                                                                            for="darkModeSwitch">تفعيل الوضع
+                                                                            الليلي</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="card lp-p-10">
+                                                                <div class="card-body">
+                                                                    <h6 class="mb-3">لون السمة</h6>
+                                                                    <div class="d-flex gap-2">
+                                                                        <div class="color-option active"
+                                                                            data-color="pink"
+                                                                            style="background-color: #fc6aba; width: 40px; height: 40px; border-radius: 8px; cursor: pointer; border: 2px solid #fff; box-shadow: 0 0 0 2px #fc6aba;">
+                                                                        </div>
+                                                                        <div class="color-option" data-color="blue"
+                                                                            style="background-color: #4e73df; width: 40px; height: 40px; border-radius: 8px; cursor: pointer; border: 2px solid #fff;">
+                                                                        </div>
+                                                                        <div class="color-option" data-color="green"
+                                                                            style="background-color: #1cc88a; width: 40px; height: 40px; border-radius: 8px; cursor: pointer; border: 2px solid #fff;">
+                                                                        </div>
+                                                                        <div class="color-option" data-color="purple"
+                                                                            style="background-color: #6f42c1; width: 40px; height: 40px; border-radius: 8px; cursor: pointer; border: 2px solid #fff;">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <div class="card lp-p-10">
+                                                                <div class="card-body">
+                                                                    <h6 class="mb-3">خط الواجهة</h6>
+                                                                    <select class="form-select mb-4">
+                                                                        <option selected>Scheherazade New (افتراضي)
+                                                                        </option>
+                                                                        <option>Droid Arabic Naskh</option>
+                                                                        <option>Tajawal</option>
+                                                                        <option>Cairo</option>
+                                                                    </select>
+
+                                                                    <h6 class="mb-3">حجم الخط</h6>
+                                                                    <div class="d-flex align-items-center gap-3">
+                                                                        <small>صغير</small>
+                                                                        <input type="range" class="form-range" min="12"
+                                                                            max="18" step="1" value="14"
+                                                                            id="fontSizeRange">
+                                                                        <small>كبير</small>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 mt-4 d-flex gap-2">
+                                                            <button class="btn btn-save">حفظ التغييرات</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="billing" role="tabpanel">
+                                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                                        <h5 class="mb-0">الاشتراكات والفوترة</h5>
+                                                        <button class="btn btn-sm bg-warning text-white">ترقية
+                                                            الخطة</button>
+                                                    </div>
+
+                                                    <div class="card lp-p-10 mb-4">
+                                                        <div class="card-body">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-md-6">
+                                                                    <h6>الخطة الحالية</h6>
+                                                                    <h4>الباقة الأساسية</h4>
+                                                                    <p class="text-muted mb-0">تنتهي في 29 ديسمبر 2025
+                                                                    </p>
+                                                                </div>
+                                                                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                                                                    <h3 class="mb-0">199 ريال/شهرياً</h3>
+                                                                    <a href="#" class="btn-link text-warning p-0">عرض
+                                                                        تفاصيل
+                                                                        الخطة</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <h6 class="mb-3">طرق الدفع</h6>
+                                                    <div class="card lp-p-10 mb-3">
+                                                        <div class="card-body">
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center">
+                                                                <div class="d-flex align-items-center">
+                                                                    <img src="https://cdn-icons-png.flaticon.com/512/196/196578.png"
+                                                                        width="40" class="me-3" alt="Visa">
+                                                                    <div>
+                                                                        <h6 class="mb-0">Visa تنتهي بـ 4242</h6>
+                                                                        <small class="text-muted">تنتهي في 12/25</small>
+                                                                    </div>
+                                                                </div>
+                                                                <button class="btn btn-sm btn-delete">إزالة</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="btn btn-add" data-bs-toggle="modal"
+                                                        data-bs-target="#addPaymentMethodModal">
+                                                        <i class="fas fa-plus me-2"></i>إضافة طريقة دفع
+                                                    </button
+                                                    <div class="mt-4">
+                                                        <h6 class="mb-3">فواتير سابقة</h6>
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>رقم الفاتورة</th>
+                                                                        <th>التاريخ</th>
+                                                                        <th>المبلغ</th>
+                                                                        <th>الحالة</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>#INV-2023-001</td>
+                                                                        <td>1 ديسمبر 2024</td>
+                                                                        <td>199 ريال</td>
+                                                                        <td><span class="badge bg-warning">مدفوع</span>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <button class="btn btn-sm btn-view">عرض
+                                                                                الفاتورة</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>#INV-2023-002</td>
+                                                                        <td>1 نوفمبر 2024</td>
+                                                                        <td>199 ريال</td>
+                                                                        <td><span class="badge bg-warning">مدفوع</span>
+                                                                        </td>
+                                                                        <td class="text-end">
+                                                                            <button class="btn btn-sm btn-view">عرض
+                                                                                الفاتورة</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="integrations" role="tabpanel">
+                                                    <h5 class="mb-4">التكاملات</h5>
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-4">
+                                                            <div class="card lp-p-10 h-100">
+                                                                <div class="card-body">
+                                                                    <div class="d-flex align-items-center mb-3">
+                                                                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968853.png"
+                                                                            width="40" class="me-3" alt="Google">
+                                                                        <h6 class="mb-0">Google Analytics</h6>
+                                                                    </div>
+                                                                    <p class="small text-muted">تتبع حركة الزوار
+                                                                        وتحليلات الموقع</p>
+                                                                    <div class="form-check form-switch">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="googleAnalyticsSwitch">
+                                                                        <label class="form-check-label"
+                                                                            for="googleAnalyticsSwitch">تفعيل
+                                                                            التكامل</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 mb-4">
+                                                            <div class="card lp-p-10 h-100">
+                                                                <div class="card-body">
+                                                                    <div class="d-flex align-items-center mb-3">
+                                                                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
+                                                                            width="40" class="me-3" alt="Facebook">
+                                                                        <h6 class="mb-0">Facebook Pixel</h6>
+                                                                    </div>
+                                                                    <p class="small text-muted">تتبع التحويلات وتحسين
+                                                                        الإعلانات</p>
+                                                                    <div class="form-check form-switch">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="facebookPixelSwitch" checked>
+                                                                        <label class="form-check-label"
+                                                                            for="facebookPixelSwitch">مفعل</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 mb-4">
+                                                            <div class="card lp-p-10 h-100">
+                                                                <div class="card-body">
+                                                                    <div class="d-flex align-items-center mb-3">
+                                                                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png"
+                                                                            width="40" class="me-3" alt="Twitter">
+                                                                        <h6 class="mb-0">Twitter Pixel</h6>
+                                                                    </div>
+                                                                    <p class="small text-muted">تتبع التحويلات على تويتر
+                                                                    </p>
+                                                                    <div class="form-check form-switch">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            id="twitterPixelSwitch">
+                                                                        <label class="form-check-label"
+                                                                            for="twitterPixelSwitch">تفعيل
+                                                                            التكامل</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 mb-4">
+                                                            <div class="card lp-p-10 h-100">
+                                                                <div class="card-body">
+                                                                    <div class="d-flex align-items-center mb-3">
+                                                                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+                                                                            width="40" class="me-3" alt="Mailchimp">
+                                                                        <h6 class="mb-0">Mailchimp</h6>
+                                                                    </div>
+                                                                    <p class="small text-muted">إدارة القوائم البريدية
+                                                                        وحملات البريد الإلكتروني</p>
+                                                                    <button class="btn btn-sm btn-dark">إعداد
+                                                                        التكامل</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editProfileModalLabel">تعديل الملف الشخصي</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="profileForm">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    <div class="mb-3 position-relative">
+                                        <img id="modalProfileImage" src="assets/images/avatars/avatar.png"
+                                            class="rounded-circle mb-3" width="150" height="150"
+                                            alt="صورة الملف الشخصي">
+                                        <div class="file-input-wrapper">
+                                            <input type="file" id="modalImageUpload" accept="image/*"
+                                                style="display:none;">
+                                        </div>
+                                        <button type="button" class="btn btn-sm btn-refresh w-100"
+                                            id="modalChangeImageBtn">
+                                            <i class="fas fa-sync-alt me-1"></i>تغيير الصورة
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">الاسم الأول</label>
+                                            <input type="text" class="form-control" value="رهف">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">اسم العائلة</label>
+                                            <input type="text" class="form-control" value="فرحات">
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">البريد الإلكتروني</label>
+                                            <input type="email" class="form-control" value="rahaf@example.com">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">رقم الجوال</label>
+                                            <input type="tel" class="form-control" value="+966501234567">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">الدولة</label>
+                                            <select class="form-select">
+                                                <option>المملكة العربية السعودية</option>
+                                                <option>مصر</option>
+                                                <option>الإمارات العربية المتحدة</option>
+                                                <option>الكويت</option>
+                                                <option>قطر</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-save" id="saveProfileChanges">
+                            <i class="fas fa-save me-1"></i>حفظ التغييرات
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">تأكيد الحذف</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>هل أنت متأكد من أنك تريد حذف هذا العنصر؟ لا يمكن التراجع عن هذا الإجراء.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-danger" id="confirmDeleteBtn">حذف</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="addPaymentMethodModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">إضافة طريقة دفع جديدة</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="paymentMethodForm">
+                            <div class="mb-3">
+                                <label class="form-label">رقم البطاقة</label>
+                                <input type="text" class="form-control" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">تاريخ الانتهاء</label>
+                                    <input type="text" class="form-control" placeholder="MM/YY" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">رمز الأمان (CVV)</label>
+                                    <input type="text" class="form-control" placeholder="123" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">اسم حامل البطاقة</label>
+                                <input type="text" class="form-control" placeholder="الاسم كما هو مدون على البطاقة"
+                                    required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-save" id="savePaymentMethod">
+                            <i class="fas fa-credit-card me-1"></i>إضافة البطاقة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">تغيير كلمة المرور</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">كلمة المرور الحالية</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">كلمة المرور الجديدة</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">تأكيد كلمة المرور الجديدة</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="d-flex justify-content-end gap-2">
+                                <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                                <button type="submit" class="btn btn-save">حفظ التغييرات</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="activeSessionsModal" tabindex="-1" aria-labelledby="activeSessionsModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="activeSessionsModalLabel">الجلسات النشطة</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-danger">
+                            <i class="fas fa-info-circle me-2"></i>
+                            لديك جلستان نشطتان حالياً
+                        </div>
+
+                        <div class="card lp-p-10 mb-3">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-laptop me-2"></i>
+                                    <h6 class="mb-0">جهاز Windows 10</h6>
+                                    <span class="badge bg-success ms-2">النشطة الآن</span>
+                                </div>
+                                <div class="text-muted small">
+                                    <div>المتصفح: Chrome 115.0.0.0</div>
+                                    <div>آخر نشاط: منذ دقيقتين</div>
+                                    <div>عنوان IP: 192.168.1.1</div>
+                                    <div>الموقع: الرياض، السعودية</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card lp-p-10">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-mobile-alt me-2"></i>
+                                    <h6 class="mb-0">iPhone 13 Pro</h6>
+                                    <span class="badge bg-success ms-2">النشطة الآن</span>
+                                </div>
+                                <div class="text-muted small">
+                                    <div>المتصفح: Safari 16.5</div>
+                                    <div>آخر نشاط: منذ 15 دقيقة</div>
+                                    <div>عنوان IP: 192.168.1.2</div>
+                                    <div>الموقع: جدة، السعودية</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-session" id="endOtherSessions">
+                            <i class="fas fa-sign-out-alt me-1"></i> إنهاء الجلسات الأخرى
+                        </button>
+                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">
+                            <i class="fas fa-check me-1"></i> تم
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="activeUsersOffcanvas"
+        aria-labelledby="activeUsersOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="activeUsersOffcanvasLabel">المستخدمون النشطون</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p class="alert alert-success text-success mb-3">هنا يمكنك رؤية المستخدمين المتصلين حالياً.</p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_3.png" alt="جوهرة تركي" class="rounded-circle"
+                                    width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs" role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">جوهرة تركي</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">نشط الآن</small>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_1.png" alt="سارة أحمد" class="rounded-circle"
+                                    width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs" role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">سارة أحمد</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">نشط الآن</small>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_2.png" alt="نورة عبد العزيز" class="rounded-circle"
+                                    width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-warning status-dot spinner-xxs" role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">نورة عبد العزيز</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">خامل</small>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/datatables.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const modalChangeImageBtn = document.getElementById('modalChangeImageBtn');
+                const modalImageUpload = document.getElementById('modalImageUpload');
+                const modalProfileImage = document.getElementById('modalProfileImage');
+
+                modalChangeImageBtn.addEventListener('click', function () {
+                    modalImageUpload.click();
+                });
+
+                modalImageUpload.addEventListener('change', function (e) {
+                    if (e.target.files && e.target.files[0]) {
+                        const reader = new FileReader();
+                        reader.onload = function (event) {
+                            modalProfileImage.src = event.target.result;
+                        }
+                        reader.readAsDataURL(e.target.files[0]);
+                    }
+                });
+            });
+        </script>
+</body>
+
+</html>

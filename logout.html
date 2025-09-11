@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/my_loop.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>تسجيل الخروج | لوحة التحكم</title>
+</head>
+<body style="background-color: #f7fafc;">
+    <div class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="text-center mb-5">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="شعار المتجر" style="width: 20%;">
+                        </a>
+                    </div>
+                    
+                    <div class="logout-container">
+                        <div class="logout-icon">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </div>
+                        
+                        <h3 class="logout-title">تأكيد تسجيل الخروج</h3>
+                        <p class="logout-message">
+                            أنت على وشك تسجيل الخروج من لوحة التحكم. هل أنت متأكد من رغبتك في المتابعة؟
+                        </p>
+                        
+                        <div class="d-flex justify-content-center">
+                            <a href="index.html" class="btn btn-cancel">
+                                <i class="fas fa-times me-1"></i> إلغاء
+                            </a>
+                            <button class="btn btn-logout" id="logoutBtn">
+                                <i class="fas fa-sign-out-alt me-1"></i> نعم، سجل خروجي
+                            </button>
+                        </div>
+                        
+                        <span class="security-note">
+                            <i class="fas fa-shield-alt me-1"></i> للحفاظ على أمان حسابك، يرجى التأكد من تسجيل الخروج عند الانتهاء.
+                        </span>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <p class="text-muted small">
+                            2025 إيليجانسيا. جميع الحقوق محفوظة
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoutBtn = document.getElementById('logoutBtn');
+            let countdown = 30;
+            const countdownElement = document.createElement('span');
+            countdownElement.className = 'countdown';
+            countdownElement.textContent = ` (${countdown} ثانية)`;
+            
+            // Add countdown to logout button
+            logoutBtn.appendChild(countdownElement);
+            
+            // Start countdown
+            const countdownInterval = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = ` (${countdown} ثانية)`;
+                
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = 'index.html';
+                }
+            }, 1000);
+            
+            // Manual logout
+            logoutBtn.addEventListener('click', function() {
+                clearInterval(countdownInterval);
+                // Add your logout logic here (clear session, etc.)
+                window.location.href = 'index.html';
+            });
+            
+            // Cancel logout
+            document.querySelector('.btn-cancel').addEventListener('click', function(e) {
+                e.preventDefault();
+                clearInterval(countdownInterval);
+                window.history.back();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/my_loop.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/46.0.1/ckeditor5.css">
+    <title>لوحة التحكم | إضافة مقال</title>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">إيليجانسيا</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="اكتب اسم المنتج للبحث">
+                    </form>
+                </div>
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div id="icons" class="icons d-flex gap-3">
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span class="icon-badge">4</span>
+                            <ul id="messagesMenu" class="icon-dropdown">
+                                <div class="header-title">الرسائل</div>
+                                <li>
+                                    <strong>نورا أحمد</strong>
+                                    <div class="small text-muted">قبل 10 دقائق</div>
+                                    <div class="small">مرحباً، هل لديكم فستان أزرق بالحجم المتوسط؟</div>
+                                </li>
+                                <li>
+                                    <strong>لمى خالد</strong>
+                                    <div class="small text-muted">قبل 30 دقيقة</div>
+                                    <div class="small">أريد استبدال المعطف الذي اشتريته بالحجم الأصغر</div>
+                                </li>
+                                <li>
+                                    <strong>سارة محمد</strong>
+                                    <div class="small text-muted">أمس</div>
+                                    <div class="small">متى ستتوفر المجموعة الصيفية الجديدة؟</div>
+                                </li>
+                                <li>
+                                    <strong>شيماء علي</strong>
+                                    <div class="small text-muted">منذ يومين</div>
+                                    <div class="small">شكراً على التوصيل السريع، المنتج رائع!</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الرسائل</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="icon-badge">2</span>
+                            <ul id="bellMenu" class="icon-dropdown">
+                                <div class="header-title">الإشعارات</div>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-truck text-success"></i>
+                                        <div>
+                                            <div class="small">تم شحن طلبك رقم #1234 بنجاح</div>
+                                            <div class="small text-muted">قبل ساعة</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-tag"></i>
+                                        <div>
+                                            <div class="small">خصم 20% على جميع الفساتين المسائية</div>
+                                            <div class="small text-muted">منذ يومين</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الإشعارات</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="المهام">
+                            <i class="fa-regular fa-clipboard"></i>
+                            <ul id="tasksMenu" class="icon-dropdown">
+                                <div class="header-title">المهام</div>
+                                <li>
+                                    <strong>مهمة: تحديث الأسعار</strong>
+                                    <div class="small text-muted">اليوم 10:30</div>
+                                    <div class="small">راجع أسعار قسم الفساتين الجديدة.</div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: صور المنتجات</strong>
+                                    <div class="small text-muted">اليوم 12:00</div>
+                                    <div class="small">أضفت صوراً عالية الدقة لمنتج "حافظة حرارية ذكية مع شاشة رقمية".
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: متابعة الشحن</strong>
+                                    <div class="small text-muted">غداً</div>
+                                    <div class="small">تأكيد موعد التسليم لطلبات المنطقة الغربية.</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل المهام</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="الإعدادات">
+                            <i class="fa-solid fa-gear"></i>
+                            <ul id="icon-dropdown" class="icon-dropdown">
+                                <div class="header-title">الإعدادات</div>
+                                <li>
+                                    <strong>الملف الشخصي</strong>
+                                    <div class="small text-muted">إعدادات الحساب والمعلومات الشخصية</div>
+                                </li>
+                                <li>
+                                    <strong>الأمان</strong>
+                                    <div class="small text-muted">تغيير كلمة المرور والمصادقة الثنائية</div>
+                                </li>
+                                <li>
+                                    <strong>الإشعارات</strong>
+                                    <div class="small text-muted">تفعيل/تعطيل التنبيهات البريدية والرسائل</div>
+                                </li>
+                                <li class="text-center small"><a href="">الذهاب إلى صفحة الإعدادات</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="avatar">
+                        <img src="assets/images/avatars/avatar.png" alt="">
+                    </div>
+                    <i class="fa-solid fa-bars-staggered active-users" role="button" tabindex="0"
+                        title="المستخدمون النشطون" data-bs-toggle="offcanvas" data-bs-target="#activeUsersOffcanvas"
+                        aria-controls="activeUsersOffcanvas"></i>
+                </div>
+            </header>
+        </nav>
+
+        <div class="side-bar" id="side-bar">
+            <div class="profile">
+                <img width="90px" src="assets/images/avatars/avatar.png" alt="">
+                <h3>رهف فرحات</h3>
+            </div>
+
+            <ul class="menu ul-sidebar">
+                <li class="mb-2"><a href="index.html" class="menu-link"><i class="fa-solid fa-house fs-5"
+                            aria-hidden="true"></i>الصفحة الرئيسية</a></li>
+                <li class="mb-2"><a href="products.html" class="menu-link"><i class="fa-solid fa-shirt fs-5"
+                            aria-hidden="true"></i>المنتجات</a></li>
+                <li class="mb-2"><a href="orders.html" class="menu-link"><i
+                            class="fa-solid fa-cart-shopping fs-5" aria-hidden="true"></i>الطلبات</a></li>
+                <li class="mb-2"><a href="customers.html" class="menu-link"><i class="fa-solid fa-users fs-5"
+                            aria-hidden="true"></i>العملاء</a></li>
+                <li class="mb-2"><a href="blog.html" class="menu-link  is-active"><i class="fa-solid fa-list fs-5"
+                            aria-hidden="true"></i>المدونة</a></li>
+                <li class="mb-2"><a href="discounts.html" class="menu-link"><i class="fa-solid fa-tag fs-5"
+                            aria-hidden="true"></i>الخصومات</a></li>
+                <li class="mb-2"><a href="reports.html" class="menu-link"><i class="fa-solid fa-chart-line fs-5"
+                            aria-hidden="true"></i>التقارير</a></li>
+                <li class="mb-2"><a href="settings.html" class="menu-link"><i class="fa-solid fa-gear fs-5"
+                            aria-hidden="true"></i>الإعدادات</a></li>
+                <li class="mb-2"><a href="help.html" class="menu-link"><i class="fa-regular fa-circle-question fs-5"
+                            aria-hidden="true"></i>مركز المساعدة</a></li>
+                <li class="mb-2"><a href="logout.html" class="menu-link"><i class="fa-solid fa-right-to-bracket fs-5"
+                            aria-hidden="true"></i>تسجيل الخروج</a></li>
+            </ul>
+        </div>
+
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <h4>إضافة مقال جديد</h4>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card p-3 lp-shadow-sm ">
+                                <form action="" id="addPostForm" class="needs-validation" novalidate>
+
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="postTitle" class="form-label">عنوان المقال <span
+                                                    class="text-danger">*</span></label>
+                                            <input id="postTitle" name="postTitle" type="text"
+                                                placeholder="اكتب عنوان المقال" class="form-control" required autofocus>
+                                            <div class="invalid-feedback">
+                                                يرجى إدخال عنوان المقال
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="postSlug" class="form-label">الرابط (Slug)</label>
+                                            <input id="postSlug" name="postSlug" type="text"
+                                                placeholder="مثال: user-experience-principles" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3 mt-0">
+                                        <div class="col-md-6">
+                                            <label class="form-label d-block" for="postCategory">التصنيف</label>
+                                            <select id="postCategory" name="postCategory" class="form-select">
+                                                <option value="" selected disabled>اختر تصنيفاً</option>
+                                                <option value="1">الموضة المستدامة</option>
+                                                <option value="2">اتجاهات الموضة</option>
+                                                <option value="3">صيحات الموضة</option>
+                                                <option value="4">نصائح الموضة</option>
+                                                <option value="5">تكنولوجيا الموضة</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="postTagsSelect" class="form-label">التاغات</label>
+                                            <select id="postTagsSelect" name="postTags[]" class="form-select postTags"
+                                                multiple>
+                                                <option value="موضة_ربيعية">موضة ربيعية</option>
+                                                <option value="موضة_صيفية">موضة صيفية</option>
+                                                <option value="موضة_شتوية">موضة شتوية</option>
+                                                <option value="أزياء_سهرة">أزياء سهرة</option>
+                                                <option value="الأطفال_والرضع">الأطفال والرضع</option>
+                                                <option value="فساتين">فساتين</option>
+                                                <option value="تنانير">تنانير</option>
+                                                <option value="بلوزات">بلوزات</option>
+                                                <option value="جينز">جينز</option>
+                                                <option value="أحذية">أحذية</option>
+                                                <option value="إكسسوارات">إكسسوارات</option>
+                                                <option value="حقائب">حقائب</option>
+                                                <option value="عناية_بالشعر">عناية بالشعر</option>
+                                                <option value="مكياج">مكياج</option>
+                                                <option value="عطور">عطور</option>
+                                                <option value="عروض_وتخفيضات">عروض وتخفيضات</option>
+                                                <option value="نصائح_موضة">نصائح موضة</option>
+                                                <option value="تنسيق_إطلالات">تنسيق إطلالات</option>
+                                                <option value="ألوان_الموضة">ألوان الموضة</option>
+                                                <option value="صيحات_الموضة">صيحات الموضة</option>
+                                            </select>
+                                            <small class="text-muted">يمكنك كتابة تاغ جديد أو اختيار عدة تاغات من
+                                                القائمة</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3 mt-0">
+                                        <div class="col-md-4">
+                                            <label for="authorImage" class="form-label">صورة الكاتب</label>
+                                            <input type="file" class="form-control" id="authorImage" accept="image/*">
+                                            <div class="form-text">الحجم الموصى به: 200 × 200 بيكسل</div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="postAuthor" class="form-label">اسم الكاتب <span
+                                                    class="text-danger">*</span></label>
+                                            <input id="postAuthor" name="postAuthor" type="text"
+                                                placeholder="اسم الكاتب" class="form-control" required>
+                                            <div class="invalid-feedback">
+                                                يرجى إدخال اسم الكاتب
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="postEmail" class="form-label">البريد الإلكتروني <span
+                                                    class="text-danger">*</span></label>
+                                            <input id="postEmail" name="postEmail" type="email"
+                                                placeholder="example@domain.com" class="form-control" required>
+                                            <div class="invalid-feedback">
+                                                يرجى إدخال بريد إلكتروني صحيح
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3 mt-3">
+                                        <label for="postExcerpt" class="form-label">ملخص المقال</label>
+                                        <textarea id="postExcerpt" name="postExcerpt" class="form-control text-start"
+                                            rows="3" placeholder="اكتب ملخصاً قصيراً للمقال"></textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="postContent" class="form-label">محتوى المقال</label>
+                                        <textarea id="editor" name="editor" class="form-control text-start" rows="8"
+                                            placeholder="اكتب المحتوى هنا..."></textarea>
+                                    </div>
+
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="postImage" class="form-label">الصورة المميزة</label>
+                                            <input class="form-control" type="file" id="postImage" name="postImage"
+                                                accept="image/*">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="imageAlt" class="form-label">النص البديل للصورة
+                                                (Alt)</label>
+                                            <input id="imageAlt" name="imageAlt" type="text"
+                                                placeholder="وصف مختصر للصورة" class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3 mt-0">
+                                        <div class="col-md-6">
+                                            <label for="seoTitle" class="form-label">عنوان SEO</label>
+                                            <input id="seoTitle" name="seoTitle" type="text" class="form-control"
+                                                placeholder="عنوان يظهر في نتائج البحث">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="seoDescription" class="form-label">وصف SEO</label>
+                                            <input id="seoDescription" name="seoDescription" type="text"
+                                                class="form-control" placeholder="وصف موجز يظهر في نتائج البحث">
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex gap-2 justify-content-end mt-3">
+                                        <button type="button" class="btn btn-cancel">إلغاء</button>
+                                        <button type="submit" class="btn btn-save">حفظ كمسودة</button>
+                                        <button type="submit" class="btn btn-publish">نشر الآن</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="activeUsersOffcanvas"
+        aria-labelledby="activeUsersOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="activeUsersOffcanvasLabel">المستخدمون النشطون</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p class="alert alert-success text-success mb-3">هنا يمكنك رؤية المستخدمين المتصلين حالياً.</p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_3.png" alt="جوهرة تركي" class="rounded-circle"
+                                    width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs" role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">جوهرة تركي</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">نشط الآن</small>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_1.png" alt="سارة أحمد" class="rounded-circle"
+                                    width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs" role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">سارة أحمد</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">نشط الآن</small>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_2.png" alt="نورة عبد العزيز" class="rounded-circle"
+                                    width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-warning status-dot spinner-xxs" role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">نورة عبد العزيز</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">خامل</small>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.postTags').select2({
+                tags: true,
+                maximumSelectionLength: 5
+            });
+        });
+    </script>
+
+    <script>
+        // Initialize Select2
+        $(document).ready(function () {
+            $('.select2-multiple').select2({
+                placeholder: 'اختر التصنيفات',
+                allowClear: true,
+                dir: 'rtl',
+                width: '100%'
+            });
+
+            // Form validation
+            var form = document.getElementById('addPostForm');
+
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+
+            // Auto-generate slug from title
+            document.getElementById('postTitle').addEventListener('input', function () {
+                const title = this.value;
+                const slug = title
+                    .toLowerCase()
+                    .replace(/[^\w\u0600-\u06FF\s-]/g, '') // Remove special characters
+                    .replace(/[\s-]+/g, '-') // Replace spaces with -
+                    .replace(/^-+|-+$/g, ''); // Remove leading/trailing -
+                document.getElementById('postSlug').value = slug;
+            });
+
+            // Custom email validation
+            document.getElementById('postEmail').addEventListener('input', function () {
+                const email = this.value;
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email && !emailRegex.test(email)) {
+                    this.setCustomValidity('الرجاء إدخال بريد إلكتروني صحيح');
+                } else {
+                    this.setCustomValidity('');
+                }
+            });
+        });
+    </script>
+
+    <!-- Add Library CKEditor -->
+    <script type="importmap">
+    {
+        "imports": {
+            "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.3.1/ckeditor5.js",
+            "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.3.1/"
+        }
+    }
+    </script>
+
+    <script type="module">
+        import {
+            ClassicEditor,
+            Essentials,
+            Bold,
+            Italic,
+            Underline,
+            Strikethrough,
+            Subscript,
+            Superscript,
+            Font,
+            Paragraph,
+            CodeBlock,
+            Link,
+            List,
+            Image,
+            ImageToolbar,
+            ImageCaption,
+            ImageStyle,
+            ImageResize,
+            Table,
+            TableToolbar,
+            MediaEmbed,
+            BlockQuote,
+            Alignment,
+            Highlight,
+            RemoveFormat,
+            Heading,
+            TodoList,
+            Indent,
+            IndentBlock
+        } from 'ckeditor5';
+
+        ClassicEditor
+            .create(document.querySelector('#editor'), {
+                plugins: [
+                    Essentials, Bold, Italic, Underline, Strikethrough, Subscript, Superscript, Font, Paragraph, CodeBlock,
+                    Link, List, Image, ImageToolbar, ImageCaption, ImageStyle, ImageResize, Table, TableToolbar,
+                    MediaEmbed, BlockQuote, Alignment, Highlight, RemoveFormat, Heading, TodoList, Indent, IndentBlock
+                ],
+                toolbar: {
+                    items: [
+                        'undo', 'redo',
+                        '|',
+                        'heading',
+                        '|',
+                        'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor',
+                        '|',
+                        'bold', 'italic', 'underline', 'strikethrough', 'subscript', 'superscript', 'code',
+                        '|',
+                        'link', 'uploadImage', 'blockQuote', 'codeBlock',
+                        '|',
+                        'alignment',
+                        '|',
+                        'bulletedList', 'numberedList', 'todoList', 'outdent', 'indent',
+                        '|',
+                        'insertTable', 'mediaEmbed',
+                        '|',
+                        'highlight', 'removeFormat'
+                    ],
+                    shouldNotGroupWhenFull: true
+                },
+                image: {
+                    toolbar: [
+                        'imageTextAlternative', 'toggleImageCaption', 'imageStyle:inline', 'imageStyle:block', 'imageStyle:side', 'linkImage'
+                    ]
+                },
+                table: {
+                    contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells', 'tableProperties', 'tableCellProperties']
+                },
+                language: {
+                    lnguage: 'ar',
+                    languageDirection: 'rtl'
+                }
+            })
+            .then(editor => {
+                console.log('Editor was initialized', editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+</body>
+
+</html>

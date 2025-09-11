@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/my_loop.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>لوحة التحكم | الخصومات</title>
+</head>
+
+<body class="discounts-page">
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">إيليجانسيا</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="اكتب اسم المنتج للبحث">
+                    </form>
+                </div>
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div id="icons" class="icons d-flex gap-3">
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span class="icon-badge">4</span>
+                            <ul id="messagesMenu" class="icon-dropdown">
+                                <div class="header-title">الرسائل</div>
+                                <li>
+                                    <strong>نورة عبد العزيز</strong>
+                                    <div class="small text-muted">قبل 10 دقائق</div>
+                                    <div class="small">مرحباً، هل لديكم فستان أزرق بالحجم المتوسط؟</div>
+                                </li>
+                                <li>
+                                    <strong>جوهرة تركي</strong>
+                                    <div class="small text-muted">قبل 30 دقيقة</div>
+                                    <div class="small">أريد استبدال المعطف الذي اشتريته بالحجم الأصغر</div>
+                                </li>
+                                <li>
+                                    <strong>سارة أحمد</strong>
+                                    <div class="small text-muted">أمس</div>
+                                    <div class="small">متى ستتوفر المجموعة الصيفية الجديدة؟</div>
+                                </li>
+                                <li>
+                                    <strong>ريم حسن</strong>
+                                    <div class="small text-muted">منذ يومين</div>
+                                    <div class="small">شكراً على التوصيل السريع، المنتج رائع!</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الرسائل</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="icon-badge">2</span>
+                            <ul id="bellMenu" class="icon-dropdown">
+                                <div class="header-title">الإشعارات</div>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-truck text-success"></i>
+                                        <div>
+                                            <div class="small">تم شحن طلبك رقم #1234 بنجاح</div>
+                                            <div class="small text-muted">قبل ساعة</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-tag"></i>
+                                        <div>
+                                            <div class="small">خصم 20% على جميع الفساتين المسائية</div>
+                                            <div class="small text-muted">منذ يومين</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الإشعارات</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="المهام">
+                            <i class="fa-regular fa-clipboard"></i>
+                            <ul id="tasksMenu" class="icon-dropdown">
+                                <div class="header-title">المهام</div>
+                                <li>
+                                    <strong>مهمة: تحديث الأسعار</strong>
+                                    <div class="small text-muted">اليوم 10:30</div>
+                                    <div class="small">راجع أسعار قسم الفساتين الجديدة.</div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: صور المنتجات</strong>
+                                    <div class="small text-muted">اليوم 12:00</div>
+                                    <div class="small">أضفت صوراً عالية الدقة لمنتج "حافظة حرارية ذكية مع شاشة رقمية".
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: متابعة الشحن</strong>
+                                    <div class="small text-muted">غداً</div>
+                                    <div class="small">تأكيد موعد التسليم لطلبات المنطقة الغربية.</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل المهام</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="الإعدادات">
+                            <i class="fa-solid fa-gear"></i>
+                            <ul id="icon-dropdown" class="icon-dropdown">
+                                <div class="header-title">الإعدادات</div>
+                                <li>
+                                    <strong>الملف الشخصي</strong>
+                                    <div class="small text-muted">إعدادات الحساب والمعلومات الشخصية</div>
+                                </li>
+                                <li>
+                                    <strong>الأمان</strong>
+                                    <div class="small text-muted">تغيير كلمة المرور والمصادقة الثنائية</div>
+                                </li>
+                                <li>
+                                    <strong>الإشعارات</strong>
+                                    <div class="small text-muted">تفعيل/تعطيل التنبيهات البريدية والرسائل</div>
+                                </li>
+                                <li class="text-center small"><a href="">الذهاب إلى صفحة الإعدادات</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="avatar">
+                        <img src="assets/images/avatars/avatar.png" alt="">
+                    </div>
+                    <i class="fa-solid fa-bars-staggered active-users" role="button" tabindex="0"
+                        title="المستخدمون النشطون" data-bs-toggle="offcanvas" data-bs-target="#activeUsersOffcanvas"
+                        aria-controls="activeUsersOffcanvas"></i>
+                </div>
+            </header>
+        </nav>
+
+        <div class="side-bar" id="side-bar">
+            <div class="profile">
+                <img width="90px" src="assets/images/avatars/avatar.png" alt="">
+                <h3>رهف فرحات</h3>
+            </div>
+
+            <ul class="menu ul-sidebar">
+                <li class="mb-2"><a href="index.html" class="menu-link"><i class="fa-solid fa-house fs-5"
+                            aria-hidden="true"></i>الصفحة الرئيسية</a></li>
+                <li class="mb-2"><a href="products.html" class="menu-link"><i class="fa-solid fa-shirt fs-5"
+                            aria-hidden="true"></i>المنتجات</a></li>
+                <li class="mb-2"><a href="orders.html" class="menu-link"><i class="fa-solid fa-cart-shopping fs-5"
+                            aria-hidden="true"></i>الطلبات</a></li>
+                <li class="mb-2"><a href="customers.html" class="menu-link"><i class="fa-solid fa-users fs-5"
+                            aria-hidden="true"></i>العملاء</a></li>
+                <li class="mb-2"><a href="blog.html" class="menu-link"><i class="fa-solid fa-list fs-5"
+                            aria-hidden="true"></i>المدونة</a></li>
+                <li class="mb-2"><a href="discounts.html" class="menu-link is-active"><i class="fa-solid fa-tag fs-5"
+                            aria-hidden="true"></i>الخصومات</a></li>
+                <li class="mb-2"><a href="reports.html" class="menu-link"><i class="fa-solid fa-chart-line fs-5"
+                            aria-hidden="true"></i>التقارير</a></li>
+                <li class="mb-2"><a href="settings.html" class="menu-link"><i class="fa-solid fa-gear fs-5"
+                            aria-hidden="true"></i>الإعدادات</a></li>
+                <li class="mb-2"><a href="help.html" class="menu-link"><i class="fa-regular fa-circle-question fs-5"
+                            aria-hidden="true"></i>مركز المساعدة</a></li>
+                <li class="mb-2"><a href="logout.html" class="menu-link"><i class="fa-solid fa-right-to-bracket fs-5"
+                            aria-hidden="true"></i>تسجيل الخروج</a></li>
+            </ul>
+        </div>
+
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <div class="row gx-3 gy-3 mb-5">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card stat-card stat-card-1 mt-3 h-100 border-0">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="text-muted mb-1">إجمالي الخصومات</h6>
+                                            <h3 class="mb-0">15</h3>
+                                        </div>
+                                        <div class="bg-icon-1 p-3 rounded-circle">
+                                            <i class="fas fa-tags"
+                                                style="font-size: 1.5rem; color: #000000; z-index: 1;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="text-success"><i class="fas fa-arrow-up"></i> 12% عن الشهر
+                                            الماضي</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card stat-card stat-card-2 mt-3 h-100 border-0">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="text-muted mb-1">الخصومات النشطة</h6>
+                                            <h3 class="mb-0">8</h3>
+                                        </div>
+                                        <div class="bg-success bg-opacity-25 p-3 rounded-circle">
+                                            <i class="fas fa-bolt" style="font-size: 1.5rem;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="text-success"><i class="fas fa-check-circle"></i> نشطة الآن</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card stat-card stat-card-3 mt-3 h-100 border-0">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="text-muted mb-1">إجمالي التوفير</h6>
+                                            <h3 class="mt-1 mb-0" style="font-size: 20px;">2.450 ر.س</h3>
+                                        </div>
+                                        <div class="bg-icon-3 p-3 rounded-circle">
+                                            <i class="fas fa-piggy-bank" style="font-size: 1.5rem;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="text-success"><i class="fas fa-arrow-up"></i> 8% عن الشهر
+                                            الماضي</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="card stat-card stat-card-4 bg-danger bg-opacity-10 mt-3 h-100 border-0">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="text-muted mb-1">الخصومات المنتهية</h6>
+                                            <h3 class="mb-0">5</h3>
+                                        </div>
+                                        <div class="bg-icon-4 p-3 rounded-circle">
+                                            <i class="fas fa-clock" style="font-size: 1.5rem;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="text-muted">آخر تحديث: اليوم</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="lp-font-bold mb-0">إدارة الخصومات</h4>
+                        <button class="btn btn-add" data-bs-toggle="modal" data-bs-target="#addDiscountModal">
+                            <i class="fas fa-plus me-1"></i> إضافة خصم جديد
+                        </button>
+                    </div>
+
+                    <!-- Discounts Table -->
+                    <div class="card lp-p-20  lp-shadow-sm">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-mobile">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>كود الخصم</th>
+                                        <th>الوصف</th>
+                                        <th>النوع</th>
+                                        <th>القيمة</th>
+                                        <th>الحد الأدنى للطلب</th>
+                                        <th>تاريخ البداية</th>
+                                        <th>تاريخ النهاية</th>
+                                        <th>الحالة</th>
+                                        <th>الإجراءات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge discount-copon p-2">SUMMER25</span>
+                                            </div>
+                                        </td>
+                                        <td>خصم صيفي خاص على جميع المنتجات</td>
+                                        <td><span class="badge bg-danger">نسبة مئوية</span></td>
+                                        <td>25%</td>
+                                        <td>100 ر.س</td>
+                                        <td>02/06/2025</td>
+                                        <td>31/08/2025</td>
+                                        <td><span class="badge bg-success">نشط</span></td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="btn btn-edit" data-bs-toggle="modal"
+                                                    data-bs-target="#editSummer25Modal" title="تعديل">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                                <button class="btn btn-copy" data-code="SUMMER25" title="نسخ الكود"
+                                                    onclick="copyDiscountCode('SUMMER25')">
+                                                    <i class="far fa-copy"></i>
+                                                </button>
+                                                <button class="btn btn-del" data-bs-toggle="modal"
+                                                    data-bs-target="#deleteSummer25Modal" title="حذف">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge discount-copon p-2">WINTER30</span>
+                                            </div>
+                                        </td>
+                                        <td>خصم شتوي على المعاطف والجاكيتات</td>
+                                        <td><span class="badge bg-warning">مبلغ ثابت</span></td>
+                                        <td>50 ر.س</td>
+                                        <td>200 ر.س</td>
+                                        <td>01/12/2025</td>
+                                        <td>28/02/2026</td>
+                                        <td><span class="badge bg-secondary">قادم</span></td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="btn btn-edit" data-bs-toggle="modal"
+                                                    data-bs-target="#editWINTER30Modal" title="تعديل">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                                <button class="btn btn-copy" data-code="WINTER30" title="نسخ الكود"
+                                                    onclick="copyDiscountCode('WINTER30')">
+                                                    <i class="far fa-copy"></i>
+                                                </button>
+                                                <button class="btn btn-del" data-bs-toggle="modal"
+                                                    data-bs-target="#deleteWINTER30Modal" title="حذف">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge discount-copon p-2">CLEAR50</span>
+                                            </div>
+                                        </td>
+                                        <td>تخفيضات نهاية الموسم</td>
+                                        <td><span class="badge bg-danger">نسبة مئوية</span></td>
+                                        <td>50%</td>
+                                        <td>150 ر.س</td>
+                                        <td>15/08/2025</td>
+                                        <td>30/08/2025</td>
+                                        <td><span class="badge bg-danger">منتهي</span></td>
+                                        <td>
+                                            <button class="btn btn-refresh" data-bs-toggle="modal"
+                                                data-bs-target="#renewalModal" title="تجديد الكود">
+                                                <i class="fas fa-redo me-2"></i>تجديد
+                                            </button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge discount-copon p-2">LOYAL15</span>
+                                            </div>
+                                        </td>
+                                        <td>خصم ولاء للعملاء الدائمين</td>
+                                        <td><span class="badge bg-danger">نسبة مئوية</span></td>
+                                        <td>15%</td>
+                                        <td>300 ر.س</td>
+                                        <td>01/01/2025</td>
+                                        <td>31/12/2025</td>
+                                        <td><span class="badge bg-success">نشط</span></td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="btn btn-edit" data-bs-toggle="modal"
+                                                    data-bs-target="#editLoyal15Modal" title="تعديل">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                                <button class="btn btn-copy" data-code="LOYAL15" title="نسخ الكود"
+                                                    onclick="copyDiscountCode('LOYAL15')">
+                                                    <i class="far fa-copy"></i>
+                                                </button>
+                                                <button class="btn btn-del" data-bs-toggle="modal"
+                                                    data-bs-target="#deleteLoyal15Modal" title="حذف">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                                <button class="btn btn-stats" data-bs-toggle="modal"
+                                                    data-bs-target="#statsModal" title="الإحصائيات">
+                                                    <i class="fa-solid fa-chart-line"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge discount-copon p-2">FREESHIP</span>
+                                            </div>
+                                        </td>
+                                        <td>توصيل مجاني للطلبات أكثر من 200 ر.س</td>
+                                        <td><span class="badge bg-success">توصيل مجاني</span></td>
+                                        <td>200 ر.س</td>
+                                        <td>200 ر.س</td>
+                                        <td>01/01/2025</td>
+                                        <td>31/12/2025</td>
+                                        <td><span class="badge bg-success">نشط</span></td>
+                                        <td>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="btn btn-edit" data-bs-toggle="modal"
+                                                    data-bs-target="#editFreeshipModal" title="تعديل">
+                                                    <i class="fas fa-pen"></i>
+                                                </button>
+                                                <button class="btn btn-copy" data-code="FREESHIP" title="نسخ الكود"
+                                                    onclick="copyDiscountCode('FREESHIP')">
+                                                    <i class="far fa-copy"></i>
+                                                </button>
+                                                <button class="btn btn-del" data-bs-toggle="modal"
+                                                    data-bs-target="#deleteFreeshipModal" title="حذف">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                                <button class="btn btn-shipping" data-bs-toggle="modal"
+                                                    data-bs-target="#shippingModal" title="التوصيل">
+                                                    <i class="fas fa-truck"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add/Edit Discount Modal -->
+        <div class="modal fade" id="addDiscountModal" tabindex="-1" aria-labelledby="addDiscountModalLabel"
+            aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addDiscountModalLabel">إضافة خصم جديد</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="discountForm">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="discountCode" class="form-label">كود الخصم <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="discountCode" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="discountDescription" class="form-label">الوصف</label>
+                                <textarea class="form-control" id="discountDescription" rows="2"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="discountType" class="form-label">نوع الخصم <span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-select" id="discountType" required>
+                                        <option value="percentage">نسبة مئوية</option>
+                                        <option value="fixed">مبلغ ثابت</option>
+                                        <option value="free_shipping">شحن مجاني</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="discountValue" class="form-label">قيمة الخصم <span
+                                            class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="discountValue" required>
+                                        <span class="input-group-text" id="discountValueAddon">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="minPurchase" class="form-label">الحد الأدنى للطلب</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="minPurchase">
+                                        <span class="input-group-text">ر.س</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="maxUses" class="form-label">الحد الأقصى للاستخدامات</label>
+                                    <input type="number" class="form-control" id="maxUses"
+                                        placeholder="اتركه فارغاً لغير محدود">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="startDate" class="form-label">تاريخ البداية <span
+                                            class="text-danger">*</span></label>
+                                    <input type="datetime-local" class="form-control" id="startDate" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="endDate" class="form-label">تاريخ النهاية</label>
+                                    <input type="datetime-local" class="form-control" id="endDate">
+                                </div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="isActive" checked>
+                                <label class="form-check-label" for="isActive">تفعيل الخصم</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                            <button type="submit" class="btn btn-save">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Modal for SUMMER25 -->
+        <div class="modal fade" id="editSummer25Modal" tabindex="-1" aria-labelledby="editSummer25ModalLabel"
+            role="dialog" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editSummer25ModalLabel">تعديل خصم SUMMER25</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                    </div>
+                    <form id="editSummer25Form">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="editDiscountCode1" class="form-label">كود الخصم</label>
+                                <input type="text" class="form-control" id="editDiscountCode1" value="SUMMER25"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editDiscountDescription1" class="form-label">الوصف</label>
+                                <textarea class="form-control" id="editDiscountDescription1"
+                                    rows="2">خصم صيفي خاص على جميع المنتجات</textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editDiscountType1" class="form-label">نوع الخصم</label>
+                                    <select class="form-select" id="editDiscountType1" required>
+                                        <option value="percentage" selected>نسبة مئوية</option>
+                                        <option value="fixed">مبلغ ثابت</option>
+                                        <option value="free_shipping">شحن مجاني</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editDiscountValue1" class="form-label">قيمة الخصم</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="editDiscountValue1" value="25"
+                                            required>
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editMinPurchase1" class="form-label">الحد الأدنى للطلب</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="editMinPurchase1" value="150">
+                                        <span class="input-group-text">ر.س</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editMaxUses1" class="form-label">الحد الأقصى للاستخدامات</label>
+                                    <input type="number" class="form-control" id="editMaxUses1" value="1000"
+                                        placeholder="اتركه فارغاً لغير محدود">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editStartDate1" class="form-label">تاريخ البداية</label>
+                                    <input type="date" class="form-control" id="editStartDate1" value="2025-06-01"
+                                        required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editEndDate1" class="form-label">تاريخ النهاية</label>
+                                    <input type="date" class="form-control" id="editEndDate1" value="2025-08-31">
+                                </div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="editIsActive1" checked>
+                                <label class="form-check-label" for="editIsActive1">تفعيل الخصم</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                            <button type="submit" class="btn btn-save">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Modal for WINTER30 -->
+        <div class="modal fade" id="editWINTER30Modal" tabindex="-1" aria-labelledby="editWINTER30ModalLabel"
+            aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editWINTER30ModalLabel">تعديل خصم WINTER30</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="editWINTER30Form">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="editDiscountCode2" class="form-label">كود الخصم</label>
+                                <input type="text" class="form-control" id="editDiscountCode2" value="WINTER30"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editDiscountDescription2" class="form-label">الوصف</label>
+                                <textarea class="form-control" id="editDiscountDescription2"
+                                    rows="2">خصم شتوي خاص على المعاطف والجاكيتات</textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editDiscountType2" class="form-label">نوع الخصم</label>
+                                    <select class="form-select" id="editDiscountType2" required>
+                                        <option value="percentage">نسبة مئوية</option>
+                                        <option value="fixed" selected>مبلغ ثابت</option>
+                                        <option value="free_shipping">شحن مجاني</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editDiscountValue2" class="form-label">قيمة الخصم</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="editDiscountValue2" value="50"
+                                            required>
+                                        <span class="input-group-text">ر.س</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editMinPurchase2" class="form-label">الحد الأدنى للطلب</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="editMinPurchase2" value="200">
+                                        <span class="input-group-text">ر.س</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editMaxUses2" class="form-label">الحد الأقصى للاستخدامات</label>
+                                    <input type="number" class="form-control" id="editMaxUses2" value="500"
+                                        placeholder="اتركه فارغاً لغير محدود">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editStartDate2" class="form-label">تاريخ البداية</label>
+                                    <input type="date" class="form-control" id="editStartDate2" value="2024-12-01"
+                                        required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editEndDate2" class="form-label">تاريخ النهاية</label>
+                                    <input type="date" class="form-control" id="editEndDate2" value="2025-02-28">
+                                </div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="editIsActive2" checked>
+                                <label class="form-check-label" for="editIsActive2">تفعيل الخصم</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                            <button type="submit" class="btn btn-save">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal for WINTER30 -->
+        <div class="modal fade" id="deleteWINTER30Modal" tabindex="-1" aria-labelledby="deleteWINTER30ModalLabel"
+            aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteWINTER30ModalLabel">تأكيد الحذف</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>هل أنت متأكد من رغبتك في حذف كود الخصم <strong>WINTER30</strong>؟</p>
+                        <p class="text-danger">هذا الإجراء لا يمكن التراجع عنه.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-delete" id="confirmDeleteWINTER30">حذف</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal for SUMMER25 -->
+        <div class="modal fade" id="deleteSummer25Modal" tabindex="-1" aria-labelledby="deleteSummer25ModalLabel"
+            aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteSummer25ModalLabel">تأكيد الحذف</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>هل أنت متأكد من رغبتك في حذف كود الخصم <strong>SUMMER25</strong>؟</p>
+                        <p class="text-danger">هذا الإجراء لا يمكن التراجع عنه.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-delete" id="confirmDeleteSummer25">حذف</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Modal for LOYAL15 -->
+        <div class="modal fade" id="editLoyal15Modal" tabindex="-1" aria-labelledby="editLoyal15ModalLabel"
+            aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editLoyal15ModalLabel">تعديل خصم LOYAL15</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="editLoyal15Form">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="editDiscountCode3" class="form-label">كود الخصم</label>
+                                <input type="text" class="form-control" id="editDiscountCode3" value="LOYAL15" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editDiscountDescription3" class="form-label">الوصف</label>
+                                <textarea class="form-control" id="editDiscountDescription3"
+                                    rows="2">خصم ولاء للعملاء الدائمين</textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editDiscountType3" class="form-label">نوع الخصم</label>
+                                    <select class="form-select" id="editDiscountType3" required>
+                                        <option value="percentage" selected>نسبة مئوية</option>
+                                        <option value="fixed">مبلغ ثابت</option>
+                                        <option value="free_shipping">شحن مجاني</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editDiscountValue3" class="form-label">قيمة الخصم</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="editDiscountValue3" value="15"
+                                            required>
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editMinPurchase3" class="form-label">الحد الأدنى للطلب</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="editMinPurchase3" value="300">
+                                        <span class="input-group-text">ر.س</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editMaxUses3" class="form-label">الحد الأقصى للاستخدامات</label>
+                                    <input type="number" class="form-control" id="editMaxUses3"
+                                        placeholder="اتركه فارغاً لغير محدود">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editStartDate3" class="form-label">تاريخ البداية</label>
+                                    <input type="date" class="form-control" id="editStartDate3" value="2025-01-01"
+                                        required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editEndDate3" class="form-label">تاريخ النهاية</label>
+                                    <input type="date" class="form-control" id="editEndDate3" value="2025-12-31">
+                                </div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="editIsActive3" checked>
+                                <label class="form-check-label" for="editIsActive3">تفعيل الخصم</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                            <button type="submit" class="btn btn-save">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Modal for FREESHIP -->
+        <div class="modal fade" id="editFreeshipModal" tabindex="-1" aria-labelledby="editFreeshipModalLabel"
+            aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editFreeshipModalLabel">تعديل خصم FREESHIP</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="editFreeshipForm">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="editDiscountCode4" class="form-label">كود الخصم</label>
+                                <input type="text" class="form-control" id="editDiscountCode4" value="FREESHIP"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="editDiscountDescription4" class="form-label">الوصف</label>
+                                <textarea class="form-control" id="editDiscountDescription4"
+                                    rows="2">توصيل مجاني للطلبات أكثر من 200 ر.س</textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editDiscountType4" class="form-label">نوع الخصم</label>
+                                    <select class="form-select" id="editDiscountType4" required>
+                                        <option value="percentage">نسبة مئوية</option>
+                                        <option value="fixed">مبلغ ثابت</option>
+                                        <option value="free_shipping" selected>شحن مجاني</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editDiscountValue4" class="form-label">قيمة الخصم</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="editDiscountValue4" value="0"
+                                            disabled>
+                                        <span class="input-group-text">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editMinPurchase4" class="form-label">الحد الأدنى للطلب</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="editMinPurchase4" value="200">
+                                        <span class="input-group-text">ر.س</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editMaxUses4" class="form-label">الحد الأقصى للاستخدامات</label>
+                                    <input type="number" class="form-control" id="editMaxUses4"
+                                        placeholder="اتركه فارغاً لغير محدود">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="editStartDate4" class="form-label">تاريخ البداية</label>
+                                    <input type="date" class="form-control" id="editStartDate4" value="2025-01-01"
+                                        required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="editEndDate4" class="form-label">تاريخ النهاية</label>
+                                    <input type="date" class="form-control" id="editEndDate4" value="2025-12-31">
+                                </div>
+                            </div>
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="editIsActive4" checked>
+                                <label class="form-check-label" for="editIsActive4">تفعيل الخصم</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                            <button type="submit" class="btn btn-save">حفظ التغييرات</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal for LOYAL15 -->
+        <div class="modal fade" id="deleteLoyal15Modal" tabindex="-1" aria-labelledby="deleteLoyal15ModalLabel"
+            aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteLoyal15ModalLabel">تأكيد الحذف</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>هل أنت متأكد من رغبتك في حذف كود الخصم <strong>LOYAL15</strong>؟</p>
+                        <p class="text-danger">هذا الإجراء لا يمكن التراجع عنه.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-delete" id="confirmDeleteLoyal15">حذف</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal for FREESHIP -->
+        <div class="modal fade" id="deleteFreeshipModal" tabindex="-1" aria-labelledby="deleteFreeshipModalLabel"
+            aria-modal="true" role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteFreeshipModalLabel">تأكيد الحذف</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>هل أنت متأكد من رغبتك في حذف كود الخصم <strong>FREESHIP</strong>؟</p>
+                        <p class="text-danger">هذا الإجراء لا يمكن التراجع عنه.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                        <button type="button" class="btn btn-delete" id="confirmDeleteFreeship">حذف</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shipping Modal -->
+        <div class="modal fade" id="shippingModal" tabindex="-1" aria-labelledby="shippingModalLabel" aria-modal="true"
+            role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="shippingModalLabel">تفاصيل التوصيل</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <h6>حالة الشحن: <span class="badge bg-success">نشط</span></h6>
+                            <p class="mb-2">المناطق المشمولة بالتوصيل:</p>
+                            <ul class="list-group mb-3">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    الرياض
+                                    <span class="badge bg-dark rounded-pill">2-3 أيام</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    جدة
+                                    <span class="badge bg-dark rounded-pill">3-4 أيام</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    الدمام
+                                    <span class="badge bg-dark rounded-pill">4-5 أيام</span>
+                                </li>
+                            </ul>
+                            <div class="alert alert-success">
+                                <i class="fas fa-info-circle me-2"></i>
+                                التوصيل مجاني للطلبات التي تزيد عن 200 ريال
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إغلاق</button>
+                        <button type="button" class="btn btn-stats">تعديل إعدادات التوصيل</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Modal -->
+        <div class="modal fade" id="statsModal" tabindex="-1" aria-labelledby="statsModalLabel" aria-modal="true"
+            role="dialog">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="statsModalLabel"><i class="fas fa-chart-pie me-2"></i>إحصائيات كود
+                            الخصم: <span id="discountCodeTitle">SUMMER25</span></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-4">
+                                <div class="stat-card stat-card-1">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h6 class="stat-title">إجمالي الطلبات</h6>
+                                        <h3 class="stat-value">1.245</h3>
+                                        <span class="stat-change text-success">
+                                            <i class="fas fa-arrow-up"></i> 12% عن الشهر الماضي
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stat-card stat-card-2">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-tag"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h6 class="stat-title">إجمالي الخصم</h6>
+                                        <h3 class="stat-value">12.450 ر.س</h3>
+                                        <span class="stat-change text-success">
+                                            <i class="fas fa-arrow-up"></i> 8% عن الشهر الماضي
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stat-card stat-card-3">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-percentage"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <h6 class="stat-title">متوسط الخصم للطلب</h6>
+                                        <h3 class="stat-value">10 ر.س</h3>
+                                        <span class="stat-change text-danger">
+                                            <i class="fas fa-arrow-down"></i> 5% عن الشهر الماضي
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-4">
+                            <div class="card-header bg-light">
+                                <h6 class="mb-0">إحصائيات الاستخدام خلال 6 أشهر</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="chart-container" style="height: 300px;">
+                                    <canvas id="discountUsageChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">أكثر المنتجات استخداماً مع الكود</h6>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <ul class="list-group list-group-flush">
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span>فستان سهرة أسود</span>
+                                                <span class="badge bg-warning rounded-pill">245</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span>حذاء كعب عالي</span>
+                                                <span class="badge bg-warning rounded-pill">189</span>
+                                            </li>
+                                            <li
+                                                class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span>حقيبة يد جلدية</span>
+                                                <span class="badge bg-warning rounded-pill">156</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-light">
+                                        <h6 class="mb-0">حالة الكود</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-unstyled">
+                                            <li class="mb-2">
+                                                <i class="fas fa-circle text-success me-2"></i>
+                                                <span>الحالة: <strong>نشط</strong></span>
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="far fa-calendar-alt me-2"></i>
+                                                <span>تاريخ البداية: <strong>01/01/2023</strong></span>
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="far fa-calendar-check me-2"></i>
+                                                <span>تاريخ الانتهاء: <strong>31/12/2023</strong></span>
+                                            </li>
+                                            <li class="mb-2">
+                                                <i class="fas fa-tag me-2"></i>
+                                                <span>نوع الخصم: <strong>نسبة مئوية (25%)</strong></span>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-shopping-cart me-2"></i>
+                                                <span>الحد الأدنى للطلب: <strong>200 ر.س</strong></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إغلاق</button>
+                        <button type="button" class="btn btn-export">
+                            <i class="fas fa-download me-1"></i> تصدير التقرير
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Renewal Modal -->
+        <div class="modal fade" id="renewalModal" tabindex="-1" aria-labelledby="renewalModalLabel" aria-modal="true"
+            role="dialog">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-light">
+                        <h5 class="modal-title"><i class="fas fa-sync-alt me-2"></i>تجديد كود الخصم</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="renewalForm">
+                        <div class="modal-body">
+                            <div class="alert alert-success">
+                                <i class="fas fa-info-circle me-2"></i>
+                                سيتم تجديد كود الخصم بناءً على الإعدادات المحددة
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="discountCode" class="form-label">كود الخصم</label>
+                                <input type="text" class="form-control" id="renewalDiscountCode" value="SUMMER25"
+                                    readonly>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="renewalPeriod" class="form-label">مدة التجديد</label>
+                                <select class="form-select" id="renewalPeriod" required>
+                                    <option value="">اختر المدة</option>
+                                    <option value="1">شهر واحد</option>
+                                    <option value="3">3 أشهر</option>
+                                    <option value="6">6 أشهر</option>
+                                    <option value="12">سنة واحدة</option>
+                                    <option value="custom">مخصص</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3" id="customDateRange" style="display: none;">
+                                <label class="form-label mb-2">تحديد التاريخ المخصص</label>
+                                <div class="row g-2">
+                                    <div class="col-md-6">
+                                        <label for="startDate" class="form-label small text-muted">من</label>
+                                        <input type="date" class="form-control" id="startDate">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="endDate" class="form-label small text-muted">إلى</label>
+                                        <input type="date" class="form-control" id="endDate">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-check form-switch mb-3">
+                                <input class="form-check-input" type="checkbox" id="sendNotification" checked>
+                                <label class="form-check-label" for="sendNotification">إرسال إشعار للعملاء
+                                    بالتجديد</label>
+                            </div>
+
+                            <div class="alert alert-warning">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                سيتم تجديد الكود مع الاحتفاظ بجميع إحصائياته وبياناته الحالية.
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                            <button type="submit" class="btn btn-save">
+                                <i class="fas fa-save me-1"></i> تأكيد التجديد
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="copyToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">تنبيه</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="إغلاق"></button>
+                </div>
+                <div class="toast-body">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    <span>تم نسخ كود الخصم: <strong id="copiedCode"></strong></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="activeUsersOffcanvas"
+            aria-labelledby="activeUsersOffcanvasLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="activeUsersOffcanvasLabel">المستخدمون النشطون</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="إغلاق"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p class="alert alert-success text-success mb-3">هنا يمكنك رؤية المستخدمين المتصلين حالياً.</p>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-status-wrapper position-relative d-inline-block">
+                                    <img src="assets/images/Customers/customer_3.png" alt="جوهرة تركي"
+                                        class="rounded-circle" width="40" height="40">
+                                    <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                        role="status">
+                                        <span class="visually-hidden">جاري التحميل...</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fw-bold">جوهرة تركي</div>
+                                    <div class="d-flex gap-1 small mt-1">
+                                        <a href="#" class="text-muted" title="WhatsApp"><i
+                                                class="fa-brands fa-whatsapp"></i></a>
+                                        <a href="#" class="text-muted" title="Telegram"><i
+                                                class="fa-brands fa-telegram"></i></a>
+                                        <a href="#" class="text-muted" title="LinkedIn"><i
+                                                class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#" class="text-muted" title="Facebook"><i
+                                                class="fa-brands fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="text-muted">نشط الآن</small>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-status-wrapper position-relative d-inline-block">
+                                    <img src="assets/images/Customers/customer_1.png" alt="سارة أحمد"
+                                        class="rounded-circle" width="40" height="40">
+                                    <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                        role="status">
+                                        <span class="visually-hidden">جاري التحميل...</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fw-bold">سارة أحمد</div>
+                                    <div class="d-flex gap-1 small mt-1">
+                                        <a href="#" class="text-muted" title="WhatsApp"><i
+                                                class="fa-brands fa-whatsapp"></i></a>
+                                        <a href="#" class="text-muted" title="Telegram"><i
+                                                class="fa-brands fa-telegram"></i></a>
+                                        <a href="#" class="text-muted" title="LinkedIn"><i
+                                                class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#" class="text-muted" title="Facebook"><i
+                                                class="fa-brands fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="text-muted">نشط الآن</small>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-status-wrapper position-relative d-inline-block">
+                                    <img src="assets/images/Customers/customer_2.png" alt="نورة عبد العزيز"
+                                        class="rounded-circle" width="40" height="40">
+                                    <div class="spinner-grow spinner-grow-xxs text-warning status-dot spinner-xxs"
+                                        role="status">
+                                        <span class="visually-hidden">جاري التحميل...</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fw-bold">نورة عبد العزيز</div>
+                                    <div class="d-flex gap-1 small mt-1">
+                                        <a href="#" class="text-muted" title="WhatsApp"><i
+                                                class="fa-brands fa-whatsapp"></i></a>
+                                        <a href="#" class="text-muted" title="Telegram"><i
+                                                class="fa-brands fa-telegram"></i></a>
+                                        <a href="#" class="text-muted" title="LinkedIn"><i
+                                                class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#" class="text-muted" title="Facebook"><i
+                                                class="fa-brands fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="text-muted">خامل</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="assets/js/datatables.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/charts.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Copy code functionality
+                const toastEl = document.getElementById('copyToast');
+                const toast = new bootstrap.Toast(toastEl, {
+                    autohide: true,
+                    delay: 3000
+                });
+
+                window.copyDiscountCode = function(code) {
+                    navigator.clipboard.writeText(code).then(function() {
+                        document.getElementById('copiedCode').textContent = code;
+                        toast.show();
+                    }).catch(function() {
+                        console.error('فشل نسخ النص');
+                    });
+                };
+
+                // Initialize chart when stats modal is shown
+                const statsModal = document.getElementById('statsModal');
+                if (statsModal) {
+                    let discountChart = null;
+
+                    statsModal.addEventListener('shown.bs.modal', function() {
+                        if (typeof Chart === 'undefined') {
+                            console.error('Chart.js is not loaded');
+                            return;
+                        }
+
+                        const ctx = document.getElementById('discountUsageChart')?.getContext('2d');
+                        if (!ctx) return;
+                        
+                        if (discountChart) {
+                            discountChart.destroy();
+                        }
+
+                        discountChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو'],
+                                datasets: [{
+                                    label: 'عدد مرات الاستخدام',
+                                    data: [120, 190, 300, 250, 420, 350],
+                                    borderColor: '#ff4da6',
+                                    backgroundColor: 'rgba(255, 77, 166, 0.1)',
+                                    borderWidth: 3,
+                                    pointBackgroundColor: '#ff4da6',
+                                    pointBorderColor: '#ffffff',
+                                    pointHoverRadius: 6,
+                                    pointHoverBackgroundColor: '#ff1a8c',
+                                    pointHoverBorderColor: '#ffffff',
+                                    pointHitRadius: 10,
+                                    pointBorderWidth: 2,
+                                    tension: 0.4,
+                                    fill: true
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        grid: {
+                                            color: 'rgba(0, 0, 0, 0.05)'
+                                        },
+                                        ticks: {
+                                            stepSize: 100
+                                        }
+                                    },
+                                    x: {
+                                        grid: {
+                                            display: false
+                                        }
+                                    }
+                                },
+                                plugins: {
+                                    legend: {
+                                        rtl: true,
+                                        labels: {
+                                            rtl: true,
+                                            textDirection: 'rtl'
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    });
+
+                    statsModal.addEventListener('hidden.bs.modal', function() {
+                        if (discountChart) {
+                            discountChart.destroy();
+                            discountChart = null;
+                        }
+                    });
+                }
+            });
+        </script>
+    </body>
+
+</html>

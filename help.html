@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/my_loop.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>لوحة التحكم | مركز المساعدة</title>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">إيليجانسيا</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="اكتب اسم المنتج للبحث">
+                    </form>
+                </div>
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div id="icons" class="icons d-flex gap-3">
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span class="icon-badge">4</span>
+                            <ul id="messagesMenu" class="icon-dropdown">
+                                <div class="header-title">الرسائل</div>
+                                <li>
+                                    <strong>نورة عبد العزيز</strong>
+                                    <div class="small text-muted">قبل 10 دقائق</div>
+                                    <div class="small">مرحباً، هل لديكم فستان أزرق بالحجم المتوسط؟</div>
+                                </li>
+                                <li>
+                                    <strong>جوهرة تركي</strong>
+                                    <div class="small text-muted">قبل 30 دقيقة</div>
+                                    <div class="small">أريد استبدال المعطف الذي اشتريته بالحجم الأصغر</div>
+                                </li>
+                                <li>
+                                    <strong>سارة أحمد</strong>
+                                    <div class="small text-muted">أمس</div>
+                                    <div class="small">متى ستتوفر المجموعة الصيفية الجديدة؟</div>
+                                </li>
+                                <li>
+                                    <strong>ريم حسن</strong>
+                                    <div class="small text-muted">منذ يومين</div>
+                                    <div class="small">شكراً على التوصيل السريع، المنتج رائع!</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الرسائل</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="icon-badge">2</span>
+                            <ul id="bellMenu" class="icon-dropdown">
+                                <div class="header-title">الإشعارات</div>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-truck text-success"></i>
+                                        <div>
+                                            <div class="small">تم شحن طلبك رقم #1234 بنجاح</div>
+                                            <div class="small text-muted">قبل ساعة</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-tag"></i>
+                                        <div>
+                                            <div class="small">خصم 20% على جميع الفساتين المسائية</div>
+                                            <div class="small text-muted">منذ يومين</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الإشعارات</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="المهام">
+                            <i class="fa-regular fa-clipboard"></i>
+                            <ul id="tasksMenu" class="icon-dropdown">
+                                <div class="header-title">المهام</div>
+                                <li>
+                                    <strong>مهمة: تحديث الأسعار</strong>
+                                    <div class="small text-muted">اليوم 10:30</div>
+                                    <div class="small">راجع أسعار قسم الفساتين الجديدة.</div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: صور المنتجات</strong>
+                                    <div class="small text-muted">اليوم 12:00</div>
+                                    <div class="small">أضفت صوراً عالية الدقة لمنتج "حافظة حرارية ذكية مع شاشة رقمية".
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: متابعة الشحن</strong>
+                                    <div class="small text-muted">غداً</div>
+                                    <div class="small">تأكيد موعد التسليم لطلبات المنطقة الغربية.</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل المهام</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="الإعدادات">
+                            <i class="fa-solid fa-gear"></i>
+                            <ul id="icon-dropdown" class="icon-dropdown">
+                                <div class="header-title">الإعدادات</div>
+                                <li>
+                                    <strong>الملف الشخصي</strong>
+                                    <div class="small text-muted">إعدادات الحساب والمعلومات الشخصية</div>
+                                </li>
+                                <li>
+                                    <strong>الأمان</strong>
+                                    <div class="small text-muted">تغيير كلمة المرور والمصادقة الثنائية</div>
+                                </li>
+                                <li>
+                                    <strong>الإشعارات</strong>
+                                    <div class="small text-muted">تفعيل/تعطيل التنبيهات البريدية والرسائل</div>
+                                </li>
+                                <li class="text-center small"><a href="">الذهاب إلى صفحة الإعدادات</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="avatar">
+                        <img src="assets/images/avatars/avatar.png" alt="">
+                    </div>
+                    <i class="fa-solid fa-bars-staggered active-users" role="button" tabindex="0"
+                        title="المستخدمون النشطون" data-bs-toggle="offcanvas" data-bs-target="#activeUsersOffcanvas"
+                        aria-controls="activeUsersOffcanvas"></i>
+                </div>
+            </header>
+        </nav>
+
+        <div class="side-bar" id="side-bar">
+            <div class="profile">
+                <img width="90px" src="assets/images/avatars/avatar.png" alt="">
+                <h3>رهف فرحات</h3>
+            </div>
+
+            <ul class="menu ul-sidebar">
+                <li class="mb-2"><a href="index.html" class="menu-link"><i class="fa-solid fa-house fs-5"
+                            aria-hidden="true"></i>الصفحة الرئيسية</a></li>
+                <li class="mb-2"><a href="products.html" class="menu-link"><i class="fa-solid fa-shirt fs-5"
+                            aria-hidden="true"></i>المنتجات</a></li>
+                <li class="mb-2"><a href="orders.html" class="menu-link"><i class="fa-solid fa-cart-shopping fs-5"
+                            aria-hidden="true"></i>الطلبات</a></li>
+                <li class="mb-2"><a href="customers.html" class="menu-link"><i class="fa-solid fa-users fs-5"
+                            aria-hidden="true"></i>العملاء</a></li>
+                <li class="mb-2"><a href="blog.html" class="menu-link"><i class="fa-solid fa-list fs-5"
+                            aria-hidden="true"></i>المدونة</a></li>
+                <li class="mb-2"><a href="discounts.html" class="menu-link"><i class="fa-solid fa-tag fs-5"
+                            aria-hidden="true"></i>الخصومات</a></li>
+                <li class="mb-2"><a href="reports.html" class="menu-link"><i class="fa-solid fa-chart-line fs-5"
+                            aria-hidden="true"></i>التقارير</a></li>
+                <li class="mb-2"><a href="settings.html" class="menu-link"><i class="fa-solid fa-gear fs-5"
+                            aria-hidden="true"></i>الإعدادات</a></li>
+                <li class="mb-2"><a href="help.html" class="menu-link is-active"><i
+                            class="fa-regular fa-circle-question fs-5" aria-hidden="true"></i>مركز المساعدة</a></li>
+                <li class="mb-2"><a href="logout.html" class="menu-link"><i class="fa-solid fa-right-to-bracket fs-5"
+                            aria-hidden="true"></i>تسجيل الخروج</a></li>
+            </ul>
+        </div>
+
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <div class="col-md-10 mx-auto">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="lp-font-bold mb-0">مركز المساعدة</h2>
+                            <button class="btn btn-contact" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                <i class="fas fa-headset me-2"></i>اتصل بفريق الدعم
+                            </button>
+                        </div>
+
+                        <!-- Search Section -->
+                        <div class="card lp-shadow-sm lp-p-10 mb-4">
+                            <div class="card-body text-center py-5">
+                                <h3 class="mb-4">كيف يمكننا مساعدتك اليوم؟</h3>
+                                <div class="col-md-8 mx-auto">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control form-control-lg"
+                                            placeholder="ابحث في الأسئلة الشائعة...">
+                                        <button class="btn btn-search" type="button">
+                                            <i class="fas fa-search"></i> بحث
+                                        </button>
+                                    </div>
+                                    <p class="text-muted">جرب البحث باستخدام كلمات مفتاحية مثل: "إرجاع منتج"، "تتبع
+                                        طلب"، "تغيير كلمة المرور"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Categories -->
+                        <div class="row g-3">
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100 lp-shadow-sm hover-lift card-Orders-Shipping">
+                                    <div class="card-body text-center p-4">
+                                        <div class="icon-lg rounded-circle mb-3">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </div>
+                                        <h5 class="mb-3">الطلبات والشحن</h5>
+                                        <p class="text-muted mb-0">تتبع الطلبات، إرجاع المنتجات، وسياسات الشحن</p>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0 text-center pb-4">
+                                        <a href="#orders" class="text-view">عرض الأسئلة <i
+                                                class="fas fa-arrow-left me-2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100 lp-shadow-sm hover-lift card-Payments-Invoices">
+                                    <div class="card-body text-center p-4">
+                                        <div class="icon-lg rounded-circle mb-3">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                        <h5 class="mb-3">المدفوعات والفواتير</h5>
+                                        <p class="text-muted mb-0">طرق الدفع، الفواتير، والاستردادات</p>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0 text-center pb-4">
+                                        <a href="#payments" class="text-view">عرض الأسئلة <i
+                                                class="fas fa-arrow-left me-2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100 lp-shadow-sm hover-lift card-My-account">
+                                    <div class="card-body text-center p-4">
+                                        <div class="icon-lg rounded-circle mb-3">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <h5 class="mb-3">حسابي</h5>
+                                        <p class="text-muted mb-0">إدارة الحساب، كلمة المرور، والمعلومات الشخصية</p>
+                                    </div>
+                                    <div class="card-footer bg-transparent border-top-0 text-center pb-4">
+                                        <a href="#account" class="text-view">عرض الأسئلة <i
+                                                class="fas fa-arrow-left me-2"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Section -->
+                        <div class="card lp-shadow-sm lp-p-10 mb-4">
+                            <div class="card-header bg-light">
+                                <h4 class="mb-0">الأسئلة الشائعة</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="accordion" id="faqAccordion">
+                                    <!-- Category 1 -->
+                                    <h5 id="orders" class="mt-4 mb-3" style="color: #f57aae;">
+                                        <i class="fas fa-shopping-cart me-2"></i>الطلبات والشحن
+                                    </h5>
+                                    <div class="accordion-item mb-3 border rounded">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne">
+                                                كيف يمكنني تتبع طلبي؟
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                            data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                يمكنك تتبع طلبك من خلال الدخول إلى حسابك وزيارة صفحة "طلباتي". سيتم
+                                                تحديث حالة الطلب فور شحنه مع إمكانية تتبع الشحنة.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item mb-3 border rounded">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                                ما هي مدة التوصيل المتوقعة؟
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                مدة التوصيل تتراوح بين 2-5 أيام عمل داخل المدينة و3-7 أيام للمدن الأخرى.
+                                                قد تختلف المدة حسب المنطقة والظروف الجوية.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Category 2 -->
+                                    <h5 id="payments" class="mt-5 mb-3" style="color: #e9d362;">
+                                        <i class="fas fa-credit-card me-2"></i>المدفوعات
+                                    </h5>
+                                    <div class="accordion-item mb-3 border rounded">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                                ما هي وسائل الدفع المتاحة؟
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#faqAccordion">
+                                            <div class="accordion-body">
+                                                نقبل الدفع ببطاقات الائتمان والخصم (فيزا، ماستركارد، مدى) بالإضافة إلى
+                                                الدفع عند الاستلام في بعض المناطق.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Helpful Resources -->
+                        <div class="card lp-shadow-sm lp-p-10 mb-4">
+                            <div class="card-header bg-light">
+                                <h4 class="mb-0">موارد مساعدة</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-start">
+                                            <div class="icon-md icon-book rounded-circle me-3 flex-shrink-0">
+                                                <i class="fas fa-book"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="h6 mb-1">دليل المستخدم</h5>
+                                                <p class="small text-muted mb-2">تعرف على كيفية استخدام منصتنا بالكامل
+                                                </p>
+                                                <a href="#" class="btn btn-sm btn-view">عرض الدليل</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-start">
+                                            <div class="icon-md icon-video rounded-circle me-3 flex-shrink-0">
+                                                <i class="fas fa-video"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="h6 mb-1">فيديوهات تعليمية</h5>
+                                                <p class="small text-muted mb-2">شاهد مقاطع فيديو توضيحية لاستخدام
+                                                    الموقع</p>
+                                                <a href="#" class="btn btn-sm btn-video">مشاهدة الفيديوهات</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Modal -->
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">تواصل مع الدعم الفني</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">الموضوع</label>
+                                <input type="text" class="form-control" id="subject" placeholder="ما هو موضوع استفسارك؟"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">البريد الإلكتروني</label>
+                                <input type="email" class="form-control" id="email" placeholder="example@domain.com"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="orderNumber" class="form-label">رقم الطلب (اختياري)</label>
+                                <input type="text" class="form-control" id="orderNumber" placeholder="مثال: #12345">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">الرسالة</label>
+                                <textarea class="form-control" id="message" rows="4"
+                                    placeholder="يرجى وصف مشكلتك بالتفصيل..." required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="attachment" class="form-label">إرفاق ملف (اختياري)</label>
+                                <input class="form-control" type="file" id="attachment">
+                                <div class="form-text">يمكنك إرفاق صورة أو مستند (الحد الأقصى 5 ميجابايت)</div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-send">إرسال الطلب</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <div class="text-center">
+                            <p class="mb-1">للحصول على مساعدة فورية، يرجى الاتصال على:</p>
+                            <h5 class="mb-0"><i class="fas fa-phone-alt me-2"></i>920000000</h5>
+                            <p class="small text-muted mt-2 mb-0">متوفر على مدار الساعة طوال أيام الأسبوع</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="activeUsersOffcanvas"
+            aria-labelledby="activeUsersOffcanvasLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="activeUsersOffcanvasLabel">المستخدمون النشطون</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="إغلاق"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p class="alert alert-success text-success mb-3">هنا يمكنك رؤية المستخدمين المتصلين حالياً.</p>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-status-wrapper position-relative d-inline-block">
+                                    <img src="assets/images/Customers/customer_3.png" alt="جوهرة تركي"
+                                        class="rounded-circle" width="40" height="40">
+                                    <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                        role="status">
+                                        <span class="visually-hidden">جاري التحميل...</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fw-bold">جوهرة تركي</div>
+                                    <div class="d-flex gap-1 small mt-1">
+                                        <a href="#" class="text-muted" title="WhatsApp"><i
+                                                class="fa-brands fa-whatsapp"></i></a>
+                                        <a href="#" class="text-muted" title="Telegram"><i
+                                                class="fa-brands fa-telegram"></i></a>
+                                        <a href="#" class="text-muted" title="LinkedIn"><i
+                                                class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#" class="text-muted" title="Facebook"><i
+                                                class="fa-brands fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="text-muted">نشط الآن</small>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-status-wrapper position-relative d-inline-block">
+                                    <img src="assets/images/Customers/customer_1.png" alt="سارة أحمد"
+                                        class="rounded-circle" width="40" height="40">
+                                    <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                        role="status">
+                                        <span class="visually-hidden">جاري التحميل...</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fw-bold">سارة أحمد</div>
+                                    <div class="d-flex gap-1 small mt-1">
+                                        <a href="#" class="text-muted" title="WhatsApp"><i
+                                                class="fa-brands fa-whatsapp"></i></a>
+                                        <a href="#" class="text-muted" title="Telegram"><i
+                                                class="fa-brands fa-telegram"></i></a>
+                                        <a href="#" class="text-muted" title="LinkedIn"><i
+                                                class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#" class="text-muted" title="Facebook"><i
+                                                class="fa-brands fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="text-muted">نشط الآن</small>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="avatar-status-wrapper position-relative d-inline-block">
+                                    <img src="assets/images/Customers/customer_2.png" alt="نورة عبد العزيز"
+                                        class="rounded-circle" width="40" height="40">
+                                    <div class="spinner-grow spinner-grow-xxs text-warning status-dot spinner-xxs"
+                                        role="status">
+                                        <span class="visually-hidden">جاري التحميل...</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="fw-bold">نورة عبد العزيز</div>
+                                    <div class="d-flex gap-1 small mt-1">
+                                        <a href="#" class="text-muted" title="WhatsApp"><i
+                                                class="fa-brands fa-whatsapp"></i></a>
+                                        <a href="#" class="text-muted" title="Telegram"><i
+                                                class="fa-brands fa-telegram"></i></a>
+                                        <a href="#" class="text-muted" title="LinkedIn"><i
+                                                class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#" class="text-muted" title="Facebook"><i
+                                                class="fa-brands fa-facebook"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <small class="text-muted">خامل</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="assets/js/datatables.js"></script>
+        <script src="assets/js/bootstrap.js"></script>
+        <script src="assets/js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/my_loop.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>المنتجات</title>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">إيليجانسيا</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="اكتب اسم المنتج للبحث">
+                    </form>
+                </div>
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div id="icons" class="icons d-flex gap-3">
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span class="icon-badge">4</span>
+                            <ul id="messagesMenu" class="icon-dropdown">
+                                <div class="header-title">الرسائل</div>
+                                <li>
+                                    <strong>نورة عبد العزيز</strong>
+                                    <div class="small text-muted">قبل 10 دقائق</div>
+                                    <div class="small">مرحباً، هل لديكم فستان أزرق بالحجم المتوسط؟</div>
+                                </li>
+                                <li>
+                                    <strong>جوهرة تركي</strong>
+                                    <div class="small text-muted">قبل 30 دقيقة</div>
+                                    <div class="small">أريد استبدال المعطف الذي اشتريته بالحجم الأصغر</div>
+                                </li>
+                                <li>
+                                    <strong>سارة أحمد</strong>
+                                    <div class="small text-muted">أمس</div>
+                                    <div class="small">متى ستتوفر المجموعة الصيفية الجديدة؟</div>
+                                </li>
+                                <li>
+                                    <strong>ريم حسن</strong>
+                                    <div class="small text-muted">منذ يومين</div>
+                                    <div class="small">شكراً على التوصيل السريع، المنتج رائع!</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الرسائل</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="icon-badge">2</span>
+                            <ul id="bellMenu" class="icon-dropdown">
+                                <div class="header-title">الإشعارات</div>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-truck text-success"></i>
+                                        <div>
+                                            <div class="small">تم شحن طلبك رقم #1234 بنجاح</div>
+                                            <div class="small text-muted">قبل ساعة</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-tag"></i>
+                                        <div>
+                                            <div class="small">خصم 20% على جميع الفساتين المسائية</div>
+                                            <div class="small text-muted">منذ يومين</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل الإشعارات</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="المهام">
+                            <i class="fa-regular fa-clipboard"></i>
+                            <ul id="tasksMenu" class="icon-dropdown">
+                                <div class="header-title">المهام</div>
+                                <li>
+                                    <strong>مهمة: تحديث الأسعار</strong>
+                                    <div class="small text-muted">اليوم 10:30</div>
+                                    <div class="small">راجع أسعار قسم الفساتين الجديدة.</div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: صور المنتجات</strong>
+                                    <div class="small text-muted">اليوم 12:00</div>
+                                    <div class="small">أضفت صوراً عالية الدقة لمنتج "حافظة حرارية ذكية مع شاشة رقمية".
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: متابعة الشحن</strong>
+                                    <div class="small text-muted">غداً</div>
+                                    <div class="small">تأكيد موعد التسليم لطلبات المنطقة الغربية.</div>
+                                </li>
+                                <li class="text-center small"><a href="">عرض كل المهام</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="الإعدادات">
+                            <i class="fa-solid fa-gear"></i>
+                            <ul id="icon-dropdown" class="icon-dropdown">
+                                <div class="header-title">الإعدادات</div>
+                                <li>
+                                    <strong>الملف الشخصي</strong>
+                                    <div class="small text-muted">إعدادات الحساب والمعلومات الشخصية</div>
+                                </li>
+                                <li>
+                                    <strong>الأمان</strong>
+                                    <div class="small text-muted">تغيير كلمة المرور والمصادقة الثنائية</div>
+                                </li>
+                                <li>
+                                    <strong>الإشعارات</strong>
+                                    <div class="small text-muted">تفعيل/تعطيل التنبيهات البريدية والرسائل</div>
+                                </li>
+                                <li class="text-center small"><a href="">الذهاب إلى صفحة الإعدادات</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="avatar">
+                        <img src="assets/images/avatars/avatar.png" alt="">
+                    </div>
+                    <i class="fa-solid fa-bars-staggered active-users" role="button" tabindex="0"
+                        title="المستخدمون النشطون" data-bs-toggle="offcanvas" data-bs-target="#activeUsersOffcanvas"
+                        aria-controls="activeUsersOffcanvas"></i>
+                </div>
+            </header>
+        </nav>
+
+        <div class="side-bar" id="side-bar">
+            <div class="profile">
+                <img width="90px" src="assets/images/avatars/avatar.png" alt="">
+                <h3>رهف فرحات</h3>
+            </div>
+
+            <ul class="menu ul-sidebar">
+                <li class="mb-2"><a href="index.html" class="menu-link"><i class="fa-solid fa-house fs-5"
+                            aria-hidden="true"></i>الصفحة الرئيسية</a></li>
+                <li class="mb-2"><a href="products.html" class="menu-link is-active"><i class="fa-solid fa-shirt fs-5"
+                            aria-hidden="true"></i>المنتجات</a></li>
+                <li class="mb-2"><a href="orders.html" class="menu-link"><i class="fa-solid fa-cart-shopping fs-5"
+                            aria-hidden="true"></i>الطلبات</a></li>
+                <li class="mb-2"><a href="customers.html" class="menu-link"><i class="fa-solid fa-users fs-5"
+                            aria-hidden="true"></i>العملاء</a></li>
+                <li class="mb-2"><a href="blog.html" class="menu-link"><i class="fa-solid fa-list fs-5"
+                            aria-hidden="true"></i>المدونة</a></li>
+                <li class="mb-2"><a href="discounts.html" class="menu-link"><i class="fa-solid fa-tag fs-5"
+                            aria-hidden="true"></i>الخصومات</a></li>
+                <li class="mb-2"><a href="reports.html" class="menu-link"><i class="fa-solid fa-chart-line fs-5"
+                            aria-hidden="true"></i>التقارير</a></li>
+                <li class="mb-2"><a href="settings.html" class="menu-link"><i class="fa-solid fa-gear fs-5"
+                            aria-hidden="true"></i>الإعدادات</a></li>
+                <li class="mb-2"><a href="help.html" class="menu-link"><i class="fa-regular fa-circle-question fs-5"
+                            aria-hidden="true"></i>مركز المساعدة</a></li>
+                <li class="mb-2"><a href="logout.html" class="menu-link"><i class="fa-solid fa-right-to-bracket fs-5"
+                            aria-hidden="true"></i>تسجيل الخروج</a></li>
+            </ul>
+        </div>
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <h4>المنتجات</h4>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card p-3 lp-shadow-sm">
+                                <div class="card-header d-flex justify-content-between align-items-center lp-p-15">
+                                    <h5 class="mb-0">قائمة المنتجات</h5>
+                                    <div class="btn-plus d-flex gap-2">
+                                        <a href="product.html" type="button" class="btn btn-add btn-sm">
+                                            <i class="fa-solid fa-plus"></i> إضافة منتج جديد
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <table id="productsTable" class="table table-hover table-mobile lp-mt-10 lp-mb-10"
+                                        style="width:100%">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>المنتج</th>
+                                                <th>الفئة</th>
+                                                <th>اللون</th>
+                                                <th>السعر</th>
+                                                <th>حالة المخزون</th>
+                                                <th style="width: 120px;">الإجراءات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1001</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/Products/product_1.jpg"
+                                                            alt="بيجاما نسائية" width="40" height="40"
+                                                            class="rounded object-fit-cover">
+                                                        <a href="product.html?id=1001">بيجاما نسائية</a>
+                                                    </div>
+                                                </td>
+                                                <td>ملابس النوم</td>
+                                                <td>رمادي</td>
+                                                <td>34.00 ر.س</td>
+                                                <td><span class="badge bg-success">متوفر</span></td>
+                                                <td class="text-nowrap">
+                                                    <a href="#view-product-1" class="btn btn-sm btn-outline-view"
+                                                        data-bs-toggle="modal" title="عرض التفاصيل">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </a>
+                                                    <a href="#edit-product-1" class="btn btn-sm btn-outline-edit"
+                                                        data-bs-toggle="modal" title="تعديل المنتج">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                    </a>
+                                                    <a href="#delete-product-1" class="btn btn-sm btn-outline-delete"
+                                                        data-bs-toggle="modal" title="حذف المنتج">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </a>
+                                                </td>
+                                            <tr>
+                                                <td>1002</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/Products/product_3.png"
+                                                            alt="بيجاما نسائية" width="40" height="40"
+                                                            class="rounded object-fit-cover">
+                                                        <a href="product.html?id=1002">بيجاما نسائية</a>
+                                                    </div>
+                                                </td>
+                                                <td>ملابس نوم</td>
+                                                <td>أسود</td>
+                                                <td>30.00 ر.س</td>
+                                                <td><span class="badge bg-warning">منخفض</span></td>
+                                                <td class="text-nowrap">
+                                                    <a href="#view-product-2" class="btn btn-sm btn-outline-view"
+                                                        data-bs-toggle="modal" title="عرض التفاصيل">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </a>
+                                                    <a href="#edit-product-2" class="btn btn-sm btn-outline-edit"
+                                                        data-bs-toggle="modal" title="تعديل المنتج">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                    </a>
+                                                    <a href="#delete-product-2" class="btn btn-sm btn-outline-delete"
+                                                        data-bs-toggle="modal" title="حذف المنتج">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1003</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/Products/product_5.png"
+                                                            alt="سراويل ضيقة مطاطية" width="40" height="40"
+                                                            class="rounded object-fit-cover">
+                                                        <a href="product.html?id=1003">سراويل ضيقة مطاطية</a>
+                                                    </div>
+                                                </td>
+                                                <td>الرياضة والأنشطة الخارجية</td>
+                                                <td>عدة ألوان</td>
+                                                <td>115.25 ر.س</td>
+                                                <td><span class="badge bg-success">متوفر</span></td>
+                                                <td class="text-nowrap">
+                                                    <a href="#view-product-3" class="btn btn-sm btn-outline-view"
+                                                        data-bs-toggle="modal" title="عرض التفاصيل">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </a>
+                                                    <a href="#edit-product-3" class="btn btn-sm btn-outline-edit"
+                                                        data-bs-toggle="modal" title="تعديل المنتج">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                    </a>
+                                                    <a href="#delete-product-3" class="btn btn-sm btn-outline-delete"
+                                                        data-bs-toggle="modal" title="حذف المنتج">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1004</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/Products/product_7.jpg"
+                                                            alt="بيجاما نسائية" width="40" height="40"
+                                                            class="rounded object-fit-cover">
+                                                        <a href="product.html?id=1004">بيجاما نسائية</a>
+                                                    </div>
+                                                </td>
+                                                <td>ملابس نوم</td>
+                                                <td>أحمر</td>
+                                                <td>73.00 ر.س</td>
+                                                <td><span class="badge bg-success">متوفر</span></td>
+                                                <td class="text-nowrap">
+                                                    <a href="#view-product-4" class="btn btn-sm btn-outline-view"
+                                                        data-bs-toggle="modal" title="عرض التفاصيل">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </a>
+                                                    <a href="#edit-product-4" class="btn btn-sm btn-outline-edit"
+                                                        data-bs-toggle="modal" title="تعديل المنتج">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                    </a>
+                                                    <a href="#delete-product-4" class="btn btn-sm btn-outline-delete"
+                                                        data-bs-toggle="modal" title="حذف المنتج">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1005</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/Products/product_9.png"
+                                                            alt="بيجاما نسائية" width="40" height="40"
+                                                            class="rounded object-fit-cover">
+                                                        <a href="product.html?id=1005">بيجاما نسائية</a>
+                                                    </div>
+                                                </td>
+                                                <td>ملابس نوم</td>
+                                                <td>أبيض</td>
+                                                <td>37.00 ر.س</td>
+                                                <td><span class="badge bg-success">متوفر</span></td>
+                                                <td class="text-nowrap">
+                                                    <a href="#view-product-5" class="btn btn-sm btn-outline-view"
+                                                        data-bs-toggle="modal" title="عرض التفاصيل">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </a>
+                                                    <a href="#edit-product-5" class="btn btn-sm btn-outline-edit"
+                                                        data-bs-toggle="modal" title="تعديل المنتج">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                    </a>
+                                                    <a href="#delete-product-5" class="btn btn-sm btn-outline-delete"
+                                                        data-bs-toggle="modal" title="حذف المنتج">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1006</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/Products/product_11.jpg"
+                                                            alt="سروال رياضي" width="40" height="40"
+                                                            class="rounded object-fit-cover">
+                                                        <a href="product.html?id=1006">سروال رياضي</a>
+                                                    </div>
+                                                </td>
+                                                <td>الرياضة والأنشطة الخارجية</td>
+                                                <td>أسود</td>
+                                                <td>36.00 ر.س</td>
+                                                <td><span class="badge bg-warning">منخفض</span></td>
+                                                <td class="text-nowrap">
+                                                    <a href="#view-product-6" class="btn btn-sm btn-outline-view"
+                                                        data-bs-toggle="modal" title="عرض التفاصيل">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </a>
+                                                    <a href="#edit-product-6" class="btn btn-sm btn-outline-edit"
+                                                        data-bs-toggle="modal" title="تعديل المنتج">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                    </a>
+                                                    <a href="#delete-product-6" class="btn btn-sm btn-outline-delete"
+                                                        data-bs-toggle="modal" title="حذف المنتج">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1007</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/Products/product_13.png"
+                                                            alt="بنطلون جينز" width="40" height="40"
+                                                            class="rounded object-fit-cover">
+                                                        <a href="product.html?id=1007">بنطلون جينز</a>
+                                                    </div>
+                                                </td>
+                                                <td>ملابس نسائية</td>
+                                                <td>أزرق فاتح</td>
+                                                <td>54.00 ر.س</td>
+                                                <td><span class="badge bg-success">متوفر</span></td>
+                                                <td class="text-nowrap">
+                                                    <a href="#view-product-7" class="btn btn-sm btn-outline-view"
+                                                        data-bs-toggle="modal" title="عرض التفاصيل">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </a>
+                                                    <a href="#edit-product-7" class="btn btn-sm btn-outline-edit"
+                                                        data-bs-toggle="modal" title="تعديل المنتج">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                    </a>
+                                                    <a href="#delete-product-7" class="btn btn-sm btn-outline-delete"
+                                                        data-bs-toggle="modal" title="حذف المنتج">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1008</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center gap-2">
+                                                        <img src="assets/images/Products/product_15.png"
+                                                            alt="بنطلون ذو خصر عالي" width="40" height="40"
+                                                            class="rounded object-fit-cover">
+                                                        <a href="product.html?id=1008">بنطلون ذو خصر عالي</a>
+                                                    </div>
+                                                </td>
+                                                <td>ملابس نسائية</td>
+                                                <td>أسود</td>
+                                                <td>27.00 ر.س</td>
+                                                <td><span class="badge bg-danger">غير متوفر</span></td>
+                                                <td class="text-nowrap">
+                                                    <a href="#view-product-8" class="btn btn-sm btn-outline-view"
+                                                        data-bs-toggle="modal" title="عرض التفاصيل">
+                                                        <i class="fa-regular fa-eye"></i>
+                                                    </a>
+                                                    <a href="#edit-product-8" class="btn btn-sm btn-outline-edit"
+                                                        data-bs-toggle="modal" title="تعديل المنتج">
+                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                    </a>
+                                                    <a href="#delete-product-8" class="btn btn-sm btn-outline-delete"
+                                                        data-bs-toggle="modal" title="حذف المنتج">
+                                                        <i class="fa-regular fa-trash-can"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Product_1-->
+    <div class="modal fade" id="view-product-1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">عرض المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 d-flex align-items-center gap-3">
+                        <div class="ratio ratio-1x1" style="width: 72px;">
+                            <img src="assets/images/Products/product_1.jpg" class="rounded lp-shadow-sm"
+                                alt="بيجاما نسائية">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">بيجاما نسائية</h5>
+                            <span class="badge bg-secondary me-1">ملابس النوم</span>
+                            <span class="badge bg-secondary text-light">رمادي</span>
+                            <span class="badge bg-success">متوفر</span>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="small text-muted">السعر</div>
+                            <div class="fs-5 fw-bold">34.00 ر.س</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted">رقم المنتج</div>
+                            <div class="fw-semibold">1001</div>
+                        </div>
+                        <div class="col-12">
+                            <div class="small text-muted">الوصف</div>
+                            <p class="card-text">بيجاما نساء كاجوال محبوكة ذات لون واحد
+                                وأكمام قصيرة
+                                مريحة للنوم</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Product_1 -->
+    <div class="modal fade" id="edit-product-1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تعديل المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Image Upload Section -->
+                        <div class="mb-4 text-center">
+                            <div class="image-upload-container mb-2">
+                                <img id="product-image-preview-1" src="assets/images/Products/product_1.jpg" 
+                                    class="img-thumbnail" style="max-height: 200px; cursor: pointer;"
+                                    alt="صورة المنتج"
+                                    onclick="document.getElementById('product-image-upload-1').click()">
+                                <input type="file" id="product-image-upload-1" class="d-none" accept="image/*">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-refresh btn-sm" 
+                                        onclick="document.getElementById('product-image-upload-1').click()">
+                                    <i class="fas fa-camera me-1"></i> تغيير الصورة
+                                </button>
+                            </div>
+                            <div class="form-text text-center">الحد الأقصى لحجم الصورة 2 ميجابايت</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">اسم المنتج</label>
+                            <input type="text" class="form-control" value="بيجاما نسائية">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">الفئة</label>
+                            <select class="form-select">
+                                <option>ملابس نسائية</option>
+                                <option selected>ملابس نوم</option>
+                                <option>أحذية</option>
+                                <option>الصحة والجمال</option>
+                                <option>الأطفال والأمومة</option>
+                                <option>مجوهرات وإكسسوارات</option>
+                                <option>الحقائب والأمتعة</option>
+                                <option>الرياضة والأنشطة الخارجية</option>
+                                <option>إلكترونيات</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">اللون</label>
+                            <select class="form-select">
+                                <option>أسود</option>
+                                <option selected>رمادي</option>
+                                <option>أبيض</option>
+                                <option>أحمر</option>
+                                <option>أزرق</option>
+                                <option>أخضر</option>
+                                <option>عدة ألوان</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">السعر (ر.س)</label>
+                            <input type="text" class="form-control" value="34.00">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">حالة المخزون</label>
+                            <select class="form-select">
+                                <option selected>متوفر</option>
+                                <option>منخفض</option>
+                                <option>غير متوفر</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-save">حفظ التغييرات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Product_1 -->
+    <div class="modal fade" id="delete-product-1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">تأكيد الحذف</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-triangle-exclamation text-danger" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="mb-3">تأكيد حذف المنتج</h5>
+                        <p>سيتم حذف المنتج <strong class="text-danger">بيجاما نسائية</strong> من النظام بشكل دائم.
+                        </p>
+                        <p class="text-muted small mb-0">ملاحظة: لا يمكن استرجاع البيانات المحذوفة مرة أخرى.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">
+                        <i class="fa-solid fa-xmark ms-1"></i> إلغاء
+                    </button>
+                    <button type="button" class="btn btn-delete">
+                        <i class="fa-solid fa-trash-can ms-1"></i> تأكيد الحذف
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Product_2-->
+    <div class="modal fade" id="view-product-2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">عرض المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 d-flex align-items-center gap-3">
+                        <div class="ratio ratio-1x1" style="width: 72px;">
+                            <img src="assets/images/Products/product_3.png" class="rounded lp-shadow-sm"
+                                alt="بيجاما نسائية">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">بيجاما نسائية</h5>
+                            <span class="badge bg-secondary me-1">ملابس نوم</span>
+                            <span class="badge bg-secondary text-light">أسود</span>
+                            <span class="badge bg-warning text-dark">منخفض</span>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="small text-muted">السعر</div>
+                            <div class="fs-5 fw-bold">30.00 ر.س</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted">رقم المنتج</div>
+                            <div class="fw-semibold">1002</div>
+                        </div>
+                        <div class="col-12">
+                            <div class="small text-muted">الوصف</div>
+                            <p class="card-text">مجموعة بيجامات للنساء قطعتين، سترة قصيرة
+                                الأكمام لون
+                                أحادي بشكل مربع وسداسي، وبنطلون مطبوع بنقاط البولكا بشكل دب
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Product_2 -->
+    <div class="modal fade" id="edit-product-2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تعديل المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Image Upload Section -->
+                        <div class="mb-4 text-center">
+                            <div class="image-upload-container mb-2">
+                                <img id="product-image-preview-2" src="assets/images/Products/product_3.png" 
+                                    class="img-thumbnail" style="max-height: 200px; cursor: pointer;"
+                                    alt="صورة المنتج"
+                                    onclick="document.getElementById('product-image-upload-2').click()">
+                                <input type="file" id="product-image-upload-2" class="d-none" accept="image/*">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-refresh btn-sm" 
+                                        onclick="document.getElementById('product-image-upload-2').click()">
+                                    <i class="fas fa-camera me-1"></i> تغيير الصورة
+                                </button>
+                            </div>
+                            <div class="form-text text-center">الحد الأقصى لحجم الصورة 2 ميجابايت</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">اسم المنتج</label>
+                            <input type="text" class="form-control" value="بيجاما نسائية">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">الفئة</label>
+                            <select class="form-select">
+                                <option>ملابس نسائية</option>
+                                <option selected>ملابس نوم</option>
+                                <option>أحذية</option>
+                                <option>الصحة والجمال</option>
+                                <option>الأطفال والأمومة</option>
+                                <option>مجوهرات وإكسسوارات</option>
+                                <option>الحقائب والأمتعة</option>
+                                <option>الرياضة والأنشطة الخارجية</option>
+                                <option>إلكترونيات</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">اللون</label>
+                            <select class="form-select">
+                                <option selected>أسود</option>
+                                <option>رمادي</option>
+                                <option>أبيض</option>
+                                <option>أحمر</option>
+                                <option>أزرق</option>
+                                <option>أخضر</option>
+                                <option>عدة ألوان</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">السعر (ر.س)</label>
+                            <input type="text" class="form-control" value="30.00">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">حالة المخزون</label>
+                            <select class="form-select">
+                                <option>متوفر</option>
+                                <option selected>منخفض</option>
+                                <option>غير متوفر</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-save">حفظ التغييرات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Product_2 -->
+    <div class="modal fade" id="delete-product-2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">تأكيد الحذف</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-triangle-exclamation text-danger" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="mb-3">تأكيد حذف المنتج</h5>
+                        <p>سيتم حذف المنتج <strong class="text-danger">بيجاما نسائية</strong> من النظام بشكل دائم.
+                        </p>
+                        <p class="text-muted small mb-0">ملاحظة: لا يمكن استرجاع البيانات المحذوفة مرة أخرى.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">
+                        <i class="fa-solid fa-xmark ms-1"></i> إلغاء
+                    </button>
+                    <button type="button" class="btn btn-delete">
+                        <i class="fa-solid fa-trash-can ms-1"></i> تأكيد الحذف
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Product_3-->
+    <div class="modal fade" id="view-product-3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">عرض المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 d-flex align-items-center gap-3">
+                        <div class="ratio ratio-1x1" style="width: 72px;">
+                            <img src="assets/images/Products/product_5.png" class="rounded lp-shadow-sm"
+                                alt="سراويل ضيقة مطاطية">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">سراويل ضيقة مطاطية</h5>
+                            <span class="badge bg-secondary me-1">الرياضة والأنشطة الخارجية</span>
+                            <span class="badge bg-secondary text-light">عدة ألوان</span>
+                            <span class="badge bg-success">متوفر</span>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="small text-muted">السعر</div>
+                            <div class="fs-5 fw-bold">115.25 ر.س</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted">رقم المنتج</div>
+                            <div class="fw-semibold">1003</div>
+                        </div>
+                        <div class="col-12">
+                            <div class="small text-muted">الوصف</div>
+                            <p class="card-text">3 قطعة/مجموعة من سراويل اليوغا، سراويل
+                                ضاغطة
+                                للرياضة،
+                                سراويل ضيقة مطاطية للركض، سراويل قاعدة ذات خصر مشدود عالي
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Product_3 -->
+    <div class="modal fade" id="edit-product-3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تعديل المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Image Upload Section -->
+                        <div class="mb-4 text-center">
+                            <div class="image-upload-container mb-2">
+                                <img id="product-image-preview-3" src="assets/images/Products/product_5.png" 
+                                    class="img-thumbnail" style="max-height: 200px; cursor: pointer;"
+                                    alt="صورة المنتج"
+                                    onclick="document.getElementById('product-image-upload-3').click()">
+                                <input type="file" id="product-image-upload-3" class="d-none" accept="image/*">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-refresh btn-sm" 
+                                        onclick="document.getElementById('product-image-upload-3').click()">
+                                    <i class="fas fa-camera me-1"></i> تغيير الصورة
+                                </button>
+                            </div>
+                            <div class="form-text text-center">الحد الأقصى لحجم الصورة 2 ميجابايت</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">اسم المنتج</label>
+                            <input type="text" class="form-control" value="سراويل ضيقة مطاطية">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">الفئة</label>
+                            <select class="form-select">
+                                <option>ملابس نسائية</option>
+                                <option>ملابس نوم</option>
+                                <option>أحذية</option>
+                                <option>الصحة والجمال</option>
+                                <option>الأطفال والأمومة</option>
+                                <option>مجوهرات وإكسسوارات</option>
+                                <option>الحقائب والأمتعة</option>
+                                <option selected>الرياضة والأنشطة الخارجية</option>
+                                <option>إلكترونيات</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">اللون</label>
+                            <select class="form-select">
+                                <option>أسود</option>
+                                <option>رمادي</option>
+                                <option>أبيض</option>
+                                <option>أحمر</option>
+                                <option>أزرق</option>
+                                <option>أخضر</option>
+                                <option selected>عدة ألوان</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">السعر (ر.س)</label>
+                            <input type="text" class="form-control" value="115.25">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">حالة المخزون</label>
+                            <select class="form-select">
+                                <option selected>متوفر</option>
+                                <option>منخفض</option>
+                                <option>غير متوفر</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-save">حفظ التغييرات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Product_3 -->
+    <div class="modal fade" id="delete-product-3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">تأكيد الحذف</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-triangle-exclamation text-danger" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="mb-3">تأكيد حذف المنتج</h5>
+                        <p>سيتم حذف المنتج <strong class="text-danger">سراويل ضيقة مطاطية</strong> من النظام بشكل دائم.
+                        </p>
+                        <p class="text-muted small mb-0">ملاحظة: لا يمكن استرجاع البيانات المحذوفة مرة أخرى.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">
+                        <i class="fa-solid fa-xmark ms-1"></i> إلغاء
+                    </button>
+                    <button type="button" class="btn btn-delete">
+                        <i class="fa-solid fa-trash-can ms-1"></i> تأكيد الحذف
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Product_4-->
+    <div class="modal fade" id="view-product-4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">عرض المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 d-flex align-items-center gap-3">
+                        <div class="ratio ratio-1x1" style="width: 72px;">
+                            <img src="assets/images/Products/product_7.jpg" class="rounded lp-shadow-sm"
+                                alt="بيجاما نسائية">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">بيجاما نسائية</h5>
+                            <span class="badge bg-secondary me-1">ملابس نوم</span>
+                            <span class="badge bg-secondary text-light">أحمر</span>
+                            <span class="badge bg-success">متوفر</span>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="small text-muted">السعر</div>
+                            <div class="fs-5 fw-bold">73.00 ر.س</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted">رقم المنتج</div>
+                            <div class="fw-semibold">1004</div>
+                        </div>
+                        <div class="col-12">
+                            <div class="small text-muted">الوصف</div>
+                            <p class="card-text">
+                                بيجاما ذات أكمام متدلية مع أربطة مزخرفة بالشراريب وطوق مرتب زخرفي بطباعة
+                                الفيونكة
+                                وشراريب بالإضافة إلى مقاسات كبيرة، للعطلات
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Product_4 -->
+    <div class="modal fade" id="edit-product-4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تعديل المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Image Upload Section -->
+                        <div class="mb-4 text-center">
+                            <div class="image-upload-container mb-2">
+                                <img id="product-image-preview-4" src="assets/images/Products/product_7.jpg" 
+                                    class="img-thumbnail" style="max-height: 200px; cursor: pointer;"
+                                    alt="صورة المنتج"
+                                    onclick="document.getElementById('product-image-upload-4').click()">
+                                <input type="file" id="product-image-upload-4" class="d-none" accept="image/*">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-refresh btn-sm" 
+                                        onclick="document.getElementById('product-image-upload-4').click()">
+                                    <i class="fas fa-camera me-1"></i> تغيير الصورة
+                                </button>
+                            </div>
+                            <div class="form-text text-center">الحد الأقصى لحجم الصورة 2 ميجابايت</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">اسم المنتج</label>
+                            <input type="text" class="form-control" value="بيجاما نسائية">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">الفئة</label>
+                            <select class="form-select">
+                                <option>ملابس نسائية</option>
+                                <option selected>ملابس نوم</option>
+                                <option>أحذية</option>
+                                <option>الصحة والجمال</option>
+                                <option>الأطفال والأمومة</option>
+                                <option>مجوهرات وإكسسوارات</option>
+                                <option>الحقائب والأمتعة</option>
+                                <option>الرياضة والأنشطة الخارجية</option>
+                                <option>إلكترونيات</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">اللون</label>
+                            <select class="form-select">
+                                <option>أسود</option>
+                                <option>رمادي</option>
+                                <option>أبيض</option>
+                                <option selected>أحمر</option>
+                                <option>أزرق</option>
+                                <option>أخضر</option>
+                                <option>عدة ألوان</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">السعر (ر.س)</label>
+                            <input type="text" class="form-control" value="73.00">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">حالة المخزون</label>
+                            <select class="form-select">
+                                <option selected>متوفر</option>
+                                <option>منخفض</option>
+                                <option>غير متوفر</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-save">حفظ التغييرات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Product_4 -->
+    <div class="modal fade" id="delete-product-4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">تأكيد الحذف</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-triangle-exclamation text-danger" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="mb-3">تأكيد حذف المنتج</h5>
+                        <p>سيتم حذف المنتج <strong class="text-danger">بيجاما نسائية</strong> من النظام بشكل دائم.
+                        </p>
+                        <p class="text-muted small mb-0">ملاحظة: لا يمكن استرجاع البيانات المحذوفة مرة أخرى.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">
+                        <i class="fa-solid fa-xmark ms-1"></i> إلغاء
+                    </button>
+                    <button type="button" class="btn btn-delete">
+                        <i class="fa-solid fa-trash-can ms-1"></i> تأكيد الحذف
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Product_5-->
+    <div class="modal fade" id="view-product-5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">عرض المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 d-flex align-items-center gap-3">
+                        <div class="ratio ratio-1x1" style="width: 72px;">
+                            <img src="assets/images/Products/product_9.png" class="rounded lp-shadow-sm"
+                                alt="بيجاما نسائية">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">بيجاما نسائية</h5>
+                            <span class="badge bg-secondary me-1">ملابس نوم</span>
+                            <span class="badge bg-secondary text-light">أبيض</span>
+                            <span class="badge bg-success">متوفر</span>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="small text-muted">السعر</div>
+                            <div class="fs-5 fw-bold">37.00 ر.س</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted">رقم المنتج</div>
+                            <div class="fw-semibold">1005</div>
+                        </div>
+                        <div class="col-12">
+                            <div class="small text-muted">الوصف</div>
+                            <p class="card-text">طقم بجامة منقوش فراشة مع لمسات تباين على
+                                طوق
+                                اللباس علوي
+                                والشورت بأكمام قصيرة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Product_5 -->
+    <div class="modal fade" id="edit-product-5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تعديل المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Image Upload Section -->
+                        <div class="mb-4 text-center">
+                            <div class="image-upload-container mb-2">
+                                <img id="product-image-preview-5" src="assets/images/Products/product_9.png" 
+                                    class="img-thumbnail" style="max-height: 200px; cursor: pointer;"
+                                    alt="صورة المنتج"
+                                    onclick="document.getElementById('product-image-upload-5').click()">
+                                <input type="file" id="product-image-upload-5" class="d-none" accept="image/*">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-refresh btn-sm" 
+                                        onclick="document.getElementById('product-image-upload-5').click()">
+                                    <i class="fas fa-camera me-1"></i> تغيير الصورة
+                                </button>
+                            </div>
+                            <div class="form-text text-center">الحد الأقصى لحجم الصورة 2 ميجابايت</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">اسم المنتج</label>
+                            <input type="text" class="form-control" value="بيجاما نسائية">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">الفئة</label>
+                            <select class="form-select">
+                                <option>ملابس نسائية</option>
+                                <option selected>ملابس نوم</option>
+                                <option>أحذية</option>
+                                <option>الصحة والجمال</option>
+                                <option>الأطفال والأمومة</option>
+                                <option>مجوهرات وإكسسوارات</option>
+                                <option>الحقائب والأمتعة</option>
+                                <option>الرياضة والأنشطة الخارجية</option>
+                                <option>إلكترونيات</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">اللون</label>
+                            <select class="form-select">
+                                <option>أسود</option>
+                                <option>رمادي</option>
+                                <option selected>أبيض</option>
+                                <option>أحمر</option>
+                                <option>أزرق</option>
+                                <option>أخضر</option>
+                                <option>عدة ألوان</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">السعر (ر.س)</label>
+                            <input type="text" class="form-control" value="37.00">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">حالة المخزون</label>
+                            <select class="form-select">
+                                <option selected>متوفر</option>
+                                <option>منخفض</option>
+                                <option>غير متوفر</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-save">حفظ التغييرات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Product_5 -->
+    <div class="modal fade" id="delete-product-5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">تأكيد الحذف</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-triangle-exclamation text-danger" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="mb-3">تأكيد حذف المنتج</h5>
+                        <p>سيتم حذف المنتج <strong class="text-danger">بيجاما نسائية</strong> من النظام بشكل دائم.
+                        </p>
+                        <p class="text-muted small mb-0">ملاحظة: لا يمكن استرجاع البيانات المحذوفة مرة أخرى.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">
+                        <i class="fa-solid fa-xmark ms-1"></i> إلغاء
+                    </button>
+                    <button type="button" class="btn btn-delete">
+                        <i class="fa-solid fa-trash-can ms-1"></i> تأكيد الحذف
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Product_6-->
+    <div class="modal fade" id="view-product-6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">عرض المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 d-flex align-items-center gap-3">
+                        <div class="ratio ratio-1x1" style="width: 72px;">
+                            <img src="assets/images/Products/product_11.jpg" class="rounded lp-shadow-sm"
+                                alt="سروال رياضي">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">سروال رياضي</h5>
+                            <span class="badge bg-secondary me-1">الرياضة والأنشطة الخارجية</span>
+                            <span class="badge bg-secondary text-light">أسود</span>
+                            <span class="badge bg-warning">منخفض</span>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="small text-muted">السعر</div>
+                            <div class="fs-5 fw-bold">36.00 ر.س</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted">رقم المنتج</div>
+                            <div class="fw-semibold">1006</div>
+                        </div>
+                        <div class="col-12">
+                            <div class="small text-muted">الوصف</div>
+                            <p class="card-text">سروال رياضي بساق متسعة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Product_6 -->
+    <div class="modal fade" id="edit-product-6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تعديل المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Image Upload Section -->
+                        <div class="mb-4 text-center">
+                            <div class="image-upload-container mb-2">
+                                <img id="product-image-preview-6" src="assets/images/Products/product_11.jpg" 
+                                    class="img-thumbnail" style="max-height: 200px; cursor: pointer;"
+                                    alt="صورة المنتج"
+                                    onclick="document.getElementById('product-image-upload-6').click()">
+                                <input type="file" id="product-image-upload-6" class="d-none" accept="image/*">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-refresh btn-sm" 
+                                        onclick="document.getElementById('product-image-upload-6').click()">
+                                    <i class="fas fa-camera me-1"></i> تغيير الصورة
+                                </button>
+                            </div>
+                            <div class="form-text text-center">الحد الأقصى لحجم الصورة 2 ميجابايت</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">اسم المنتج</label>
+                            <input type="text" class="form-control" value="سروال رياضي">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">الفئة</label>
+                            <select class="form-select">
+                                <option>ملابس نسائية</option>
+                                <option>ملابس نوم</option>
+                                <option>أحذية</option>
+                                <option>الصحة والجمال</option>
+                                <option>الأطفال والأمومة</option>
+                                <option>مجوهرات وإكسسوارات</option>
+                                <option>الحقائب والأمتعة</option>
+                                <option selected>الرياضة والأنشطة الخارجية</option>
+                                <option>إلكترونيات</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">اللون</label>
+                            <select class="form-select">
+                                <option selected>أسود</option>
+                                <option>رمادي</option>
+                                <option>أبيض</option>
+                                <option>أحمر</option>
+                                <option>أزرق</option>
+                                <option>أخضر</option>
+                                <option>عدة ألوان</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">السعر (ر.س)</label>
+                            <input type="text" class="form-control" value="36.00">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">حالة المخزون</label>
+                            <select class="form-select">
+                                <option>متوفر</option>
+                                <option selected>منخفض</option>
+                                <option>غير متوفر</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-save">حفظ التغييرات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Product_6 -->
+    <div class="modal fade" id="delete-product-6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">تأكيد الحذف</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-triangle-exclamation text-danger" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="mb-3">تأكيد حذف المنتج</h5>
+                        <p>سيتم حذف المنتج <strong class="text-danger">سروال رياضي</strong> من النظام بشكل دائم.
+                        </p>
+                        <p class="text-muted small mb-0">ملاحظة: لا يمكن استرجاع البيانات المحذوفة مرة أخرى.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">
+                        <i class="fa-solid fa-xmark ms-1"></i> إلغاء
+                    </button>
+                    <button type="button" class="btn btn-delete">
+                        <i class="fa-solid fa-trash-can ms-1"></i> تأكيد الحذف
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Product_7-->
+    <div class="modal fade" id="view-product-7" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">عرض المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 d-flex align-items-center gap-3">
+                        <div class="ratio ratio-1x1" style="width: 72px;">
+                            <img src="assets/images/Products/product_13.png" class="rounded lp-shadow-sm"
+                                alt="بنطلون جينز">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">بنطلون جينز</h5>
+                            <span class="badge bg-secondary me-1">ملابس نسائية</span>
+                            <span class="badge bg-secondary text-light">أزرق فاتح</span>
+                            <span class="badge bg-success">متوفر</span>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="small text-muted">السعر</div>
+                            <div class="fs-5 fw-bold">54.00 ر.س</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted">رقم المنتج</div>
+                            <div class="fw-semibold">1007</div>
+                        </div>
+                        <div class="col-12">
+                            <div class="small text-muted">الوصف</div>
+                            <p class="card-text">جينز فضفاض بقصة رجل مُلائم للمراهقة،
+                                بنطلون
+                                جينز مُستقيم
+                                عادي</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Product_7 -->
+    <div class="modal fade" id="edit-product-7" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تعديل المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Image Upload Section -->
+                        <div class="mb-4 text-center">
+                            <div class="image-upload-container mb-2">
+                                <img id="product-image-preview-7" src="assets/images/Products/product_13.png" 
+                                    class="img-thumbnail" style="max-height: 200px; cursor: pointer;"
+                                    alt="صورة المنتج"
+                                    onclick="document.getElementById('product-image-upload-7').click()">
+                                <input type="file" id="product-image-upload-7" class="d-none" accept="image/*">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-refresh btn-sm" 
+                                        onclick="document.getElementById('product-image-upload-7').click()">
+                                    <i class="fas fa-camera me-1"></i> تغيير الصورة
+                                </button>
+                            </div>
+                            <div class="form-text text-center">الحد الأقصى لحجم الصورة 2 ميجابايت</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">اسم المنتج</label>
+                            <input type="text" class="form-control" value="بنطلون جينز">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">الفئة</label>
+                            <select class="form-select">
+                                <option selected>ملابس نسائية</option>
+                                <option>ملابس نوم</option>
+                                <option>أحذية</option>
+                                <option>الصحة والجمال</option>
+                                <option>الأطفال والأمومة</option>
+                                <option>مجوهرات وإكسسوارات</option>
+                                <option>الحقائب والأمتعة</option>
+                                <option>الرياضة والأنشطة الخارجية</option>
+                                <option>إلكترونيات</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">اللون</label>
+                            <select class="form-select">
+                                <option>أسود</option>
+                                <option>رمادي</option>
+                                <option>أبيض</option>
+                                <option>أحمر</option>
+                                <option selected>أزرق فاتح</option>
+                                <option>أخضر</option>
+                                <option>عدة ألوان</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">السعر (ر.س)</label>
+                            <input type="text" class="form-control" value="129.00">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">حالة المخزون</label>
+                            <select class="form-select">
+                                <option selected>متوفر</option>
+                                <option>منخفض</option>
+                                <option>غير متوفر</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-save">حفظ التغييرات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Product_7 -->
+    <div class="modal fade" id="delete-product-7" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">تأكيد الحذف</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-triangle-exclamation text-danger" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="mb-3">تأكيد حذف المنتج</h5>
+                        <p>سيتم حذف المنتج <strong class="text-danger">بنطلون جينز</strong> من النظام بشكل دائم.
+                        </p>
+                        <p class="text-muted small mb-0">ملاحظة: لا يمكن استرجاع البيانات المحذوفة مرة أخرى.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">
+                        <i class="fa-solid fa-xmark ms-1"></i> إلغاء
+                    </button>
+                    <button type="button" class="btn btn-delete">
+                        <i class="fa-solid fa-trash-can ms-1"></i> تأكيد الحذف
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Product_8-->
+    <div class="modal fade" id="view-product-8" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">عرض المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 d-flex align-items-center gap-3">
+                        <div class="ratio ratio-1x1" style="width: 72px;">
+                            <img src="assets/images/Products/product_15.png" class="rounded lp-shadow-sm"
+                                alt="بنطلون ذو خصر عالي">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">بنطلون ذو خصر عالي</h5>
+                            <span class="badge bg-secondary me-1">ملابس نسائية</span>
+                            <span class="badge bg-secondary text-light">أسود</span>
+                            <span class="badge bg-danger">غير متوفر</span>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="small text-muted">السعر</div>
+                            <div class="fs-5 fw-bold">27.00 ر.س</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="small text-muted">رقم المنتج</div>
+                            <div class="fw-semibold">1008</div>
+                        </div>
+                        <div class="col-12">
+                            <div class="small text-muted">الوصف</div>
+                            <p class="card-text">بنطلون أسود ذو خصر عالي منسدل واسع مطوي
+                                للفتيات والفتيات
+                                المراهقات مناسب للاستخدام اليومي، مرن للربيع والصيف والخريف والشتاء</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Product_8 -->
+    <div class="modal fade" id="edit-product-8" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تعديل المنتج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Image Upload Section -->
+                        <div class="mb-4 text-center">
+                            <div class="image-upload-container mb-2">
+                                <img id="product-image-preview-8" src="assets/images/Products/product_15.png" 
+                                    class="img-thumbnail" style="max-height: 200px; cursor: pointer;"
+                                    alt="صورة المنتج"
+                                    onclick="document.getElementById('product-image-upload-8').click()">
+                                <input type="file" id="product-image-upload-8" class="d-none" accept="image/*">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-refresh btn-sm" 
+                                        onclick="document.getElementById('product-image-upload-8').click()">
+                                    <i class="fas fa-camera me-1"></i> تغيير الصورة
+                                </button>
+                            </div>
+                            <div class="form-text text-center">الحد الأقصى لحجم الصورة 2 ميجابايت</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">اسم المنتج</label>
+                            <input type="text" class="form-control" value="بنطلون ذو خصر عالي">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">الفئة</label>
+                            <select class="form-select">
+                                <option selected>ملابس نسائية</option>
+                                <option>ملابس نوم</option>
+                                <option>أحذية</option>
+                                <option>الصحة والجمال</option>
+                                <option>الأطفال والأمومة</option>
+                                <option>مجوهرات وإكسسوارات</option>
+                                <option>الحقائب والأمتعة</option>
+                                <option>الرياضة والأنشطة الخارجية</option>
+                                <option>إلكترونيات</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">اللون</label>
+                            <select class="form-select">
+                                <option selected>أسود</option>
+                                <option>رمادي</option>
+                                <option>أبيض</option>
+                                <option>أحمر</option>
+                                <option>أزرق</option>
+                                <option>أخضر</option>
+                                <option>عدة ألوان</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">السعر (ر.س)</label>
+                            <input type="text" class="form-control" value="27.00">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">حالة المخزون</label>
+                            <select class="form-select">
+                                <option>متوفر</option>
+                                <option>منخفض</option>
+                                <option selected>غير متوفر</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-save">حفظ التغييرات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Product_8 -->
+    <div class="modal fade" id="delete-product-8" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger">تأكيد الحذف</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <div class="mb-3">
+                            <i class="fa-solid fa-triangle-exclamation text-danger" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="mb-3">تأكيد حذف المنتج</h5>
+                        <p>سيتم حذف المنتج <strong class="text-danger">بنطلون ذو خصر عالي</strong> من النظام بشكل دائم.
+                        </p>
+                        <p class="text-muted small mb-0">ملاحظة: لا يمكن استرجاع البيانات المحذوفة مرة أخرى.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">
+                        <i class="fa-solid fa-xmark ms-1"></i> إلغاء
+                    </button>
+                    <button type="button" class="btn btn-delete">
+                        <i class="fa-solid fa-trash-can ms-1"></i> تأكيد الحذف
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offcanvas: Active Users -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="activeUsersOffcanvas"
+        aria-labelledby="activeUsersOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="activeUsersOffcanvasLabel">المستخدمون النشطون</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p class="alert alert-success text-success mb-3">هنا يمكنك رؤية المستخدمين المتصلين حالياً.</p>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_3.png" alt="جوهرة تركي"
+                                    class="rounded-circle" width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                    role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">جوهرة تركي</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">نشط الآن</small>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_1.png" alt="سارة أحمد" class="rounded-circle"
+                                    width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                    role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">سارة أحمد</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">نشط الآن</small>
+                    </div>
+                </li>
+
+                <li class="list-group-item">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                <img src="assets/images/Customers/customer_2.png" alt="نورة عبد العزيز"
+                                    class="rounded-circle" width="40" height="40">
+                                <div class="spinner-grow spinner-grow-xxs text-warning status-dot spinner-xxs"
+                                    role="status">
+                                    <span class="visually-hidden">جاري التحميل...</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-bold">نورة عبد العزيز</div>
+                                <div class="d-flex gap-1 small mt-1">
+                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                            class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="#" class="text-muted" title="Telegram"><i
+                                            class="fa-brands fa-telegram"></i></a>
+                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin"></i></a>
+                                    <a href="#" class="text-muted" title="Facebook"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">خامل</small>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Toast Container for Notifications -->
+    <div id="toast-container" class="position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 1100"></div>
+
+    <script src="assets/js/datatables.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        new DataTable('#productsTable', {
+            responsive: true,
+            language: {
+                "sProcessing": "جاري التحميل...",
+                "sLengthMenu": "عرض _MENU_ سجل",
+                "sZeroRecords": "لم يتم العثور على سجلات",
+                "sInfo": "عرض _START_ إلى _END_ من _TOTAL_ سجل",
+                "sInfoEmpty": "عرض 0 إلى 0 من 0 سجل",
+                "sInfoFiltered": "(تصفية من _MAX_ إجمالي السجلات)",
+                "sSearch": "بحث",
+                "oPaginate": {
+                    "sFirst": "الأول",
+                    "sPrevious": "السابق",
+                    "sNext": "التالي",
+                    "sLast": "الأخير"
+                },
+                "emptyTable": "لا توجد بيانات متاحة في الجدول",
+                "loadingRecords": "جاري التحميل...",
+                "search": "بحث",
+                "searchPlaceholder": "ابحث..."
+            },
+            buttons: [
+                {
+                    extend: 'copy',
+                    text: 'نسخ'
+                },
+                {
+                    extend: 'excel',
+                    text: 'إكسيل'
+                },
+                {
+                    extend: 'pdf',
+                    text: 'PDF'
+                },
+                {
+                    extend: 'print',
+                    text: 'طباعة'
+                }
+            ],
+            layout: {
+                topStart: 'buttons'
+            },
+            dom: "<'row'<'col-sm-12 col-md-6'B><'col-sm-12 col-md-6'f>>" +
+                "<'row'<'col-sm-12'tr>>" +
+                "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+            scrollX: false,
+            autoWidth: false,
+            pageLength: 10,
+            lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, 'الكل']],
+            order: [[0, 'asc']]
+        });
+    </script>
+</body>
+
+</html>

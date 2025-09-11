@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/my_loop.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>لوحة التحكم | العملاء</title>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+                <div class="right-header d-flex align-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">إيليجانسيا</a>
+                    </div>
+
+                    <div class="px-3">
+                        <a href="#"><i class="fa-solid fa-chart-bar" id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="اكتب اسم المنتج للبحث">
+                    </form>
+                </div>
+
+                <div class="left-header d-flex align-items-center gap-3 px-3">
+                    <div id="icons" class="icons d-flex gap-3">
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span class="icon-badge">4</span>
+                            <ul id="messagesMenu" class="icon-dropdown">
+                                <div class="header-title">الرسائل</div>
+                                <li>
+                                    <strong>نورة عبد العزيز</strong>
+                                    <div class="small text-muted">قبل 10 دقائق</div>
+                                    <div class="small">مرحباً، هل لديكم فستان أزرق بالحجم المتوسط؟</div>
+                                </li>
+                                <li>
+                                    <strong>جوهرة تركي</strong>
+                                    <div class="small text-muted">قبل 30 دقيقة</div>
+                                    <div class="small">أريد استبدال المعطف الذي اشتريته بالحجم الأصغر</div>
+                                </li>
+                                <li>
+                                    <strong>سارة أحمد</strong>
+                                    <div class="small text-muted">أمس</div>
+                                    <div class="small">متى ستتوفر المجموعة الصيفية الجديدة؟</div>
+                                </li>
+                                <li>
+                                    <strong>ريم حسن</strong>
+                                    <div class="small text-muted">منذ يومين</div>
+                                    <div class="small">شكراً على التوصيل السريع، المنتج رائع!</div>
+                                </li>
+                                <li class="text-center small text-primary"><a href="">عرض كل الرسائل</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end">
+                            <i class="fa-regular fa-bell"></i>
+                            <span class="icon-badge">2</span>
+                            <ul id="bellMenu" class="icon-dropdown">
+                                <div class="header-title">الإشعارات</div>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-truck text-success"></i>
+                                        <div>
+                                            <div class="small">تم شحن طلبك رقم #1234 بنجاح</div>
+                                            <div class="small text-muted">قبل ساعة</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="fa-solid fa-tag text-primary"></i>
+                                        <div>
+                                            <div class="small">خصم 20% على جميع الفساتين المسائية</div>
+                                            <div class="small text-muted">منذ يومين</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="text-center small text-primary"><a href="">عرض كل الإشعارات</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="المهام">
+                            <i class="fa-regular fa-clipboard"></i>
+                            <ul id="tasksMenu" class="icon-dropdown">
+                                <div class="header-title">المهام</div>
+                                <li>
+                                    <strong>مهمة: تحديث الأسعار</strong>
+                                    <div class="small text-muted">اليوم 10:30</div>
+                                    <div class="small">راجع أسعار قسم الفساتين الجديدة.</div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: صور المنتجات</strong>
+                                    <div class="small text-muted">اليوم 12:00</div>
+                                    <div class="small">أضفت صوراً عالية الدقة لمنتج "حافظة حرارية ذكية مع شاشة رقمية".
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong>مهمة: متابعة الشحن</strong>
+                                    <div class="small text-muted">غداً</div>
+                                    <div class="small">تأكيد موعد التسليم لطلبات المنطقة الغربية.</div>
+                                </li>
+                                <li class="text-center small text-primary"><a href="">عرض كل المهام</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown-icon align-end" title="الإعدادات">
+                            <i class="fa-solid fa-gear"></i>
+                            <ul id="icon-dropdown" class="icon-dropdown">
+                                <div class="header-title">الإعدادات</div>
+                                <li>
+                                    <strong>الملف الشخصي</strong>
+                                    <div class="small text-muted">إعدادات الحساب والمعلومات الشخصية</div>
+                                </li>
+                                <li>
+                                    <strong>الأمان</strong>
+                                    <div class="small text-muted">تغيير كلمة المرور والمصادقة الثنائية</div>
+                                </li>
+                                <li>
+                                    <strong>الإشعارات</strong>
+                                    <div class="small text-muted">تفعيل/تعطيل التنبيهات البريدية والرسائل</div>
+                                </li>
+                                <li class="text-center small text-primary"><a href="">الذهاب إلى صفحة الإعدادات</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="avatar">
+                        <img src="assets/images/avatars/avatar.png" alt="">
+                    </div>
+                    <i class="fa-solid fa-bars-staggered active-users" role="button" tabindex="0"
+                        title="المستخدمون النشطون" data-bs-toggle="offcanvas" data-bs-target="#activeUsersOffcanvas"
+                        aria-controls="activeUsersOffcanvas"></i>
+                </div>
+            </header>
+        </nav>
+
+        <div class="side-bar" id="side-bar">
+            <div class="profile">
+                <img width="90px" src="assets/images/avatars/avatar.png" alt="">
+                <h3>رهف فرحات</h3>
+            </div>
+
+            <ul class="menu ul-sidebar">
+                <li class="mb-2"><a href="index.html" class="menu-link"><i class="fa-solid fa-house fs-5"
+                            aria-hidden="true"></i>الصفحة الرئيسية</a></li>
+                <li class="mb-2"><a href="products.html" class="menu-link"><i class="fa-solid fa-shirt fs-5"
+                            aria-hidden="true"></i>المنتجات</a></li>
+                <li class="mb-2"><a href="orders.html" class="menu-link"><i class="fa-solid fa-cart-shopping fs-5"
+                            aria-hidden="true"></i>الطلبات</a></li>
+                <li class="mb-2"><a href="customers.html" class="menu-link is-active"><i class="fa-solid fa-users fs-5"
+                            aria-hidden="true"></i>العملاء</a></li>
+                <li class="mb-2"><a href="blog.html" class="menu-link"><i class="fa-solid fa-list fs-5"
+                            aria-hidden="true"></i>المدونة</a></li>
+                <li class="mb-2"><a href="discounts.html" class="menu-link"><i class="fa-solid fa-tag fs-5"
+                            aria-hidden="true"></i>الخصومات</a></li>
+                <li class="mb-2"><a href="reports.html" class="menu-link"><i class="fa-solid fa-chart-line fs-5"
+                            aria-hidden="true"></i>التقارير</a></li>
+                <li class="mb-2"><a href="settings.html" class="menu-link"><i class="fa-solid fa-gear fs-5"
+                            aria-hidden="true"></i>الإعدادات</a></li>
+                <li class="mb-2"><a href="help.html" class="menu-link"><i class="fa-regular fa-circle-question fs-5"
+                            aria-hidden="true"></i>مركز المساعدة</a></li>
+                <li class="mb-2"><a href="logout.html" class="menu-link"><i class="fa-solid fa-right-to-bracket fs-5"
+                            aria-hidden="true"></i>تسجيل الخروج</a></li>
+            </ul>
+        </div>
+        <div class="content p-3" id="content">
+            <div class="inner-content">
+                <div class="container-fluid">
+                    <h4>العملاء</h4>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card p-3 lp-shadow-sm ">
+                                <div class="card-header d-flex justify-content-between align-items-center lp-p-15">
+                                    <h5 class="mb-0">قائمة العملاء</h5>
+                                    <div class="d-flex gap-2">
+                                        <button type="button" class="btn btn-secondary active"
+                                            data-filter="">الكل</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-filter="مخلصة">مخلصة</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-filter="جديدة">جديدة</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-filter="مخفضة">مخفضة</button>
+                                    </div>
+                                </div>
+                                <div class="all-customers">
+                                    <div class="card border-0 lp-shadow-sm">
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table id="customersTable"
+                                                    class="table table-hover table-mobile lp-mt-10 lp-mb-10"
+                                                    style="width:100%">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>الصورة</th>
+                                                            <th>العميل</th>
+                                                            <th>البريد الإلكتروني</th>
+                                                            <th>رقم الجوال</th>
+                                                            <th>عدد الطلبات</th>
+                                                            <th>إجمالي المشتريات</th>
+                                                            <th>التصنيف</th>
+                                                            <th>الحالة</th>
+                                                            <th>الإجراءات</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="customer-item loyal">
+                                                            <td>1001</td>
+                                                            <td>
+                                                                <img src="assets/images/Customers/customer_1.png"
+                                                                    class="rounded-circle" width="40" height="40"
+                                                                    alt="سارة أحمد">
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div>
+                                                                        <div class="fw-bold">سارة أحمد</div>
+                                                                        <small class="text-muted">ID:
+                                                                            CUST-1001</small>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>sara.ahmed@example.com</td>
+                                                            <td>+966 50 123 4567</td>
+                                                            <td>15</td>
+                                                            <td>4.750 ر.س</td>
+                                                            <td><span class="badge bg-success loyal">عميلة
+                                                                    مخلصة</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div style="width: 10px; height: 10px;"
+                                                                        class="spinner-grow spinner-grow-sm text-success"
+                                                                        role="status">
+                                                                        <span class="visually-hidden">جاري
+                                                                            التحميل...</span>
+                                                                    </div>
+                                                                    نشط
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button class="btn btn-sm btn-view"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#viewCustomerModal">
+                                                                        <i class="fa-regular fa-eye"></i>
+                                                                    </button>
+                                                                    <button class="btn btn-sm btn-edit"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#editCustomerModal">
+                                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="customer-item new">
+                                                            <td>1002</td>
+                                                            <td><img src="assets/images/Customers/customer_2.png"
+                                                                    class="rounded-circle" width="40" height="40"
+                                                                    alt="نورة عبد العزيز"></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div>
+                                                                        <div class="fw-bold">نورة عبد العزيز</div>
+                                                                        <small class="text-muted">ID:
+                                                                            CUST-1002</small>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>nora.mohammed@example.com</td>
+                                                            <td>+966 55 987 6543</td>
+                                                            <td>8</td>
+                                                            <td>3.250 ر.س</td>
+                                                            <td><span class="badge bg-warning new">عميلة
+                                                                    جديدة</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div style="width: 10px; height: 10px;"
+                                                                        class="spinner-grow spinner-grow-sm text-warning"
+                                                                        role="status">
+                                                                        <span class="visually-hidden">جاري
+                                                                            التحميل...</span>
+                                                                    </div>
+                                                                    غير نشط
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-group"><button
+                                                                        class="btn btn-sm btn-view"><i
+                                                                            class="fa-regular fa-eye"></i></button><button
+                                                                        class="btn btn-sm btn-edit"><i
+                                                                            class="fa-regular fa-pen-to-square"></i></button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="customer-item discount">
+                                                            <td>1003</td>
+                                                            <td><img src="assets/images/Customers/customer_3.png"
+                                                                    class="rounded-circle" width="40" height="40"
+                                                                    alt="جوهرة تركي"></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div>
+                                                                        <div class="fw-bold">جوهرة تركي</div>
+                                                                        <small class="text-muted">ID:
+                                                                            CUST-1003</small>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>lama.khaled@example.com</td>
+                                                            <td>+966 54 321 0987</td>
+                                                            <td>12</td>
+                                                            <td>5.400 ر.س</td>
+                                                            <td><span class="badge bg-danger discount">عميلة
+                                                                    مخفضة</span></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div style="width: 10px; height: 10px;"
+                                                                        class="spinner-grow spinner-grow-sm text-secondary"
+                                                                        role="status">
+                                                                        <span class="visually-hidden">جاري
+                                                                            التحميل...</span>
+                                                                    </div>
+                                                                    متوقف
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-group"><button
+                                                                        class="btn btn-sm btn-view"><i
+                                                                            class="fa-regular fa-eye"></i></button><button
+                                                                        class="btn btn-sm btn-edit"><i
+                                                                            class="fa-regular fa-pen-to-square"></i></button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="customer-item loyal">
+                                                            <td>1004</td>
+                                                            <td><img src="assets/images/Customers/customer_4.png"
+                                                                    class="rounded-circle" width="40" height="40"
+                                                                    alt="هند سليمان"></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div>
+                                                                        <div class="fw-bold">هند سليمان</div>
+                                                                        <small class="text-muted">ID:
+                                                                            CUST-1004</small>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>hind.sulaiman@example.com</td>
+                                                            <td>+966 56 123 4567</td>
+                                                            <td>6</td>
+                                                            <td>2.800 ر.س</td>
+                                                            <td><span class="badge bg-success loyal">عميلة
+                                                                    مخلصة</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div style="width: 10px; height: 10px;"
+                                                                        class="spinner-grow spinner-grow-sm text-success"
+                                                                        role="status">
+                                                                        <span class="visually-hidden">جاري
+                                                                            التحميل...</span>
+                                                                    </div>
+                                                                    نشط
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button class="btn btn-sm btn-view"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#viewCustomerModal">
+                                                                        <i class="fa-regular fa-eye"></i>
+                                                                    </button>
+                                                                    <button class="btn btn-sm btn-edit"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#editCustomerModal">
+                                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="customer-item new">
+                                                            <td>1005</td>
+                                                            <td><img src="assets/images/Customers/customer_5.png"
+                                                                    class="rounded-circle" width="40" height="40"
+                                                                    alt="شهد عبدالله"></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div>
+                                                                        <div class="fw-bold">شهد عبدالله</div>
+                                                                        <small class="text-muted">ID:
+                                                                            CUST-1005</small>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>shahad.abdullah@example.com</td>
+                                                            <td>+966 57 234 5678</td>
+                                                            <td>9</td>
+                                                            <td>4.100 ر.س</td>
+                                                            <td><span class="badge bg-warning new">عميلة
+                                                                    جديدة</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div style="width: 10px; height: 10px;"
+                                                                        class="spinner-grow spinner-grow-sm text-success"
+                                                                        role="status">
+                                                                        <span class="visually-hidden">جاري
+                                                                            التحميل...</span>
+                                                                    </div>
+                                                                    نشط
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button class="btn btn-sm btn-view"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#viewCustomerModal">
+                                                                        <i class="fa-regular fa-eye"></i>
+                                                                    </button>
+                                                                    <button class="btn btn-sm btn-edit"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#editCustomerModal">
+                                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="customer-item discount">
+                                                            <td>1006</td>
+                                                            <td><img src="assets/images/Customers/customer_6.png"
+                                                                    class="rounded-circle" width="40" height="40"
+                                                                    alt="سارة علي"></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div>
+                                                                        <div class="fw-bold">سارة علي</div>
+                                                                        <small class="text-muted">ID:
+                                                                            CUST-1006</small>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>sara.ali@example.com</td>
+                                                            <td>+966 58 345 6789</td>
+                                                            <td>11</td>
+                                                            <td>3.900 ر.س</td>
+                                                            <td><span class="badge bg-danger discount">عميلة
+                                                                    مخفضة</span></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div style="width: 10px; height: 10px;"
+                                                                        class="spinner-grow spinner-grow-sm text-success"
+                                                                        role="status">
+                                                                        <span class="visually-hidden">جاري
+                                                                            التحميل...</span>
+                                                                    </div>
+                                                                    نشط
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button class="btn btn-sm btn-view"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#viewCustomerModal">
+                                                                        <i class="fa-regular fa-eye"></i>
+                                                                    </button>
+                                                                    <button class="btn btn-sm btn-edit"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#editCustomerModal">
+                                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="customer-item loyal">
+                                                            <td>1007</td>
+                                                            <td><img src="assets/images/Customers/customer_7.png"
+                                                                    class="rounded-circle" width="40" height="40"
+                                                                    alt="ريم حسن"></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div>
+                                                                        <div class="fw-bold">ريم حسن</div>
+                                                                        <small class="text-muted">ID:
+                                                                            CUST-1007</small>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>reem.hassan@example.com</td>
+                                                            <td>+966 59 456 7890</td>
+                                                            <td>7</td>
+                                                            <td>2.600 ر.س</td>
+                                                            <td><span class="badge bg-success loyal">عميلة
+                                                                    مخلصة</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div style="width: 10px; height: 10px;"
+                                                                        class="spinner-grow spinner-grow-sm text-success"
+                                                                        role="status">
+                                                                        <span class="visually-hidden">جاري
+                                                                            التحميل...</span>
+                                                                    </div>
+                                                                    نشط
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button class="btn btn-sm btn-view"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#viewCustomerModal">
+                                                                        <i class="fa-regular fa-eye"></i>
+                                                                    </button>
+                                                                    <button class="btn btn-sm btn-edit"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#editCustomerModal">
+                                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="customer-item new">
+                                                            <td>1008</td>
+                                                            <td><img src="assets/images/Customers/customer_8.png"
+                                                                    class="rounded-circle" width="40" height="40"
+                                                                    alt="نجوى عبدالله"></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div>
+                                                                        <div class="fw-bold">نجوى عبدالله</div>
+                                                                        <small class="text-muted">ID:
+                                                                            CUST-1008</small>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>najwa.abdullah@example.com</td>
+                                                            <td>+966 50 567 8901</td>
+                                                            <td>14</td>
+                                                            <td>5.200 ر.س</td>
+                                                            <td><span class="badge bg-warning new">عميلة
+                                                                    جديدة</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div style="width: 10px; height: 10px;"
+                                                                        class="spinner-grow spinner-grow-sm text-success"
+                                                                        role="status">
+                                                                        <span class="visually-hidden">جاري
+                                                                            التحميل...</span>
+                                                                    </div>
+                                                                    نشط
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button class="btn btn-sm btn-view"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#viewCustomerModal">
+                                                                        <i class="fa-regular fa-eye"></i>
+                                                                    </button>
+                                                                    <button class="btn btn-sm btn-edit"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#editCustomerModal">
+                                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="customer-item discount">
+                                                            <td>1009</td>
+                                                            <td><img src="assets/images/Customers/customer_9.png"
+                                                                    class="rounded-circle" width="40" height="40"
+                                                                    alt="هبة محمد"></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div>
+                                                                        <div class="fw-bold">هبة محمد</div>
+                                                                        <small class="text-muted">ID:
+                                                                            CUST-1009</small>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>heba.mohammed@example.com</td>
+                                                            <td>+966 55 678 9012</td>
+                                                            <td>10</td>
+                                                            <td>3.700 ر.س</td>
+                                                            <td><span class="badge bg-danger discount">عميلة
+                                                                    مخفضة</span></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div style="width: 10px; height: 10px;"
+                                                                        class="spinner-grow spinner-grow-sm text-success"
+                                                                        role="status">
+                                                                        <span class="visually-hidden">جاري
+                                                                            التحميل...</span>
+                                                                    </div>
+                                                                    نشط
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button class="btn btn-sm btn-view"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#viewCustomerModal">
+                                                                        <i class="fa-regular fa-eye"></i>
+                                                                    </button>
+                                                                    <button class="btn btn-sm btn-edit"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#editCustomerModal">
+                                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="customer-item loyal">
+                                                            <td>1010</td>
+                                                            <td><img src="assets/images/Customers/customer_10.png"
+                                                                    class="rounded-circle" width="40" height="40"
+                                                                    alt="أمل سليمان"></td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center">
+                                                                    <div>
+                                                                        <div class="fw-bold">أمل سليمان</div>
+                                                                        <small class="text-muted">ID:
+                                                                            CUST-1010</small>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td>amal.sulaiman@example.com</td>
+                                                            <td>+966 56 789 0123</td>
+                                                            <td>8</td>
+                                                            <td>3.000 ر.س</td>
+                                                            <td><span class="badge bg-success loyal">عميلة
+                                                                    مخلصة</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex align-items-center gap-2">
+                                                                    <div style="width: 10px; height: 10px;"
+                                                                        class="spinner-grow spinner-grow-sm text-success"
+                                                                        role="status">
+                                                                        <span class="visually-hidden">جاري
+                                                                            التحميل...</span>
+                                                                    </div>
+                                                                    نشط
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="btn-group">
+                                                                    <button class="btn btn-sm btn-view"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#viewCustomerModal">
+                                                                        <i class="fa-regular fa-eye"></i>
+                                                                    </button>
+                                                                    <button class="btn btn-sm btn-edit"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#editCustomerModal">
+                                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offcanvas: Active Users -->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="activeUsersOffcanvas"
+                        aria-labelledby="activeUsersOffcanvasLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="activeUsersOffcanvasLabel">المستخدمون النشطون</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="إغلاق"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <p class="alert alert-success text-success mb-3">هنا يمكنك رؤية المستخدمين المتصلين حالياً.
+                            </p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                                <img src="assets/images/Customers/customer_3.png" alt="جوهرة تركي"
+                                                    class="rounded-circle" width="40" height="40">
+                                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                                    role="status">
+                                                    <span class="visually-hidden">جاري التحميل...</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="fw-bold">جوهرة تركي</div>
+                                                <div class="d-flex gap-1 small mt-1">
+                                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                                            class="fa-brands fa-whatsapp"></i></a>
+                                                    <a href="#" class="text-muted" title="Telegram"><i
+                                                            class="fa-brands fa-telegram"></i></a>
+                                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                                            class="fa-brands fa-linkedin"></i></a>
+                                                    <a href="#" class="text-muted" title="Facebook"><i
+                                                            class="fa-brands fa-facebook"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">نشط الآن</small>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                                <img src="assets/images/Customers/customer_1.png" alt="سارة أحمد"
+                                                    class="rounded-circle" width="40" height="40">
+                                                <div class="spinner-grow spinner-grow-xxs text-success status-dot spinner-xxs"
+                                                    role="status">
+                                                    <span class="visually-hidden">جاري التحميل...</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="fw-bold">سارة أحمد</div>
+                                                <div class="d-flex gap-1 small mt-1">
+                                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                                            class="fa-brands fa-whatsapp"></i></a>
+                                                    <a href="#" class="text-muted" title="Telegram"><i
+                                                            class="fa-brands fa-telegram"></i></a>
+                                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                                            class="fa-brands fa-linkedin"></i></a>
+                                                    <a href="#" class="text-muted" title="Facebook"><i
+                                                            class="fa-brands fa-facebook"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">نشط الآن</small>
+                                    </div>
+                                </li>
+
+                                <li class="list-group-item">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="avatar-status-wrapper position-relative d-inline-block">
+                                                <img src="assets/images/Customers/customer_2.png" alt="نورة عبد العزيز"
+                                                    class="rounded-circle" width="40" height="40">
+                                                <div class="spinner-grow spinner-grow-xxs text-warning status-dot spinner-xxs"
+                                                    role="status">
+                                                    <span class="visually-hidden">جاري التحميل...</span>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="fw-bold">نورة عبد العزيز</div>
+                                                <div class="d-flex gap-1 small mt-1">
+                                                    <a href="#" class="text-muted" title="WhatsApp"><i
+                                                            class="fa-brands fa-whatsapp"></i></a>
+                                                    <a href="#" class="text-muted" title="Telegram"><i
+                                                            class="fa-brands fa-telegram"></i></a>
+                                                    <a href="#" class="text-muted" title="LinkedIn"><i
+                                                            class="fa-brands fa-linkedin"></i></a>
+                                                    <a href="#" class="text-muted" title="Facebook"><i
+                                                            class="fa-brands fa-facebook"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">خامل</small>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- View Customer Modal -->
+                    <div class="modal fade" id="viewCustomerModal" tabindex="-1"
+                        aria-labelledby="viewCustomerModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="viewCustomerModalLabel">عرض بيانات العميل</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="إغلاق"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-4 text-center mb-4">
+                                            <img src="assets/images/Customers/customer_1.png"
+                                                class="img-fluid rounded-circle mb-3" width="150" height="150"
+                                                alt="صورة العميل">
+                                            <h5 class="mb-1">سارة أحمد</h5>
+                                            <p class="text-muted">ID: CUST-1001</p>
+                                            <span class="badge bg-success">نشط</span>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <p class="mb-2"><strong>البريد الإلكتروني:</strong></p>
+                                                    <p>sara.ahmed@example.com</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p class="mb-2"><strong>رقم الجوال:</strong></p>
+                                                    <p>+966 50 123 4567</p>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                    <p class="mb-2"><strong>عدد الطلبات:</strong></p>
+                                                    <p>15</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p class="mb-2"><strong>إجمالي المشتريات:</strong></p>
+                                                    <p>4.750 ر.س</p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <p class="mb-2"><strong>تاريخ التسجيل:</strong></p>
+                                                    <p>10 يناير 2025</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-cancel" data-bs-dismiss="modal">إغلاق</button>
+                                    <button type="button" class="btn btn-edit" data-bs-toggle="modal"
+                                        data-bs-target="#editCustomerModal" data-bs-dismiss="modal">
+                                        <i class="fa-regular fa-pen-to-square me-1"></i> تعديل
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Edit Customer Modal -->
+                    <div class="modal fade" id="editCustomerModal" tabindex="-1"
+                        aria-labelledby="editCustomerModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editCustomerModalLabel">تعديل بيانات العميل</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="إغلاق"></button>
+                                </div>
+                                <form>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-4 text-center mb-4">
+                                                <div class="mb-3 position-relative">
+                                                    <img src="assets/images/Customers/customer_1.png"
+                                                        class="img-fluid rounded-circle mb-2" width="150" height="150"
+                                                        alt="صورة العميل">
+                                                    <div class="w-100">
+                                                        <button type="button" class="btn btn-sm btn-refresh w-100"
+                                                            onclick="document.getElementById('imageUpload').click()">
+                                                            <i class="fa-solid fa-camera me-1"></i> تغيير الصورة
+                                                        </button>
+                                                    </div>
+                                                    <input type="file" class="form-control d-none" id="imageUpload"
+                                                        accept="image/*">
+                                                </div>
+                                                <div class="form-check form-switch d-flex justify-content-center mb-3">
+                                                    <input class="form-check-input me-2" type="checkbox"
+                                                        id="activeStatus" checked onchange="updateStatusText(this)">
+                                                    <label class="form-check-label" for="activeStatus"
+                                                        id="statusLabel">نشط</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <label for="customerId" class="form-label">رقم العميل</label>
+                                                        <input type="text" class="form-control" id="customerId"
+                                                            value="1001" disabled>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="customerName" class="form-label">اسم العميل</label>
+                                                        <input type="text" class="form-control" id="customerName"
+                                                            value="سارة أحمد">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <label for="customerEmail" class="form-label">البريد
+                                                            الإلكتروني</label>
+                                                        <input type="email" class="form-control" id="customerEmail"
+                                                            value="sara.ahmed@example.com">
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="customerPhone" class="form-label">رقم الجوال</label>
+                                                        <input type="tel" class="form-control" id="customerPhone"
+                                                            value="+966 50 123 4567">
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-6">
+                                                        <label for="orderCount" class="form-label">عدد الطلبات</label>
+                                                        <input type="number" class="form-control" id="orderCount"
+                                                            value="15" disabled>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="totalSpent" class="form-label">إجمالي
+                                                            المشتريات</label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" id="totalSpent"
+                                                                value="4.750" dir="ltr">
+                                                            <span class="input-group-text">ر.س</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-12">
+                                                        <label for="joinDate" class="form-label">تاريخ التسجيل</label>
+                                                        <input type="text" class="form-control" id="joinDate"
+                                                            value="2025/01/10" disabled>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-cancel"
+                                            data-bs-dismiss="modal">إلغاء</button>
+                                        <button type="button" class="btn btn-save">حفظ التغييرات</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script src="assets/js/datatables.js"></script>
+                    <script src="assets/js/bootstrap.js"></script>
+                    <script src="assets/js/script.js"></script>
+                    <script>
+                        $(document).ready(function () {
+                            const dataTable = $('#customersTable').DataTable({
+                                responsive: true,
+                                language: {
+                                    "sProcessing": "جاري التحميل...",
+                                    "sLengthMenu": "عرض _MENU_ سجل",
+                                    "sZeroRecords": "لم يتم العثور على سجلات",
+                                    "sInfo": "عرض _START_ إلى _END_ من _TOTAL_ سجل",
+                                    "sInfoEmpty": "عرض 0 إلى 0 من 0 سجل",
+                                    "sInfoFiltered": "(تصفية من _MAX_ إجمالي السجلات)",
+                                    "sSearch": "بحث:",
+                                    "oPaginate": {
+                                        "sFirst": "الأول",
+                                        "sPrevious": "السابق",
+                                        "sNext": "التالي",
+                                        "sLast": "الأخير"
+                                    }
+                                },
+                                dom: "<'row'<'col-sm-12 col-md-6'B><'col-sm-12 col-md-6'f>>" +
+                                    "<'row'<'col-sm-12'tr>>" +
+                                    "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+                                pageLength: 10,
+                                lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, 'الكل']]
+                            });
+
+                            $('button[data-filter]').on('click', function () {
+                                const filterValue = $(this).data('filter');
+
+                                $('button[data-filter]').removeClass('active');
+                                $(this).addClass('active');
+
+                                if (filterValue === '*') {
+                                    dataTable.search('').draw();
+                                } else {
+                                    dataTable.column(7).search(filterValue).draw();
+                                }
+                            });
+                        });
+                    </script>
+                    <script>
+                        function updateStatusText(checkbox) {
+                            const statusLabel = document.getElementById('statusLabel');
+                            if (checkbox.checked) {
+                                statusLabel.textContent = 'نشط';
+                                statusLabel.classList.remove('text-danger');
+                                statusLabel.classList.add('text-success');
+                            } else {
+                                statusLabel.textContent = 'غير نشط';
+                                statusLabel.classList.remove('text-success');
+                                statusLabel.classList.add('text-danger');
+                            }
+                        }
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const checkbox = document.getElementById('activeStatus');
+                            if (checkbox) {
+                                updateStatusText(checkbox);
+                            }
+                        });
+                    </script>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const imageUpload = document.getElementById('imageUpload');
+                            const customerImage = document.querySelector('#editCustomerModal .modal-body img');
+
+                            if (imageUpload && customerImage) {
+                                imageUpload.addEventListener('change', function (e) {
+                                    const file = e.target.files[0];
+                                    if (file) {
+                                        const reader = new FileReader();
+                                        reader.onload = function (event) {
+                                            customerImage.src = event.target.result;
+                                        };
+                                        reader.readAsDataURL(file);
+                                    }
+                                });
+                            }
+
+                            const checkbox = document.getElementById('activeStatus');
+                            if (checkbox) {
+                                updateStatusText(checkbox);
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
