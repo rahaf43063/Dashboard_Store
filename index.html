@@ -15,16 +15,154 @@
 </head>
 
 <body>
-  <div class="loader" id="loader" aria-label="جاري التحميل" role="status">
-    <svg width="64" height="64" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" stroke="#fc6aba"
-      aria-hidden="true">
-      <g fill="none" fill-rule="evenodd" stroke-width="4">
-        <circle cx="22" cy="22" r="18" stroke-opacity="0.2" />
-        <path d="M40 22c0-9.94-8.06-18-18-18">
-          <animateTransform attributeName="transform" type="rotate" from="0 22 22" to="360 22 22" dur="0.9s"
-            repeatCount="indefinite" />
-        </path>
-      </g>
+  <div class="loader" id="loader" aria-label="جاري التحميل" role="status" style="
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 9999;
+">
+    <div style="
+    position: relative;
+    width: 120px;
+    height: 120px;
+  ">
+      <!-- Outer petals -->
+      <div style="
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      animation: rotate 8s linear infinite;
+    ">
+        <span style="
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ff6b9e;
+        top: 0;
+        left: 50px;
+      "></span>
+        <span style="
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ff8ab4;
+        right: 0;
+        top: 50px;
+      "></span>
+        <span style="
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ff6b9e;
+        bottom: 0;
+        left: 50px;
+      "></span>
+        <span style="
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ff8ab4;
+        left: 0;
+        top: 50px;
+      "></span>
+      </div>
+
+      <!-- Middle petals -->
+      <div style="
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 20px;
+      left: 20px;
+      animation: rotate 6s linear infinite reverse;
+    ">
+        <span style="
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #ff4d8d;
+        top: -8px;
+        left: 32px;
+      "></span>
+        <span style="
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #ff4d8d;
+        right: -8px;
+        top: 32px;
+      "></span>
+        <span style="
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #ff4d8d;
+        bottom: -8px;
+        left: 32px;
+      "></span>
+        <span style="
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #ff4d8d;
+        left: -8px;
+        top: 32px;
+      "></span>
+      </div>
+
+      <!-- Center -->
+      <div style="
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #ff2d7a;
+      border-radius: 50%;
+      top: 40px;
+      left: 40px;
+      animation: pulse 2s infinite;
+    "></div>
+    </div>
+  </div>
+
+  <div style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <style>
+          @keyframes rotate {
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+
+          @keyframes pulse {
+
+            0%,
+            100% {
+              transform: scale(1);
+              box-shadow: 0 0 0 0 rgba(255, 45, 122, 0.7);
+            }
+
+            70% {
+              transform: scale(1.1);
+              box-shadow: 0 0 0 10px rgba(255, 45, 122, 0);
+            }
+          }
+        </style>
+      </defs>
     </svg>
   </div>
 
@@ -46,13 +184,13 @@
 
         <div class="left-header d-flex align-items-center gap-3 px-3">
           <div id="icons" class="icons d-flex gap-3">
-            <div class="dropdown-icon align-end">
+            <div class="dropdown-icon align-end" title="الرسائل">
               <i class="fa-regular fa-envelope"></i>
               <span class="icon-badge">4</span>
               <ul id="messagesMenu" class="icon-dropdown">
                 <div class="header-title">الرسائل</div>
                 <li>
-                  <strong>نورا أحمد</strong>
+                  <strong>نورة أحمد</strong>
                   <div class="small text-muted">قبل 10 دقائق</div>
                   <div class="small">مرحباً، هل لديكم فستان أزرق بالحجم المتوسط؟</div>
                 </li>
@@ -75,7 +213,7 @@
               </ul>
             </div>
 
-            <div class="dropdown-icon align-end">
+            <div class="dropdown-icon align-end" title="الإشعارات">
               <i class="fa-regular fa-bell"></i>
               <span class="icon-badge">2</span>
               <ul id="bellMenu" class="icon-dropdown">
